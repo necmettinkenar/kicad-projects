@@ -1,0 +1,176 @@
+name: KiCad CI/CD
+
+on:
+  push:
+    paths:
+      - '**.kicad_sch'
+      - '**.kicad_pcb'
+      - '**.kicad_pro'
+  pull_request:
+    paths:
+      - '**.kicad_sch'
+      - '**.kicad_pcb'
+      - '**.kicad_pro'
+  workflow_dispatch:
+
+env:
+  KICAD_VERSION: "10.0"
+
+jobs:
+  # ─── CI: DRC + ERC Kontrolleri ────────────────────────────
+  check:
+    name: DRC + ERC
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad10_auto:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find KiCad projects
+        id: find
+        run: |
+          echo "pcb_files=$(find projects -name '*.kicad_pcb' 2>/dev/null | tr '\n' ' ')" >> $GITHUB_OUTPUT
+          echo "sch_files=$(find projects -name '*.kicad_sch' 2>/dev/null | tr '\n' ' ')" >> $GITHUB_OUTPUT
+
+      - name: Run ERC (Electrical Rule Check)
+        if: steps.find.outputs.sch_files != ''
+        run: |
+          for sch in ${{ steps.find.outputs.sch_files }}; do
+            echo "=== ERC: $sch ==="
+            kicad-cli sch erc \
+              --output "erc_$(basename $sch .kicad_sch).txt" \
+              "$sch" || true
+            cat "erc_$(basename $sch .kicad_sch).txt" || true
+          done
+
+      - name: Run DRC (Design Rule Check)
+        if: steps.find.outputs.pcb_files != ''
+        run: |
+          for pcb in ${{ steps.find.outputs.pcb_files }}; do
+            echo "=== DRC: $pcb ==="
+            kicad-cli pcb drc \
+              --output "drc_$(basename $pcb .kicad_pcb).txt" \
+              "$pcb" || true
+            cat "drc_$(basename $pcb .kicad_pcb).txt" || true
+          done
+
+      - name: Upload check reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: drc-erc-reports
+          path: |
+            drc_*.txt
+            erc_*.txt
+          if-no-files-found: ignore
+
+  # ─── CD: Gerber + BOM + Pick&Place ────────────────────────
+  manufacture:
+    name: Gerber + BOM + PnP
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad10_auto:latest
+    needs: check
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find KiCad PCB files
+        id: find
+        run: |
+          echo "pcb_files=$(find projects -name '*.kicad_pcb' 2>/dev/null | tr '\n' ' ')" >> $GITHUB_OUTPUT
+
+      - name: Generate Gerbers
+        if: steps.find.outputs.pcb_files != ''
+        run: |
+          for pcb in ${{ steps.find.outputs.pcb_files }}; do
+            name=$(basename $pcb .kicad_pcb)
+            mkdir -p "gerbers_$name"
+            kicad-cli pcb export gerbers \
+              --output "gerbers_$name/" \
+              "$pcb"
+            kicad-cli pcb export drill \
+              --output "gerbers_$name/" \
+              "$pcb"
+          done
+
+      - name: Generate BOM (CSV)
+        if: steps.find.outputs.pcb_files != ''
+        run: |
+          for pcb in ${{ steps.find.outputs.pcb_files }}; do
+            name=$(basename $pcb .kicad_pcb)
+            sch=$(echo $pcb | sed 's/.kicad_pcb/.kicad_sch/')
+            if [ -f "$sch" ]; then
+              kicad-cli sch export bom \
+                --output "bom_$name.csv" \
+                "$sch" || true
+            fi
+          done
+
+      - name: Generate Pick & Place
+        if: steps.find.outputs.pcb_files != ''
+        run: |
+          for pcb in ${{ steps.find.outputs.pcb_files }}; do
+            name=$(basename $pcb .kicad_pcb)
+            kicad-cli pcb export pos \
+              --output "pnp_$name.pos" \
+              "$pcb" || true
+          done
+
+      - name: Zip manufacturing files
+        if: always()
+        run: |
+          for pcb in ${{ steps.find.outputs.pcb_files }}; do
+            name=$(basename $pcb .kicad_pcb)
+            zip -r "manufacturing_$name.zip" \
+              "gerbers_$name/" \
+              "bom_$name.csv" \
+              "pnp_$name.pos" \
+              2>/dev/null || true
+          done
+
+      - name: Upload manufacturing files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: manufacturing-files
+          path: |
+            manufacturing_*.zip
+            gerbers_*/
+            bom_*.csv
+            pnp_*.pos
+          if-no-files-found: ignore
+
+  # ─── CD: 3D Render ────────────────────────────────────────
+  render:
+    name: 3D Render
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad10_auto:latest
+    needs: check
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find KiCad PCB files
+        id: find
+        run: |
+          echo "pcb_files=$(find projects -name '*.kicad_pcb' 2>/dev/null | tr '\n' ' ')" >> $GITHUB_OUTPUT
+
+      - name: Generate 3D render (SVG)
+        if: steps.find.outputs.pcb_files != ''
+        run: |
+          for pcb in ${{ steps.find.outputs.pcb_files }}; do
+            name=$(basename $pcb .kicad_pcb)
+            kicad-cli pcb export 3d \
+              --output "render_$name.svg" \
+              "$pcb" || true
+          done
+
+      - name: Upload renders
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 3d-renders
+          path: render_*.svg
+          if-no-files-found: ignore
