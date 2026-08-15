@@ -1,0 +1,169 @@
+# KiBot configuration for automated KiCad project outputs
+# Documentation: https://kibot.readthedocs.io/
+
+global:
+  # KiCad 10.0 kullan
+  kicad_active_version: 10.0
+  # Çıktı dizini
+  output: 'output/%f'
+  # Kural ihlallerinde hata ver
+  fail_on_warnings: false
+
+filters:
+  - name: 'exclude_dnp'
+    type: 'generic'
+    comment: 'DNP işaretli bileşenleri hariç tut'
+    attrs:
+      - name: 'dnp'
+        value: true
+
+variants:
+  - name: 'default'
+    comment: 'Default variant'
+    type: kibom
+    variant: default
+    pre_transform: exclude_dnp
+
+outputs:
+  # ─── DRC (Design Rule Check) ─────────────────────────────
+  - name: 'drc'
+    comment: 'Design Rule Check'
+    type: 'drc'
+    dir: 'reports'
+    options:
+      check_zone_fills: true
+      debug: false
+
+  # ─── ERC (Electrical Rule Check) ─────────────────────────
+  - name: 'erc'
+    comment: 'Electrical Rule Check'
+    type: 'erc'
+    dir: 'reports'
+    options:
+      debug: false
+
+  # ─── Gerber dosyaları ────────────────────────────────────
+  - name: 'gerbers'
+    comment: 'Gerber fabrication files'
+    type: 'gerber'
+    dir: 'fabrication/gerbers'
+    options:
+      exclude_edge_layer: false
+      exclude_pads_from_silkscreen: false
+      plot_sheet_reference: false
+      plot_footprint_refs: true
+      plot_footprint_values: true
+      force_plot_invisible_refs_vals: false
+      tent_vias: true
+      use_protel_extensions: false
+      create_gerber_job_file: true
+      gerber_precision: 4
+      line_width: 0.1
+      subtract_mask_from_silk: true
+      use_gerber_x2_attributes: true
+      use_gerber_net_attributes: false
+
+  # ─── Drill dosyaları ─────────────────────────────────────
+  - name: 'drill'
+    comment: 'Drill files (Excellon + IPC-2581)'
+    type: 'drill'
+    dir: 'fabrication/drills'
+    options:
+      generate_via_condensed_list: false
+      use_aux_axis_as_origin: false
+      minimal_header: false
+      mirror_y_axis: false
+      report: true
+      map:
+        type: 'pdf'
+      output: '%f_%i.%x'
+      units: 'mm'
+
+  # ─── BOM (HTML) ──────────────────────────────────────────
+  - name: 'bom_html'
+    comment: 'Bill of Materials (HTML)'
+    type: 'bom'
+    dir: 'fabrication/bom'
+    options:
+      output: 'bom_%f.html'
+      format: 'html'
+      group_fields: ['part', 'value', 'footprint']
+      columns:
+        - field: 'References'
+          name: 'Ref'
+        - field: 'Value'
+        - field: 'Footprint'
+        - field: 'Quantity'
+          name: 'Qty'
+        - field: 'Manufacturer'
+        - field: 'Manufacturer Part Number'
+        - field: 'DigiKey'
+        - field: 'Description'
+
+  # ─── BOM (CSV) ───────────────────────────────────────────
+  - name: 'bom_csv'
+    comment: 'Bill of Materials (CSV)'
+    type: 'bom'
+    dir: 'fabrication/bom'
+    options:
+      output: 'bom_%f.csv'
+      format: 'csv'
+      group_fields: ['part', 'value', 'footprint']
+
+  # ─── Pick & Place ────────────────────────────────────────
+  - name: 'pnp'
+    comment: 'Pick and Place file'
+    type: 'position'
+    dir: 'fabrication/pnp'
+    options:
+      format: 'CSV'
+      units: 'mm'
+      separate_files_for_front_and_back: true
+      only_smd: true
+
+  # ─── PCB PDF (renkli) ────────────────────────────────────
+  - name: 'pcb_pdf'
+    comment: 'PCB layout PDF (color)'
+    type: 'pcb_print'
+    dir: 'documentation'
+    options:
+      output_name: 'pcb_%f.pdf'
+      pages:
+        - layer: 'F.Cu'
+          layer: 'B.Cu'
+          layer: 'F.SilkS'
+          layer: 'B.SilkS'
+          layer: 'F.Mask'
+          layer: 'B.Mask'
+          layer: 'Edge.Cuts'
+
+  # ─── Şematik PDF ─────────────────────────────────────────
+  - name: 'schematic_pdf'
+    comment: 'Schematic PDF'
+    type: 'pdf_sch_print'
+    dir: 'documentation'
+    options:
+      output_name: 'schematic_%f.pdf'
+
+  # ─── 3D Render (SVG) ─────────────────────────────────────
+  - name: 'render_3d'
+    comment: '3D render (SVG)'
+    type: 'render_3d'
+    dir: 'documentation'
+    options:
+      output: 'render_%f.svg'
+      view: 'top'
+      zoom: 4
+      width: 1600
+      height: 1200
+      debug: false
+
+  # ─── PCB 3D Step ─────────────────────────────────────────
+  - name: 'step_3d'
+    comment: '3D STEP model'
+    type: 'step'
+    dir: 'fabrication/3d'
+    options:
+      output: '%f.step'
+      min_distance: 0.01
+      origin: 'grid'
