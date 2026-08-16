@@ -1,0 +1,110 @@
+# KiBot config for Step Motor Controller project
+# Generates: DRC, ERC, Gerber, Drill, BOM, PnP, PDF, 3D render
+
+global:
+  kicad_active_version: 10.0
+  output: 'output/%f'
+  fail_on_warnings: false
+
+filters:
+  - name: 'exclude_dnp'
+    type: 'generic'
+    comment: 'Exclude DNP components'
+    attrs:
+      - name: 'dnp'
+        value: true
+
+outputs:
+  - name: 'drc'
+    comment: 'Design Rule Check'
+    type: 'drc'
+    dir: 'reports'
+    options:
+      check_zone_fills: true
+
+  - name: 'erc'
+    comment: 'Electrical Rule Check'
+    type: 'erc'
+    dir: 'reports'
+
+  - name: 'gerbers'
+    comment: 'Gerber fabrication files'
+    type: 'gerber'
+    dir: 'fabrication/gerbers'
+    options:
+      create_gerber_job_file: true
+      gerber_precision: 4
+      use_gerber_x2_attributes: true
+      line_width: 0.1
+      subtract_mask_from_silk: true
+      tent_vias: true
+
+  - name: 'drill'
+    comment: 'Drill files'
+    type: 'drill'
+    dir: 'fabrication/drills'
+    options:
+      units: 'mm'
+      report: true
+      map:
+        type: 'pdf'
+
+  - name: 'bom_html'
+    comment: 'BOM (HTML)'
+    type: 'bom'
+    dir: 'fabrication/bom'
+    options:
+      output: 'bom_%f.html'
+      format: 'html'
+      group_fields: ['part', 'value', 'footprint']
+      columns:
+        - field: 'References'
+          name: 'Ref'
+        - field: 'Value'
+        - field: 'Footprint'
+        - field: 'Quantity'
+          name: 'Qty'
+        - field: 'Description'
+
+  - name: 'bom_csv'
+    comment: 'BOM (CSV)'
+    type: 'bom'
+    dir: 'fabrication/bom'
+    options:
+      output: 'bom_%f.csv'
+      format: 'csv'
+
+  - name: 'pnp'
+    comment: 'Pick and Place'
+    type: 'position'
+    dir: 'fabrication/pnp'
+    options:
+      format: 'CSV'
+      units: 'mm'
+      separate_files_for_front_and_back: true
+      only_smd: false
+
+  - name: 'pcb_pdf'
+    comment: 'PCB layout PDF'
+    type: 'pcb_print'
+    dir: 'documentation'
+    options:
+      output_name: 'pcb_%f.pdf'
+
+  - name: 'schematic_pdf'
+    comment: 'Schematic PDF'
+    type: 'pdf_sch_print'
+    dir: 'documentation'
+    options:
+      output_name: 'schematic_%f.pdf'
+
+  - name: 'render_3d'
+    comment: '3D render'
+    type: 'render_3d'
+    dir: 'documentation'
+    options:
+      output: 'render_%f.svg'
+      view: 'top'
+      zoom: 4
+      width: 1600
+      height: 1200

@@ -1,0 +1,382 @@
+(kicad_sch
+	(version 20260206)
+	(generator "kicad-python")
+	(generator_version "10.0")
+	(uuid "12345678-1234-1234-1234-123456789abc")
+	(paper "A3")
+	(title_block
+		(title "Step Motor Controller")
+		(date "2026-08-15")
+		(rev "1.0")
+		(company "AutoGen")
+	)
+	(lib_symbols)
+		(symbol "Conn_01x03"
+			(lib_id "Connector_Generic:Conn_01x03")
+		)
+		(symbol "IRM-20-24"
+			(lib_id "Converter_ACDC:IRM-20-24")
+		)
+		(symbol "OKI-78SR-5_1.5-W36-C"
+			(lib_id "Regulator_Switching:OKI-78SR-5_1.5-W36-C")
+		)
+		(symbol "CP"
+			(lib_id "Device:CP")
+		)
+		(symbol "CP"
+			(lib_id "Device:CP")
+		)
+		(symbol "ESP32-DevKitC"
+			(lib_id "RF_Module:ESP32-DevKitC")
+		)
+		(symbol "LV8729"
+			(lib_id "Driver_Motor:LV8729")
+		)
+		(symbol "Conn_01x04"
+			(lib_id "Connector_Generic:Conn_01x04")
+		)
+		(symbol "AM26LS32ACN"
+			(lib_id "Interface:AM26LS32ACN")
+		)
+		(symbol "74HC4050"
+			(lib_id "74xx:74HC4050")
+		)
+		(symbol "Conn_01x08"
+			(lib_id "Connector_Generic:Conn_01x08")
+		)
+		(symbol "BC547"
+			(lib_id "Transistor_BJT:BC547")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "C"
+			(lib_id "Device:C")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "R"
+			(lib_id "Device:R")
+		)
+		(symbol "SW_SPDT"
+			(lib_id "Switch:SW_SPDT")
+		)
+		(symbol "SW_SPDT"
+			(lib_id "Switch:SW_SPDT")
+		)
+		(symbol "C"
+			(lib_id "Device:C")
+		)
+		(symbol "C"
+			(lib_id "Device:C")
+		)
+		(symbol "TCRT5000"
+			(lib_id "Sensor_Optical:TCRT5000")
+		)
+		(symbol "TCRT5000"
+			(lib_id "Sensor_Optical:TCRT5000")
+		)
+		(symbol "AH3503"
+			(lib_id "Sensor_Magnetic:AH3503")
+		)
+		(symbol "AH3503"
+			(lib_id "Sensor_Magnetic:AH3503")
+		)
+		(symbol "Conn_01x04"
+			(lib_id "Connector_Generic:Conn_01x04")
+		)
+
+	(symbol (lib_id "Connector_Generic:Conn_01x03") (at 30.0000 30.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "J1" (at 31.2700 28.7300 0))
+		(property "Value" "AC Input" (at 31.2700 31.2700 0))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 30.0000 30.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Converter_ACDC:IRM-20-24") (at 60.0000 30.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "PS1" (at 61.2700 28.7300 0))
+		(property "Value" "IRM-20-24" (at 61.2700 31.2700 0))
+		(property "Footprint" "Converter_ACDC:ACDC-Converter_MeanWell_IRM-20" (at 60.0000 30.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Regulator_Switching:OKI-78SR-5_1.5-W36-C") (at 95.0000 30.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "U1" (at 96.2700 28.7300 0))
+		(property "Value" "OKI-78SR-5" (at 96.2700 31.2700 0))
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical" (at 95.0000 30.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:CP") (at 60.0000 55.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "C1" (at 61.2700 53.7300 0))
+		(property "Value" "100uF" (at 61.2700 56.2700 0))
+		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" (at 60.0000 55.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:CP") (at 95.0000 55.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "C2" (at 96.2700 53.7300 0))
+		(property "Value" "10uF" (at 96.2700 56.2700 0))
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" (at 95.0000 55.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "RF_Module:ESP32-DevKitC") (at 110.0000 90.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "U3" (at 111.2700 88.7300 0))
+		(property "Value" "ESP32-DevKitC" (at 111.2700 91.2700 0))
+		(property "Footprint" "RF_Module:ESP32-DevKitC" (at 110.0000 90.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Driver_Motor:LV8729") (at 170.0000 100.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "U4" (at 171.2700 98.7300 0))
+		(property "Value" "LV8729" (at 171.2700 101.2700 0))
+		(property "Footprint" "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" (at 170.0000 100.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Connector_Generic:Conn_01x04") (at 210.0000 100.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "J2" (at 211.2700 98.7300 0))
+		(property "Value" "Motor" (at 211.2700 101.2700 0))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 210.0000 100.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Interface:AM26LS32ACN") (at 170.0000 40.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "U5" (at 171.2700 38.7300 0))
+		(property "Value" "AM26LS32" (at 171.2700 41.2700 0))
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm" (at 170.0000 40.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "74xx:74HC4050") (at 110.0000 150.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "U6" (at 111.2700 148.7300 0))
+		(property "Value" "74HC4050" (at 111.2700 151.2700 0))
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm" (at 110.0000 150.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Connector_Generic:Conn_01x08") (at 210.0000 40.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "J3" (at 211.2700 38.7300 0))
+		(property "Value" "Encoder" (at 211.2700 41.2700 0))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" (at 210.0000 40.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Transistor_BJT:BC547") (at 60.0000 90.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "Q1" (at 61.2700 88.7300 0))
+		(property "Value" "BC547" (at 61.2700 91.2700 0))
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 60.0000 90.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 75.0000 90.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R11" (at 76.2700 88.7300 0))
+		(property "Value" "10K" (at 76.2700 91.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 75.0000 90.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 75.0000 105.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R12" (at 76.2700 103.7300 0))
+		(property "Value" "1K" (at 76.2700 106.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 75.0000 105.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:C") (at 75.0000 120.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "C5" (at 76.2700 118.7300 0))
+		(property "Value" "100nF" (at 76.2700 121.2700 0))
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 75.0000 120.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 30.0000 120.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R1" (at 31.2700 118.7300 0))
+		(property "Value" "FSR" (at 31.2700 121.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 30.0000 120.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 45.0000 120.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R2" (at 46.2700 118.7300 0))
+		(property "Value" "10K" (at 46.2700 121.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 45.0000 120.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 30.0000 135.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R3" (at 31.2700 133.7300 0))
+		(property "Value" "FSR" (at 31.2700 136.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 30.0000 135.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 45.0000 135.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R4" (at 46.2700 133.7300 0))
+		(property "Value" "10K" (at 46.2700 136.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 45.0000 135.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 30.0000 160.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R5" (at 31.2700 158.7300 0))
+		(property "Value" "10K" (at 31.2700 161.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 30.0000 160.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 45.0000 160.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R6" (at 46.2700 158.7300 0))
+		(property "Value" "10K" (at 46.2700 161.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 45.0000 160.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 30.0000 180.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R7" (at 31.2700 178.7300 0))
+		(property "Value" "10K" (at 31.2700 181.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 30.0000 180.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 45.0000 180.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R8" (at 46.2700 178.7300 0))
+		(property "Value" "20K" (at 46.2700 181.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 45.0000 180.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 30.0000 195.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R9" (at 31.2700 193.7300 0))
+		(property "Value" "10K" (at 31.2700 196.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 30.0000 195.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:R") (at 45.0000 195.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "R10" (at 46.2700 193.7300 0))
+		(property "Value" "20K" (at 46.2700 196.2700 0))
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 45.0000 195.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Switch:SW_SPDT") (at 15.0000 160.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "SW1" (at 16.2700 158.7300 0))
+		(property "Value" "Limit-1" (at 16.2700 161.2700 0))
+		(property "Footprint" "Button_Switch_THT:SW_CuK_OS102011MA1QN1_SPDT_Angled" (at 15.0000 160.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Switch:SW_SPDT") (at 15.0000 175.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "SW2" (at 16.2700 173.7300 0))
+		(property "Value" "Limit-2" (at 16.2700 176.2700 0))
+		(property "Footprint" "Button_Switch_THT:SW_CuK_OS102011MA1QN1_SPDT_Angled" (at 15.0000 175.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:C") (at 30.0000 175.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "C3" (at 31.2700 173.7300 0))
+		(property "Value" "100nF" (at 31.2700 176.2700 0))
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 30.0000 175.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Device:C") (at 45.0000 175.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "C4" (at 46.2700 173.7300 0))
+		(property "Value" "100nF" (at 46.2700 176.2700 0))
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 45.0000 175.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Sensor_Optical:TCRT5000") (at 15.0000 130.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "S1" (at 16.2700 128.7300 0))
+		(property "Value" "Optic-1" (at 16.2700 131.2700 0))
+		(property "Footprint" "OptoDevice:OptoDevice_TCRT5000" (at 15.0000 130.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Sensor_Optical:TCRT5000") (at 15.0000 145.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "S2" (at 16.2700 143.7300 0))
+		(property "Value" "Optic-2" (at 16.2700 146.2700 0))
+		(property "Footprint" "OptoDevice:OptoDevice_TCRT5000" (at 15.0000 145.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Sensor_Magnetic:AH3503") (at 15.0000 190.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "S3" (at 16.2700 188.7300 0))
+		(property "Value" "Hall-1" (at 16.2700 191.2700 0))
+		(property "Footprint" "Sensor:Sensor_Hall_TH" (at 15.0000 190.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Sensor_Magnetic:AH3503") (at 15.0000 210.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "S4" (at 16.2700 208.7300 0))
+		(property "Value" "Hall-2" (at 16.2700 211.2700 0))
+		(property "Footprint" "Sensor:Sensor_Hall_TH" (at 15.0000 210.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "Connector_Generic:Conn_01x04") (at 30.0000 210.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "U2" (at 31.2700 208.7300 0))
+		(property "Value" "UART Display" (at 31.2700 211.2700 0))
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" (at 30.0000 210.0000 0) (effects (font (size 1.27 1.27)) hide))
+	)
+
+	(symbol (lib_id "power:GND") (at 50.0000 15.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "#PWR" (at 50.0000 13.7300 0))
+		(property "Value" "GND" (at 50.0000 12.4600 0))
+	)
+
+	(symbol (lib_id "power:VCC") (at 80.0000 15.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "#PWR" (at 80.0000 13.7300 0))
+		(property "Value" "+24V" (at 80.0000 12.4600 0))
+	)
+
+	(symbol (lib_id "power:VCC") (at 90.0000 15.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "#PWR" (at 90.0000 13.7300 0))
+		(property "Value" "+5V" (at 90.0000 12.4600 0))
+	)
+
+	(symbol (lib_id "power:VCC") (at 100.0000 15.0000 0)
+		(in_bom yes) (on_board yes)
+		(property "Reference" "#PWR" (at 100.0000 13.7300 0))
+		(property "Value" "+3V3" (at 100.0000 12.4600 0))
+	)
+
+	(sheet_instances
+		(path "/" (page "1"))
+	)
+)

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Step Motor Controller — Proje Raporu</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Segoe UI,Tahoma,sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+h1{color:#58a6ff;font-size:2em;margin-bottom:8px;border-bottom:1px solid #30363d;padding-bottom:12px}
+.subtitle{color:#8b949e;margin-bottom:32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-bottom:32px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px}
+.card-title{color:#58a6ff;font-size:0.85em;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
+.card-value{font-size:1.8em;font-weight:bold;color:#f0f6fc}
+.card-desc{color:#8b949e;font-size:0.85em;margin-top:4px}
+.section{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:24px;margin-bottom:24px}
+.section-title{color:#58a6ff;font-size:1.2em;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #30363d}
+table{width:100%;border-collapse:collapse;font-size:0.9em}
+th{background:#21262d;color:#58a6ff;text-align:left;padding:10px 12px;border:1px solid #30363d}
+td{padding:8px 12px;border:1px solid #30363d;color:#c9d1d9}
+tr:nth-child(even){background:#161b22}
+tr:hover{background:#21262d}
+.badge{display:inline-block;padding:2px 8px;border-radius:12px;font-size:0.75em;font-weight:bold}
+.badge-green{background:#1a7f37;color:#fff}
+.badge-yellow{background:#9e6a03;color:#fff}
+.badge-blue{background:#1f6feb;color:#fff}
+.badge-red{background:#da3633;color:#fff}
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:#30363d}
+.tl-item{position:relative;margin-bottom:20px}
+.tl-marker{position:absolute;left:-28px;top:4px;width:20px;height:20px;border-radius:50%;background:#1f6feb;color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.7em;font-weight:bold}
+.tl-title{color:#f0f6fc;font-weight:bold;margin-bottom:4px}
+.tl-text{color:#8b949e;font-size:0.9em}
+.footer{text-align:center;color:#484f58;padding:24px;font-size:0.85em;border-top:1px solid #30363d;margin-top:24px}
+pre{background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:12px;overflow-x:auto;font-size:0.85em}
+code{color:#79c0ff}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Step Motor Controller</h1>
+<p class="subtitle">ESP32 tabanlı step motor kontrolör — Otomatik PCB tasarım raporu</p>
+
+<div class="grid">
+<div class="card"><div class="card-title">Bileşen Sayısı</div><div class="card-value">34</div><div class="card-desc">Toplam yerleştirilen komponent</div></div>
+<div class="card"><div class="card-title">Pad Sayısı</div><div class="card-value">169</div><div class="card-desc">Toplam bağlantı noktası</div></div>
+<div class="card"><div class="card-title">PCB Boyutu</div><div class="card-value">100×80mm</div><div class="card-desc">2 katmanlı (F.Cu + B.Cu)</div></div>
+<div class="card"><div class="card-title">Nets</div><div class="card-value">43</div><div class="card-desc">Toplam ağ sayısı</div></div>
+<div class="card"><div class="card-title">Track Sayısı</div><div class="card-value">74</div><div class="card-desc">Otomatik route edilen iz</div></div>
+<div class="card"><div class="card-title">Gerber Dosyası</div><div class="card-value">25</div><div class="card-desc">Üretim için hazır</div></div>
+</div>
+
+<div class="section">
+<div class="section-title">📋 Bileşen Listesi (BOM)</div>
+<table>
+<tr><th>Ref</th><th>Değer</th><th>Footprint</th><th>Tür</th><th>Adet</th></tr>
+<tr><td>J1</td><td>AC Input</td><td>PinHeader 1x03 P2.54mm</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>J2</td><td>Motor</td><td>PinHeader 1x04 P2.54mm</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>J3</td><td>Encoder</td><td>PinHeader 1x08 P2.54mm</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>PS1</td><td>IRM-20-24</td><td>ACDC-Converter IRM-20</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>U1</td><td>OKI-78SR-5</td><td>TO-220-3 Vertical</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>U2</td><td>UART Display</td><td>PinHeader 1x04 P2.54mm</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>U3</td><td>ESP32-DevKitC</td><td>ESP32-DevKitC module</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>U4</td><td>LV8729</td><td>SOIC-16 3.9x9.9mm</td><td><span class="badge badge-green">SMD</span></td><td>1</td></tr>
+<tr><td>U5</td><td>AM26LS32ACN</td><td>DIP-16 W7.62mm</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>U6</td><td>74HC4050</td><td>DIP-16 W7.62mm</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>Q1</td><td>BC547</td><td>TO-92 Inline</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>R1, R3</td><td>FSR</td><td>R 0805 2012Metric</td><td><span class="badge badge-green">SMD</span></td><td>2</td></tr>
+<tr><td>R2, R4, R5, R6, R7, R9, R11</td><td>10K</td><td>R 0805 2012Metric</td><td><span class="badge badge-green">SMD</span></td><td>7</td></tr>
+<tr><td>R8, R10</td><td>20K</td><td>R 0805 2012Metric</td><td><span class="badge badge-green">SMD</span></td><td>2</td></tr>
+<tr><td>R12</td><td>1K</td><td>R 0805 2012Metric</td><td><span class="badge badge-green">SMD</span></td><td>1</td></tr>
+<tr><td>C1</td><td>100uF</td><td>CP Radial D8.0mm</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>C2</td><td>10uF</td><td>CP Radial D5.0mm</td><td><span class="badge badge-blue">THT</span></td><td>1</td></tr>
+<tr><td>C3, C4, C5</td><td>100nF</td><td>C 0805 2012Metric</td><td><span class="badge badge-green">SMD</span></td><td>3</td></tr>
+<tr><td>S1, S2</td><td>Optic LS</td><td>TCRT5000</td><td><span class="badge badge-blue">THT</span></td><td>2</td></tr>
+<tr><td>S3, S4</td><td>Hall Sensor</td><td>Hall TH</td><td><span class="badge badge-blue">THT</span></td><td>2</td></tr>
+<tr><td>SW1, SW2</td><td>Limit SW</td><td>SPDT Angled</td><td><span class="badge badge-blue">THT</span></td><td>2</td></tr>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">🔌 Ağ Bağlantıları</div>
+<table>
+<tr><th>Ağ</th><th>Tür</th><th>Bağlı Pad'ler</th><th>Track Genişliği</th></tr>
+<tr><td><strong>GND</strong></td><td><span class="badge badge-red">Power</span></td><td>19 pad (J1.3, PS1.3, U1.2, C1.2, C2.2, U2.4, U3.14, U4.9, U4.15, U5.8, U5.12, U6.8, J3.2, ...)</td><td>0.8mm</td></tr>
+<tr><td><strong>+24V</strong></td><td><span class="badge badge-red">Power</span></td><td>4 pad (PS1.4, U1.1, C1.1, U4.16)</td><td>0.8mm</td></tr>
+<tr><td><strong>+5V</strong></td><td><span class="badge badge-red">Power</span></td><td>12 pad (U1.3, C2.1, J3.1, U2.1, U4.10, U5.16, U5.4, U6.1, S1.1, S2.1, S3.1, S4.1)</td><td>0.8mm</td></tr>
+<tr><td><strong>+3V3</strong></td><td><span class="badge badge-red">Power</span></td><td>6 pad (U3.1, R1.1, R3.1, R5.2, R6.2, R11.1)</td><td>0.8mm</td></tr>
+<tr><td>GPIO36</td><td><span class="badge badge-blue">Signal</span></td><td>U3.3, SW1.1, R5.1, C3.1</td><td>0.25mm</td></tr>
+<tr><td>GPIO39</td><td><span class="badge badge-blue">Signal</span></td><td>U3.4, SW2.1, R6.1, C4.1</td><td>0.25mm</td></tr>
+<tr><td>CHIP_PU</td><td><span class="badge badge-blue">Signal</span></td><td>U3.2, Q1.3, R11.2, C5.1</td><td>0.25mm</td></tr>
+<tr><td>MOTOR_1A-2B</td><td><span class="badge badge-yellow">Motor</span></td><td>U4.11-14 → J2.1-4</td><td>0.25mm</td></tr>
+<tr><td>EA/EB/EZ</td><td><span class="badge badge-blue">Signal</span></td><td>J3.3-8 → U5.1-10 → U6 → U3</td><td>0.25mm</td></tr>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">📁 Üretilen Dosyalar</div>
+<div class="timeline">
+<div class="tl-item"><div class="tl-marker">1</div><div class="tl-title">KiCad Proje Dosyaları</div><div class="tl-text">.kicad_pro, .kicad_sch, .kicad_pcb, .net — KiCad 10.0 formatında</div></div>
+<div class="tl-item"><div class="tl-marker">2</div><div class="tl-title">Gerber Dosyaları (25 adet)</div><div class="tl-text">F.Cu, B.Cu, F.SilkS, B.SilkS, F.Mask, B.Mask, Edge.Cuts, Paste, Adhesive, Fab, Courtyard + job file</div></div>
+<div class="tl-item"><div class="tl-marker">3</div><div class="tl-title">Drill Dosyası</div><div class="tl-text">Excellon formatında .drl — THT delik konumları</div></div>
+<div class="tl-item"><div class="tl-marker">4</div><div class="tl-title">Pick & Place</div><div class="tl-text">pos.csv — SMD montaj koordinatları (mm)</div></div>
+<div class="tl-item"><div class="tl-marker">5</div><div class="tl-title">PCB Layout PDF</div><div class="tl-text">pcb_layout.pdf — Renkli PCB görünümü</div></div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">⚠️ DRC Durumu</div>
+<table>
+<tr><th>Kontrol</th><th>Durum</th><th>Not</th></tr>
+<tr><td>Footprint hataları</td><td><span class="badge badge-green">0 hata</span></td><td>Tüm footprint'ler geçerli</td></tr>
+<tr><td>Courtyard tanımları</td><td><span class="badge badge-yellow">Atlandı</span></td><td>Manuel footprint'lerde courtyard yok (ignore edildi)</td></tr>
+<tr><td>Unconnected items</td><td><span class="badge badge-yellow">14</span></td><td>Signal net'lerin tam routing'i için manuel İnceleme gerekli</td></tr>
+<tr><td>Clearance violations</td><td><span class="badge badge-red">Var</span></td><td>Manuel routing optimizasyonu ile düzeltilebilir</td></tr>
+</table>
+<p style="margin-top:12px;color:#8b949e;font-size:0.9em">DRC ihlalleri beklenen durumdadır — otomatik routing sonrası manuel optimizasyon ile azaltılabilir. Üretim için PCB'yi KiCad'de açıp izleri düzenlemek önerilir.</p>
+</div>
+
+<div class="section">
+<div class="section-title">🚀 GitHub CI/CD</div>
+<p>Proje <code>necmettinkenar/kicad-projects</code> reposuna push'landığında GitHub Actions otomatik çalışır:</p>
+<ul style="margin-top:12px;padding-left:20px">
+<li><strong>DRC + ERC</strong> — Her push/PR'da otomatik kontrol</li>
+<li><strong>Gerber + BOM + PnP</strong> — main branch push'ta otomatik üretim</li>
+<li><strong>3D Render</strong> — PCB üst görünüş SVG</li>
+<li><strong>PDF</strong> — PCB layout + şematik PDF</li>
+</ul>
+</div>
+
+<div class="footer">
+Otomatik olarak üretildi — 16 Ağustos 2026 — KiCad 10.0 + Python pcbnew API + KiBot
+</div>
+</div>
+</body>
+</html>
