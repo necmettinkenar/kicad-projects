@@ -74,15 +74,6 @@ outputs:
     options:
       output_name: 'schematic_%f.pdf'
 
-  - name: 'render_3d'
-    comment: '3D render'
-    type: 'render_3d'
-    dir: 'documentation'
-    options:
-      output: 'render_%f.svg'
-      width: 1600
-      height: 1200
-
   - name: 'step_3d'
     comment: '3D STEP model'
     type: 'step'
