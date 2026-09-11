@@ -42,7 +42,7 @@ outputs:
     dir: 'fabrication/bom'
     options:
       output: 'bom_%f.html'
-      format: 'html'
+      format: 'HTML'
 
   - name: 'bom_csv'
     comment: 'BOM (CSV)'
@@ -50,7 +50,7 @@ outputs:
     dir: 'fabrication/bom'
     options:
       output: 'bom_%f.csv'
-      format: 'csv'
+      format: 'CSV'
 
   - name: 'pnp'
     comment: 'Pick and Place'
