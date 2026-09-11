@@ -24,7 +24,7 @@ outputs:
     dir: 'fabrication/gerbers'
     options:
       create_gerber_job_file: true
-      gerber_precision: 4
+      gerber_precision: 4.6
       use_gerber_x2_attributes: true
       line_width: 0.1
       subtract_mask_from_silk: true
