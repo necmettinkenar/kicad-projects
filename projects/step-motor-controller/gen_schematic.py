@@ -64,6 +64,8 @@ def extract_lib_symbol(lib, name):
             pn = nm2.group(1) if nm2 else ''
             if pn in ('-Vo', '+Vo'):
                 pinblk = pinblk.replace('(pin ' + m2.group(1), '(pin power_out', 1)
+            elif pn in ('AC/L', 'AC/N'):
+                pinblk = pinblk.replace('(pin ' + m2.group(1), '(pin passive', 1)
             out.append(pinblk)
             i = j + len(pinblk)
         blk = ''.join(out)
