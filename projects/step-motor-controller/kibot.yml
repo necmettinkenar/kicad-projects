@@ -16,7 +16,7 @@ outputs:
     type: 'netlist'
     dir: 'reports'
     options:
-      format: 'kicadsexpr'
+      format: 'kicadxml'
 
   - name: 'gerbers'
     comment: 'Gerber fabrication files'
