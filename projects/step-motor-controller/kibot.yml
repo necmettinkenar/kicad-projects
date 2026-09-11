@@ -11,6 +11,13 @@ preflight:
   run_drc: true
 
 outputs:
+  - name: 'netlist'
+    comment: 'Netlist export'
+    type: 'netlist'
+    dir: 'reports'
+    options:
+      format: 'kicadsexpr'
+
   - name: 'gerbers'
     comment: 'Gerber fabrication files'
     type: 'gerber'

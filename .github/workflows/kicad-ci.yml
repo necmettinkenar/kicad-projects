@@ -47,7 +47,7 @@ jobs:
                 -c kibot.yml \
                 -d output \
                 -v \
-                drc erc
+                netlist
 
       - name: Upload DRC/ERC reports
         if: always()
