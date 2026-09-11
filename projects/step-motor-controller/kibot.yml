@@ -9,8 +9,6 @@ global:
 preflight:
   run_erc: true
   run_drc: true
-  erc_warnings: false
-  drc_warnings: false
 
 outputs:
   - name: 'gerbers'
