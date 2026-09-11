@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel Bağlantı Tablosu — Anlayış Raporu</title>
+<style>
+:root{
+  --bg:#f7f5f0; --ink:#201d18; --mut:#6b6459; --hair:#d8d2c6; --acc:#9c5227; --accd:#7a3f1e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.62 "Segoe UI",Tahoma,sans-serif}
+.wrap{max-width:1160px;margin:0 auto;padding:48px 28px 72px}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* header */
+header{border-bottom:3px solid var(--ink);padding-bottom:28px;margin-bottom:8px}
+.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:600}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:40px;line-height:1.12;font-weight:700;margin:10px 0 12px;letter-spacing:-.01em}
+.standfirst{font-size:18px;color:var(--mut);max-width:62ch}
+.meta{display:flex;flex-wrap:wrap;gap:0 28px;margin-top:20px;font-size:13.5px;color:var(--mut)}
+.meta b{color:var(--ink);font-weight:600}
+
+/* layout with TOC */
+.layout{display:grid;grid-template-columns:200px 1fr;gap:44px;margin-top:36px}
+nav{position:sticky;top:24px;align-self:start;font-size:13.5px}
+nav .t{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
+nav ol{list-style:none}
+nav li{margin:0 0 2px;padding:4px 0 4px 12px;border-left:2px solid var(--hair)}
+nav li.on{border-left-color:var(--acc)}
+nav li.on a{color:var(--ink);font-weight:600}
+nav a{color:var(--mut)}
+main{min-width:0}
+
+h2{font-family:Georgia,serif;font-size:26px;line-height:1.2;margin:56px 0 6px;letter-spacing:-.005em}
+h2 .no{color:var(--acc);font-family:Consolas,monospace;font-size:17px;margin-right:10px;font-weight:400}
+h2 + .lead{color:var(--mut);margin-bottom:18px;max-width:66ch}
+h3{font-size:16.5px;margin:26px 0 8px}
+p{max-width:68ch;margin:0 0 14px}
+.rule{height:1px;background:var(--hair);width:120px;margin:14px 0 0}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:13.8px;margin:16px 0 22px}
+th{text-align:left;font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);border-bottom:2px solid var(--ink);padding:7px 10px}
+td{border-bottom:1px solid var(--hair);padding:7px 10px;vertical-align:top}
+tr:last-child td{border-bottom:1px solid var(--hair)}
+.mono{font-family:Consolas,'Courier New',monospace;font-size:12.8px}
+td.mono{color:var(--accd)}
+caption{caption-side:top;text-align:left;font-size:12.5px;color:var(--mut);padding:0 0 8px}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+
+/* chain diagram */
+.chain{border:1px solid var(--hair);background:#fdfcf9;padding:18px 20px;margin:14px 0 24px;overflow-x:auto}
+.chain .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:14px;padding:5px 0}
+.chain .blk{border:1px solid var(--ink);padding:5px 12px;background:var(--bg);white-space:nowrap;font-weight:600}
+.chain .blk small{display:block;font-weight:400;font-size:11px;color:var(--mut)}
+.chain .ar{color:var(--acc);font-family:Consolas,monospace;font-size:12px;white-space:nowrap}
+
+/* flag list */
+.flags{counter-reset:f;margin:8px 0 0;list-style:none}
+.flags>li{counter-increment:f;border-top:1px solid var(--hair);padding:16px 0 14px 56px;position:relative}
+.flags>li::before{content:counter(f,decimal-leading-zero);position:absolute;left:0;top:14px;font-family:Consolas,monospace;font-size:22px;color:var(--acc)}
+.flags b.t{display:block;margin-bottom:4px;font-size:15.5px}
+.flags .q{color:var(--accd);font-weight:600}
+
+/* plan steps */
+.steps{list-style:none;counter-reset:s;margin:10px 0 0}
+.steps li{counter-increment:s;border-top:1px solid var(--hair);padding:12px 0 12px 52px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:12px;width:28px;height:28px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:Consolas,monospace;font-size:13px}
+.steps b{display:block;margin-bottom:2px}
+
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--acc);color:var(--acc);padding:1px 8px;margin-right:6px;vertical-align:1px}
+.tag.mut{border-color:var(--hair);color:var(--mut)}
+
+.footer{margin-top:72px;border-top:1px solid var(--hair);padding-top:16px;font-size:12.5px;color:var(--mut);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr}
+  nav{position:static;display:none}
+  h1{font-size:30px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Onay Bekleyen Çalışma · Adım 1/2</div>
+  <h1>Excel Bağlantı Tablosu —<br>Anlayış Raporu</h1>
+  <p class="standfirst">Sema_Baglanti_Tablosu.xlsx dosyasının altı sekmesinin tamamı satır satır okundu. Aşağıda devrenin ne yaptığına dair çıkarımım, tam ağ listesi ve şemaya dökmeden önce netleşmesi gereken noktalar var. Onayınla devam ediyorum.</p>
+  <div class="meta">
+    <span><b>Kaynak:</b> Sema_Baglanti_Tablosu.xlsx (6 sekme)</span>
+    <span><b>Bileşen:</b> 34</span>
+    <span><b>Ağ (net):</b> 45</span>
+    <span><b>Verilen:</b> Bağlantı listesi (pin–pin)</span>
+  </div>
+</header>
+
+<div class="layout">
+<nav>
+  <div class="t">İçindekiler</div>
+  <ol>
+    <li class="on"><a href="#s1">Genel bakış</a></li>
+    <li><a href="#s2">Bileşen envanteri</a></li>
+    <li><a href="#s3">Güç mimarisi</a></li>
+    <li><a href="#s4">Sinyal zincirleri</a></li>
+    <li><a href="#s5">Tam net listesi</a></li>
+    <li><a href="#s6">Boş (NC) pinler</a></li>
+    <li><a href="#s7">Dikkat gerektiren 8 nokta</a></li>
+    <li><a href="#s8">Önceki denemeden farklar</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<h2 id="s1"><span class="no">01</span>Genel bakış</h2>
+<p class="lead">Bu kart ne yapıyor — tek paragrafta.</p>
+<p>220V AC şebekeden beslenen, ESP32-DevKitC ile kontrol edilen bir <b>step motor kontrolörü</b>. MeanWell IRM-20-24 modül şebekeyi 24V DC'ye indiriyor; Murata OKI-78SR buck regülatör 5V mantık beslemesini üretiyor. ESP32, LV8729 step sürücü modülünü EN/MS1-3/STEP/DIR pinleriyle sürüyor; diferansiyel enkoder sinyalleri AM26LS32 hat alıcısı ve 74HC4050 tampon üzerinden ESP32'ye geliyor. Sınır algılama üç ayrı sensör ailesiyle yapılıyor: mekanik limit anahtarları (debounce'lu), optik limit sensörleri (tamponlu) ve Hall sensörleri (bölücülü). Ayrıca iki FSR basınç sensörü ve bir UART ekran modülü var. EN hattındaki BC547 transistör devresi, GPIO23 ile yazılımsal reset vermeyi sağlıyor.</p>
+<div class="chain">
+  <div class="row"><span class="blk">220V AC<small>J1 klemens</small></span><span class="ar">──▶</span><span class="blk">PS1 · IRM-20-24<small>AC→24V DC</small></span><span class="ar">──▶</span><span class="blk">U1 · OKI-78SR<small>24V→5V</small></span><span class="ar">──▶</span><span class="blk">Mantık + Modüller<small>5V / 3V3</small></span></div>
+  <div class="row"><span class="blk">ESP32<small>U3 · DevKitC</small></span><span class="ar">──▶</span><span class="blk">LV8729<small>U4 sürücü</small></span><span class="ar">──▶</span><span class="blk">J2<small>step motor</small></span></div>
+  <div class="row"><span class="blk">J3 enkoder<small>diferansiyel</small></span><span class="ar">──▶</span><span class="blk">AM26LS32<small>U5 alıcı</small></span><span class="ar">──▶</span><span class="blk">74HC4050<small>U6 tampon</small></span><span class="ar">──▶</span><span class="blk">ESP32<small>GPIO21/22/13</small></span></div>
+</div>
+
+<h2 id="s2"><span class="no">02</span>Bileşen envanteri</h2>
+<p class="lead">34 bileşen, 8 işlev grubunda. Sayılar Excel 1. sekmeyle birebir.</p>
+<table>
+<caption>Sekme 1 · Devre Bileşenleri Listesi</caption>
+<tr><th>Grup</th><th>Ref</th><th>Bileşen</th><th>Görev</th></tr>
+<tr><td>Bağlantı</td><td class="mono">J1</td><td>3 pinli klemens</td><td>220V AC giriş (L / N / Toprak)</td></tr>
+<tr><td>Bağlantı</td><td class="mono">J2</td><td>Conn_01x04 soket</td><td>Step motor çıkışı (farklı Bobin 1A/1B, 2A/2B)</td></tr>
+<tr><td>Bağlantı</td><td class="mono">J3</td><td>Conn_01x08 soket</td><td>Diferansiyel enkoder girişi (5V, GND, EA±, EB±, EZ±)</td></tr>
+<tr><td>Güç</td><td class="mono">PS1</td><td>IRM-20-24</td><td>220V AC → 24V DC güç modülü</td></tr>
+<tr><td>Güç</td><td class="mono">U1</td><td>OKI-78SR-5/1.5-W36-C</td><td>24V → 5V buck regülatör</td></tr>
+<tr><td>Güç</td><td class="mono">C1 / C2</td><td>100µF / 10µF</td><td>24V hattı / 5V hattı filtre kondansatörleri (kutuplu)</td></tr>
+<tr><td>Kontrol</td><td class="mono">U3</td><td>ESP32-DevKitC</td><td>Ana mikrodenetleyici modülü (38 pin, sokete oturur)</td></tr>
+<tr><td>Kontrol</td><td class="mono">Q1 · R11 · R12 · C5</td><td>BC547 · 10K · 1K · 100nF</td><td>CHIP_PU reset sürücü devresi</td></tr>
+<tr><td>Motor</td><td class="mono">U4</td><td>LV8729 (modül)</td><td>Step motor sürücü; EN, MS1-3, STEP, DIR ile kontrol</td></tr>
+<tr><td>Enkoder</td><td class="mono">U5</td><td>AM26LS32ACN</td><td>3× diferansiyel hat alıcısı (A, B, Z kanalları)</td></tr>
+<tr><td>Enkoder</td><td class="mono">U6</td><td>74HC4050N_652</td><td>Hex tampon; 5 kanal kullanılıyor, kanal 6 boş</td></tr>
+<tr><td>Sensör</td><td class="mono">S1, S2</td><td>Optik limit switch (3 pin)</td><td>Optik sınır algılama → U6 üzerinden</td></tr>
+<tr><td>Sensör</td><td class="mono">S3, S4</td><td>Hall efekt sensörü (3 pin)</td><td>Manyetik sınır algılama → R7-R8 / R9-R10 bölücü</td></tr>
+<tr><td>Sensör</td><td class="mono">SW1, SW2</td><td>Mekanik limit switch (SPDT)</td><td>Sınır anahtarı; R5-R6 pull-up + C3-C4 debounce</td></tr>
+<tr><td>Sensör</td><td class="mono">R1, R3</td><td>FSR (basınç sensörü)</td><td>Kuvvet algılama; R2 / R4 alt dirençle bölücü</td></tr>
+<tr><td>Sensör</td><td class="mono">R2, R4</td><td>10K</td><td>FSR bölücü alt dirençleri</td></tr>
+<tr><td>Sensör</td><td class="mono">R5, R6</td><td>10K</td><td>SW1 / SW2 pull-up'ları (3V3'e)</td></tr>
+<tr><td>Sensör</td><td class="mono">R7, R9</td><td>10K</td><td>Hall çıkışı üst / seri direnç</td></tr>
+<tr><td>Sensör</td><td class="mono">R8, R10</td><td>20K</td><td>Hall çıkışı alt (pull-down) direnç</td></tr>
+<tr><td>İletişim</td><td class="mono">U2</td><td>UART ekran modülü (4 pin)</td><td>VCC, TX, RX, GND</td></tr>
+<tr><td>Filtre</td><td class="mono">C3, C4</td><td>100nF</td><td>SW1 / SW2 debounce kondansatörleri</td></tr>
+</table>
+
+<h2 id="s3"><span class="no">03</span>Güç mimarisi</h2>
+<p class="lead">Sekme 2 · Dört güç ağının tamamı ve üyeleri. GND tek ağ — Excel'de toprak ile DC dönüşü birleşik.</p>
+<table>
+<tr><th>Ağ</th><th class="num">Pad</th><th>Üyeler</th></tr>
+<tr><td class="mono">AC_L</td><td class="num">2</td><td>J1.1, PS1.1</td></tr>
+<tr><td class="mono">AC_N</td><td class="num">2</td><td>J1.2, PS1.2</td></tr>
+<tr><td class="mono">+24V</td><td class="num">4</td><td>PS1.4, U1.1(IN), C1(+), U4.16(VM)</td></tr>
+<tr><td class="mono">+5V</td><td class="num">13</td><td>U1.3, C2(+), U3.19(5V), J3.1, U2.1, U4.10(VDD), U5.16(VCC), U5.4(G), U6.1(VCC), S1.1, S2.1, S3.1, S4.1</td></tr>
+<tr><td class="mono">+3V3</td><td class="num">6</td><td>U3.1(3V3 çıkışı), R1.1, R3.1, R5.2, R6.2, R11.1</td></tr>
+<tr><td class="mono">GND</td><td class="num">27</td><td>J1.3, PS1.3, U1.2, C1(−), C2(−), U2.4, U3.14, U4.9, U4.15, U5.8, U5.12(/G), U6.8, J3.2, S1.3, S2.3, S3.2, S4.2, SW1.2, SW2.2, R2.2, R4.2, R8.1, R10.1, C3(−), C4(−), C5(−), Q1.1(E)</td></tr>
+</table>
+<p>Not: <span class="mono">+3V3</span> ağı harici beslenmiyor — DevKitC 5V'den besleniyor, kendi regülatöründen çıkan 3V3 (U3.1) yalnızca pull-up'ları (R1, R3, R5, R6, R11) besliyor. Excel bunu böyle tanımlıyor, doğru okuduğumı teyit ediyorum.</p>
+
+<h2 id="s4"><span class="no">04</span>Sinyal zincirleri</h2>
+<p class="lead">Sekmeler 3–6 · Yedi zincirin hepsi, yönleriyle. Her satır Excel'deki pin eşleşmelerinin aynısı.</p>
+
+<h3>4.1 — Motor kontrolü (sekme 3)</h3>
+<div class="chain">
+  <div class="row"><span class="blk">U3.12 GPIO14</span><span class="ar">──▶</span><span class="blk">U4.1 EN</span><span class="tag mut">enable</span><span class="blk">U3.26 GPIO4</span><span class="ar">──▶</span><span class="blk">U4.2 MS1</span><span class="blk">U3.29 GPIO5</span><span class="ar">──▶</span><span class="blk">U4.3 MS2</span><span class="blk">U3.9 GPIO25</span><span class="ar">──▶</span><span class="blk">U4.4 MS3</span></div>
+  <div class="row"><span class="blk">U3.10 GPIO26</span><span class="ar">──▶</span><span class="blk">U4.7 STEP</span><span class="blk">U3.11 GPIO27</span><span class="ar">──▶</span><span class="blk">U4.8 DIR</span><span class="blk">U4.14/13/12/11</span><span class="ar">──▶</span><span class="blk">J2.1/2/3/4<small>1A · 1B · 2A · 2B</small></span></div>
+</div>
+<p>U4.5 (RST) ve U4.6 (RST2) boşta. Motor sargıları: J2.1=1A, J2.2=1B, J2.3=2A, J2.4=2B — Excel'in sırası aynen korunacak.</p>
+
+<h3>4.2 — Diferansiyel enkoder (sekmeler 4–5)</h3>
+<div class="chain">
+  <div class="row"><span class="blk">J3.3 EA+ / J3.4 EA−</span><span class="ar">──▶</span><span class="blk">U5.2/1 · 1Y(3)</span><span class="ar">──▶</span><span class="blk">U6.3 1A · 1Y(2)</span><span class="ar">──▶</span><span class="blk">U3.32 GPIO21</span></div>
+  <div class="row"><span class="blk">J3.5 EB+ / J3.6 EB−</span><span class="ar">──▶</span><span class="blk">U5.7/6 · 2Y(5)</span><span class="ar">──▶</span><span class="blk">U6.5 2A · 2Y(4)</span><span class="ar">──▶</span><span class="blk">U3.33 GPIO22</span></div>
+  <div class="row"><span class="blk">J3.7 EZ+ / J3.8 EZ−</span><span class="ar">──▶</span><span class="blk">U5.9/10 · 3Y(11)</span><span class="ar">──▶</span><span class="blk">U6.7 3A · 3Y(6)</span><span class="ar">──▶</span><span class="blk">U3.15 GPIO13</span></div>
+</div>
+<p>AM26LS32'nin enable pinleri: <span class="mono">U5.4 (G) → +5V</span> (1–2. kanal aktif, yüksek aktif) ve <span class="mono">U5.12 (/G) → GND</span> (3–4. kanal aktif, düşük aktif). Excel'deki yönlendirme bu; A/B/Z için 3 alıcı kullanılıyor, 4.'sü (pin 13–15) boş.</p>
+
+<h3>4.3 — Optik limit sensörleri (sekmeler 4–5)</h3>
+<div class="chain">
+  <div class="row"><span class="blk">S1.2 (S)</span><span class="ar">──▶</span><span class="blk">U6.9 4A · 4Y(10)</span><span class="ar">──▶</span><span class="blk">U3.30 GPIO18</span><span class="blk">S2.2 (S2)</span><span class="ar">──▶</span><span class="blk">U6.11 5A · 5Y(12)</span><span class="ar">──▶</span><span class="blk">U3.31 GPIO19</span></div>
+</div>
+
+<h3>4.4 — Mekanik limit anahtarları (sekmeler 3–5)</h3>
+<div class="chain">
+  <div class="row"><span class="blk">SW1.1</span><span class="ar">──</span><span class="blk">U3.3 GPIO36</span><span class="ar">──</span><span class="blk">R5.1<small>pull-up → 3V3 (R5.2)</small></span><span class="ar">──</span><span class="blk">C3 (+)<small>100nF, (−) → GND</small></span></div>
+  <div class="row"><span class="blk">SW2.1</span><span class="ar">──</span><span class="blk">U3.4 GPIO39</span><span class="ar">──</span><span class="blk">R6.1<small>pull-up → 3V3 (R6.2)</small></span><span class="ar">──</span><span class="blk">C4 (+)<small>100nF, (−) → GND</small></span></div>
+</div>
+<p>SW1/SW2 SPDT: pin 1 = sinyal tarafı, pin 2 = GND, pin 3 = boş. Yani anahtar kapalıyken pin GPIO'yu GND'ye çeker, R5/R6 ile HIGH'a çeken pull-up var; RC (10K × 100nF) debounce ediyor.</p>
+
+<h3>4.5 — Hall sensörleri (sekmeler 3–5)</h3>
+<div class="chain">
+  <div class="row"><span class="blk">S3.3 OUT</span><span class="ar">──▶</span><span class="blk">R7 10K<small>seri</small></span><span class="ar">──▶</span><span class="blk">U3.5 GPIO34</span><span class="ar">──</span><span class="blk">R8 20K<small>→ GND</small></span></div>
+  <div class="row"><span class="blk">S4.3 OUT</span><span class="ar">──▶</span><span class="blk">R9 10K<small>seri</small></span><span class="ar">──▶</span><span class="blk">U3.6 GPIO35</span><span class="ar">──</span><span class="blk">R10 20K<small>→ GND</small></span></div>
+</div>
+<p>Bu klasik "üst direnç 5V'ye bağlı pull-up bölücüsü değil": R7'nin serbest ucu hiçbir beslemeye gitmiyor, sensör çıkışına bağlı. Yani konfigürasyon <b>seri direnç + 20K pull-down</b>. Bunu Excel'den böyle okudum; 7. bölümdeki soru listesinde teyidine yer var.</p>
+
+<h3>4.6 — FSR basınç sensörleri (sekmeler 3–5)</h3>
+<div class="chain">
+  <div class="row"><span class="blk">U3.1 3V3</span><span class="ar">──▶</span><span class="blk">R1 FSR</span><span class="ar">──</span><span class="blk">U3.7 GPIO32</span><span class="ar">──</span><span class="blk">R2 10K<small>→ GND</small></span></div>
+  <div class="row"><span class="blk">U3.1 3V3</span><span class="ar">──▶</span><span class="blk">R3 FSR</span><span class="ar">──</span><span class="blk">U3.8 GPIO33</span><span class="ar">──</span><span class="blk">R4 10K<small>→ GND</small></span></div>
+</div>
+
+<h3>4.7 — UART ekran modülü (sekmeler 3–5)</h3>
+<div class="chain">
+  <div class="row"><span class="blk">U2.2 TX</span><span class="ar">──▶</span><span class="blk">U3.27 GPIO16 RX</span><span class="blk">U3.28 GPIO17 TX</span><span class="ar">──▶</span><span class="blk">U2.3 RX</span></div>
+</div>
+
+<h3>4.8 — Reset / EN sürücü devresi (sekme 3)</h3>
+<div class="chain">
+  <div class="row"><span class="blk">U3.37 GPIO23</span><span class="ar">──▶</span><span class="blk">R12 1K</span><span class="ar">──▶</span><span class="blk">Q1.2 Base</span><span class="blk">Q1.1 Emitter</span><span class="ar">──▶</span><span class="blk">GND</span></div>
+  <div class="row"><span class="blk">+3V3<small>R11 10K pull-up</small></span><span class="ar">──▶</span><span class="blk">U3.2 CHIP_PU</span><span class="ar">──</span><span class="blk">Q1.3 Collector</span><span class="ar">──</span><span class="blk">C5 100nF<small>→ GND</small></span></div>
+</div>
+<p>GPIO23 HIGH → Q1 iletime geçer → CHIP_PU GND'ye çekilir → ESP32 resetlenir. R11 hattı HIGH'ta tutar, C5 soft-start / gürültü filtresi sağlar. İşlevsel bağlantı bu; fiziksel TO-92 pin sırasıyla ilgili düzeltme notu 7. bölümde.</p>
+
+<h2 id="s5"><span class="no">05</span>Tam net listesi</h2>
+<p class="lead">Excel'den türetilen 45 ağ. Güç ağları 3. bölümde ayrıntılı; burada kalan 39 sinyal ağı. Bu tablo, şematik ve PCB çiziminin doğruluk referansı olacak.</p>
+<table>
+<tr><th>#</th><th>Ağ adı (önerim)</th><th>Bağlı pinler</th><th>Yön / işlev</th></tr>
+<tr><td class="num">1</td><td class="mono">M_EN</td><td class="mono">U3.12 ↔ U4.1</td><td>GPIO14 → sürücü enable</td></tr>
+<tr><td class="num">2</td><td class="mono">M_MS1</td><td class="mono">U3.26 ↔ U4.2</td><td>GPIO4 → microstep 1</td></tr>
+<tr><td class="num">3</td><td class="mono">M_MS2</td><td class="mono">U3.29 ↔ U4.3</td><td>GPIO5 → microstep 2</td></tr>
+<tr><td class="num">4</td><td class="mono">M_MS3</td><td class="mono">U3.9 ↔ U4.4</td><td>GPIO25 → microstep 3</td></tr>
+<tr><td class="num">5</td><td class="mono">M_STEP</td><td class="mono">U3.10 ↔ U4.7</td><td>GPIO26 → adım darbesi</td></tr>
+<tr><td class="num">6</td><td class="mono">M_DIR</td><td class="mono">U3.11 ↔ U4.8</td><td>GPIO27 → yön</td></tr>
+<tr><td class="num">7</td><td class="mono">MOT_1A</td><td class="mono">U4.14 ↔ J2.1</td><td>bobin 1A</td></tr>
+<tr><td class="num">8</td><td class="mono">MOT_1B</td><td class="mono">U4.13 ↔ J2.2</td><td>bobin 1B</td></tr>
+<tr><td class="num">9</td><td class="mono">MOT_2A</td><td class="mono">U4.12 ↔ J2.3</td><td>bobin 2A</td></tr>
+<tr><td class="num">10</td><td class="mono">MOT_2B</td><td class="mono">U4.11 ↔ J2.4</td><td>bobin 2B</td></tr>
+<tr><td class="num">11</td><td class="mono">ENC_A_P</td><td class="mono">J3.3 ↔ U5.2 (1A)</td><td>diferansiyel A+</td></tr>
+<tr><td class="num">12</td><td class="mono">ENC_A_N</td><td class="mono">J3.4 ↔ U5.1 (1B)</td><td>diferansiyel A−</td></tr>
+<tr><td class="num">13</td><td class="mono">ENC_B_P</td><td class="mono">J3.5 ↔ U5.7 (2B)</td><td>diferansiyel B+</td></tr>
+<tr><td class="num">14</td><td class="mono">ENC_B_N</td><td class="mono">J3.6 ↔ U5.6 (2A)</td><td>diferansiyel B−</td></tr>
+<tr><td class="num">15</td><td class="mono">ENC_Z_P</td><td class="mono">J3.7 ↔ U5.9 (3B)</td><td>diferansiyel Z+</td></tr>
+<tr><td class="num">16</td><td class="mono">ENC_Z_N</td><td class="mono">J3.8 ↔ U5.10 (3A)</td><td>diferansiyel Z−</td></tr>
+<tr><td class="num">17</td><td class="mono">ENC_A_BUF</td><td class="mono">U5.3 (1Y) ↔ U6.3 (1A)</td><td>alıcı → tampon</td></tr>
+<tr><td class="num">18</td><td class="mono">ENC_B_BUF</td><td class="mono">U5.5 (2Y) ↔ U6.5 (2A)</td><td>alıcı → tampon</td></tr>
+<tr><td class="num">19</td><td class="mono">ENC_Z_BUF</td><td class="mono">U5.11 (3Y) ↔ U6.7 (3A)</td><td>alıcı → tampon</td></tr>
+<tr><td class="num">20</td><td class="mono">GPIO21_ENC_A</td><td class="mono">U6.2 (1Y) ↔ U3.32</td><td>tampon → ESP32</td></tr>
+<tr><td class="num">21</td><td class="mono">GPIO22_ENC_B</td><td class="mono">U6.4 (2Y) ↔ U3.33</td><td>tampon → ESP32</td></tr>
+<tr><td class="num">22</td><td class="mono">GPIO13_ENC_Z</td><td class="mono">U6.6 (3Y) ↔ U3.15</td><td>tampon → ESP32</td></tr>
+<tr><td class="num">23</td><td class="mono">OPTIC1_RAW</td><td class="mono">S1.2 ↔ U6.9 (4A)</td><td>optik 1 → tampon</td></tr>
+<tr><td class="num">24</td><td class="mono">OPTIC2_RAW</td><td class="mono">S2.2 ↔ U6.11 (5A)</td><td>optik 2 → tampon</td></tr>
+<tr><td class="num">25</td><td class="mono">GPIO18_OPTIC1</td><td class="mono">U6.10 (4Y) ↔ U3.30</td><td>tampon → ESP32</td></tr>
+<tr><td class="num">26</td><td class="mono">GPIO19_OPTIC2</td><td class="mono">U6.12 (5Y) ↔ U3.31</td><td>tampon → ESP32</td></tr>
+<tr><td class="num">27</td><td class="mono">SW1_SIG</td><td class="mono">SW1.1 ↔ U3.3 ↔ R5.1 ↔ C3(+)</td><td>GPIO36 · pull-up + debounce</td></tr>
+<tr><td class="num">28</td><td class="mono">SW2_SIG</td><td class="mono">SW2.1 ↔ U3.4 ↔ R6.1 ↔ C4(+)</td><td>GPIO39 · pull-up + debounce</td></tr>
+<tr><td class="num">29</td><td class="mono">HALL1_RAW</td><td class="mono">S3.3 ↔ R7.1</td><td>Hall 1 çıkışı</td></tr>
+<tr><td class="num">30</td><td class="mono">HALL1_DIV</td><td class="mono">R7.2 ↔ R8.2 ↔ U3.5</td><td>GPIO34 · bölücü orta ucu</td></tr>
+<tr><td class="num">31</td><td class="mono">HALL2_RAW</td><td class="mono">S4.3 ↔ R9.1</td><td>Hall 2 çıkışı</td></tr>
+<tr><td class="num">32</td><td class="mono">HALL2_DIV</td><td class="mono">R9.2 ↔ R10.2 ↔ U3.6</td><td>GPIO35 · bölücü orta ucu</td></tr>
+<tr><td class="num">33</td><td class="mono">FSR1_TOP</td><td class="mono">R1.2 ↔ R2.1 ↔ U3.7</td><td>GPIO32 · FSR bölücü 1</td></tr>
+<tr><td class="num">34</td><td class="mono">FSR2_TOP</td><td class="mono">R3.2 ↔ R4.1 ↔ U3.8</td><td>GPIO33 · FSR bölücü 2</td></tr>
+<tr><td class="num">35</td><td class="mono">UART_M_TX</td><td class="mono">U2.2 ↔ U3.27</td><td>modül TX → ESP32 RX (GPIO16)</td></tr>
+<tr><td class="num">36</td><td class="mono">UART_M_RX</td><td class="mono">U3.28 ↔ U2.3</td><td>ESP32 TX (GPIO17) → modül RX</td></tr>
+<tr><td class="num">37</td><td class="mono">GPIO23_RST</td><td class="mono">U3.37 ↔ R12.1</td><td>yazılım reset komutu</td></tr>
+<tr><td class="num">38</td><td class="mono">Q1_BASE</td><td class="mono">R12.2 ↔ Q1.2</td><td>transistör baz sürücü</td></tr>
+<tr><td class="num">39</td><td class="mono">CHIP_PU</td><td class="mono">U3.2 ↔ Q1.3 ↔ R11.2 ↔ C5(+)</td><td>reset hattı · pull-up + filtre</td></tr>
+</table>
+<p>Güç ağlarıyla birlikte toplam <b>45 net</b>. Karşılaştırma için: sekme 2'deki GND satırı 27 üye listeliyor; bu satırı 3. bölümdeki tabloda aynen aldım.</p>
+
+<h2 id="s6"><span class="no">06</span>Boş (NC) pinler</h2>
+<p class="lead">Excel'de "Boş / NC" yazan her pin — şematikte bağlantısız bırakılacak, hiçbiri uydurulmayacak.</p>
+<table>
+<tr><th>Bileşen</th><th>NC pinler</th><th>Not</th></tr>
+<tr><td class="mono">U3 ESP32</td><td class="mono">13, 16–18, 20–25, 34–35</td><td>GPIO12 dahil boş; 38. pin Excel'de hiç geçmiyor (muhtemelen GND veya CLK — 7. bölüm)</td></tr>
+<tr><td class="mono">U4 LV8729</td><td class="mono">5 (RST), 6 (RST2)</td><td>Modülün reset pinleri kullanılmıyor</td></tr>
+<tr><td class="mono">U5 AM26LS32</td><td class="mono">13–15 (4Y, 4A, 4B)</td><td>4. alıcı kanalı kullanılmıyor</td></tr>
+<tr><td class="mono">U6 74HC4050</td><td class="mono">13–16 (6A, 6Y, ...)</td><td>6. tampon kanalı kullanılmıyor</td></tr>
+<tr><td class="mono">SW1, SW2</td><td class="mono">3</td><td>SPDT'nin ikinci konumu kullanılmıyor (NO/NC seçimi 7. bölümde)</td></tr>
+</table>
+
+<h2 id="s7"><span class="no">07</span>Dikkat gerektiren 8 nokta</h2>
+<p class="lead">Şemaya dökmeden önce netleşmemiz gerekenler. Her biri için önerim de hazır; onayında "hepsi uygun" diyebilirsin ya da istediğini düzeltebilirsin.</p>
+<ol class="flags">
+<li>
+  <b class="t">BC547 pin sırası Excel ile standart pinout arasında ters</b>
+  <p>Excel'de Q1: Pin 1 = E, Pin 2 = B, Pin 3 = C. Standart BC547 (TO-92) pinout'u ise 1 = Collector, 2 = Base, 3 = Emitter. İkisi uyuşmuyor — Excel'in numaralarını birebir TO-92 footprint'e uygularsam kollektör ve emitör fiziksel olarak ters olur. <span class="q">Önerim:</span> işlevsel bağlantı Excel'deki gibi kalacak (E→GND, B→R12, C→CHIP_PU); fiziksel pin numaralandırmasını standart BC547'ye göre kuracağım. Devre aynı, sadece gerçek yarı iletkenle eşleşir.</p>
+</li>
+<li>
+  <b class="t">ESP32-DevKitC pin numaralandırması</b>
+  <p>Excel U3'ü 1–37 arası fiziksel numarayla anlatıyor; sol sütun (3V3, EN, GPIO36...5V) standart DevKitC ile birebir örtüşüyor, sağ sütunun numaraları ise standart silkscreen sırasından farklı ilerliyor. DevKitC bir modül olduğu için kritik olan fiziksel numara değil <b>pin adı</b> (GPIO21, GPIO16...). <span class="q">Önerim:</span> şematik sembolü 38 pinli, pin adlarıyla kuracağım; PCB footprint'i standart 2×19 dişi soket (2.54 mm pitch, 25.4 mm sıra aralığı) olacak. Excel'deki tüm GPIO atamaları standart DevKitC sinyal adlarıyla birebir eşleşiyor.</p>
+</li>
+<li>
+  <b class="t">220V tarafı ile GND'nin aynı ağda birleşmesi</b>
+  <p>Excel, J1.3'ü "Toprak Bağlantısı" diyor ve PS1.3, U1.2 dahil her şeyle tek GND ağında birleştiriyor. Bu senin tasarım kararın; aynen uygulayacağım. PCB'de dikkat edeceğim şey: AC_L / AC_N izleri ile diğer her şey arasında üretim güvenli kleransı (en az 2.5 mm net class kuralı) tanımlamak — AC yalnızca J1 ↔ PS1 arasında yaşadığı için bu kolay.</p>
+</li>
+<li>
+  <b class="t">U5 enable pinleri — yönlendirme teyidi</b>
+  <p>U5.4 (G) → +5V ve U5.12 (/G) → GND. AM26LS32'de G yüksek aktif (1–2. kanal), /G düşük aktif (3–4. kanal); yani her iki enable da "aktif" konumda ve A/B/Z kanalları çalışıyor. Excel ile tutarlı — değişiklik önermiyorum, sadece okuduğum mantığı teyit ediyorum.</p>
+</li>
+<li>
+  <b class="t">Hall sensör bölücü topolojisi</b>
+  <p>R7'nin serbest ucu +5V'ye değil, doğrudan sensör çıkışına gidiyor; R8 altta GND'ye. Bu, klasik pull-up bölücü değil, "seri + pull-down" düzeni. <span class="q">Soru:</span> senin kastın bu muydu (R7 seri koruma + R8 pull-down), yoksa R7'nin üst ucu +5V'ye mi gitmeliydi? Excel'e bakılırsa birincisi; onaysa aynen uygulayacağım.</p>
+</li>
+<li>
+  <b class="t">DIP mı, SOIC mı — minimum alan sorusu</b>
+  <p>Excel U5 = AM26LS32ACN (PDIP-16) ve U6 = 74HC4050N_652 (DIP-16) diye belirli — yani through-hole. "En küçük PCB alanı" hedefin için en büyük kazanç burada: her ikisinin SOIC-16 sürümü (AM26LS32ACDR, 74HC4050D_653) yarıdan fazla yer kaplamaz ve köprüleme gerektirmez. <span class="q">Önerim:</span> Excel'e sadık kalıp DIP-16 yapmak istersen yaparım; alan hedefi öncelikliyse SOIC-16'a geçişini öneririm. Karar senin.</p>
+</li>
+<li>
+  <b class="t">Modül soketleri ve sensör bağlantı biçimi</b>
+  <p>U3, U4, U2 kart <b>üzerine takılan modüller</b>: ESP32 → 2×19 dişi soket, LV8729 → muhtemelen 2×8 stepstick soketi (tek sıra 16 pin değilse), U2 → 1×4 soket. S1/S2/S3/S4 ve muhtemelen R1/R3 (FSR) kart dışı elemanlar — bunları 2.54 mm (veya JST-XH) pin header ile kart çıkışına alacağım; sensör kablosu oraya takılır. <span class="q">Soru:</span> LV8729 modülün fiziksel formatı 2×8 (stepstick) mi, tek sıra mı? Ve FSR'ları karta lehimli mi yoksa dışarıdan konnektörlü mü sayayım? Önerim: ikisi de konnektörlü.</p>
+</li>
+<li>
+  <b class="t">U4 motor sargı sırası</b>
+  <p>Excel U4'ün alt sırasını GND, VDD, 2B, 2A, 1B, 1A, GND, VM diye listeliyor — yaygın A4988 stepstick düzeninden (1B, 1A, 2A, 2B) farklı. LV8729 modülleri üreticiye göre değişiyor. J2 soketi zaten dışarıda olduğundan motor teli takılıp ters çevrilerek düzeltilebilir; ama şema-PCB tutarlılığı için Excel'deki sırayı aynen uygulayacağım. Yalnız U4'ün fiziksel modülünle birebir eşleşmesi için yukarıdaki 2×8 sorusuna verdiğin cevaba bağlıyım.</p>
+</li>
+</ol>
+
+<h2 id="s8"><span class="no">08</span>Önceki denemeden farklar ve onay sonrası plan</h2>
+<p class="lead">Önceki üretim neden gerçek bir PCB değildi — ve bu sefer nasıl farklı olacak.</p>
+<p>Önceki çıktıda üç yapısal hata vardı ve bunları açıkça kabul ediyorum: (1) Footprint'ler gerçek kütüphane parçaları değil, elle çizilmiş uydurma pad'lerdi; (2) 45 ağın yalnızca 4 güç ağı PCB'ye aktarılmış, 41 sinyal ağı hiç bağlanmamıştı — dolayısıyla üretilen "Gerber" pad'lerden ibaret, elektriksel olarak tamamlanmamış bir taslaktı; (3) Şematik dosyası sembollerin yerleşiminden ibaretti, pinler arasında gerçek kablo/net bağlantısı yoktu. Bunun sonucunda DRC'nin gösterdiği 1485 ihlal "routing bekleniyor" değil, "tasarım henüz yok" demekti. Bu sefer zincir ters kurulacak: önce gerçek şematik, oradan üretilen netlist, gerçek kütüphane footprint'leri, sonra yerleşim ve routing — Gerber en son, DRC temizken.</p>
+<ol class="steps">
+<li><b>Şematik (KiCad S-expression, elle kurulmuş)</b>38 pinli ESP32-DevKitC sembolü dahil tüm semboller gerçek pin adlarıyla; güç sembolleri ve global etiketlerle 45 netin tamamı bağlanmış. Sıfır uydurma pin.</li>
+<li><b>Netlist üretimi</b>Şematikten kicad-cli ile netlist çıkarımı; Excel'in 45 ağıyla satır satır karşılaştırma ve fark raporu — senin tablonla birebir eşleşmeden PCB'ye geçilmeyecek.</li>
+<li><b>Gerçek footprint'ler</b>KiCad'in resmi kütüphanelerinden: 0805 direnç/kondansatör, DIP-16 (veya onaylarsan SOIC-16), TO-92, TO-220, 2.54 mm header/soket ailesi, 5.08 mm klemens, IRM-20 footprint'i, 2×19 ve 2×8 modül soketleri.</li>
+<li><b>Yerleşim + minimum alan</b>Güç yolunun kısalığı (PS1→U1→U4), kristal benzeri STEP/DIR hattının kısalığı, enkoder diferansiyel çiftlerinin eşit uzunlukta olması; modüllerin sökülüp takılabilir kenarlarda olması. Hedef: 100×80'in altına inebiliyorken inmek, alan raporunu sana vermek.</li>
+<li><b>Routing</b>Güç: +24V/GND geniş iz ve B.Cu düzlem; sinyaller: F.Cu. AC net class'ına 2.5 mm klerans kuralı. Step motor çıkışlarına kalın iz. Kalan zor kısımlar için via'lı 2 katman çözümü.</li>
+<li><b>DRC + ERC temizlenene kadar döngü</b>Her ihlal tek tek giderilecek; raporda "0 hata" görmeden Gerber üretimi yapılmayacak.</li>
+<li><b>Gerber + üretim paketi</b>Gerber, Excellon drill, PnP, BOM ve montaj PDF'i. GitHub'a push + CI/CD kontrolü. Paket sana son teslim olarak sunulacak.</li>
+</ol>
+<p>Onay verdikten sonra 1. adımdan başlıyorum; 7. bölümdeki 8 soruya "önerim gibi" dediğin noktalarda önerimi uygulayıp, farklı istediklerini notuna göre değiştirerek ilerleyeceğim. Süreç sonunda tek seferde Gerber'e kadar geliyorum — arada onay istemeyeceğim.</p>
+
+</main>
+</div>
+
+<div class="footer">
+  <span>Anlayış raporu · Sema_Baglanti_Tablosu.xlsx · 6 sekme / 34 bileşen / 45 net</span>
+  <span>Adım 1/2 — onay bekleniyor</span>
+</div>
+</div>
+</body>
+</html>
