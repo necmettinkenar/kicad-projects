@@ -48,7 +48,26 @@ def extract_lib_symbol(lib, name):
         blk = re.sub(r'\n?\s*\(extends "[^"]+"\)', '', pblk)
         depth += 1
     # rename top-level:  (symbol "Name"  ->  (symbol "Lib:Name"
-    return blk.replace('(symbol "' + name + '"', '(symbol "' + lib + ':' + name + '"', 1)
+    blk = blk.replace('(symbol "' + name + '"', '(symbol "' + lib + ':' + name + '"', 1)
+    # PS1: force -Vo/+Vo pins to power_out so GND/+24V count as driven for ERC
+    if name == 'IRM-20-24':
+        out = []
+        i = 0
+        while i < len(blk):
+            m2 = re.compile(r'\(pin (\w+)').search(blk, i)
+            if not m2:
+                out.append(blk[i:]); break
+            j = m2.start()
+            out.append(blk[i:j])
+            pinblk = extract_block(blk, j)
+            nm2 = re.search(r'\(name "([^"]*)"', pinblk)
+            pn = nm2.group(1) if nm2 else ''
+            if pn in ('-Vo', '+Vo'):
+                pinblk = pinblk.replace('(pin ' + m2.group(1), '(pin power_out', 1)
+            out.append(pinblk)
+            i = j + len(pinblk)
+        blk = ''.join(out)
+    return blk
 
 def parse_pins(blk):
     """Extract pins from a symbol block: number -> (x, y, angle, name, etype)."""
@@ -278,6 +297,7 @@ A('\t)')
 
 symbol_ems = []
 label_ems = []
+nc_ems = []
 nets_json = {}
 
 for ref, lib, name, value, fp, pinmap in COMPS:
@@ -314,6 +334,9 @@ for ref, lib, name, value, fp, pinmap in COMPS:
         if net:
             label_ems.append((net, ex, ey, outward))
             net_members.setdefault(net, []).append([ref, num])
+        else:
+            # unconnected pin: emit no_connect marker (ERC pin_not_connected fix)
+            nc_ems.append((ex, ey))
     A('\t\t(instances')
     A('\t\t\t(project "step-motor-controller"')
     A(f'\t\t\t\t(path "/{ROOT}"')
@@ -330,6 +353,13 @@ for ref, lib, name, value, fp, pinmap in COMPS:
 # (power_out), U1's VO (power_out) and U3.1 3V3 (power_out), satisfying ERC.
 
 # (FLG refs are assigned directly per-flag at emit time; no rename pass needed)
+
+# no_connect markers on unlabeled pins
+for (ex, ey) in nc_ems:
+    A('\t(no_connect')
+    A(f'\t\t(at {ex:.4f} {ey:.4f})')
+    A(f'\t\t(uuid "{uid()}")')
+    A('\t)')
 
 # global labels
 for net, ex, ey, ang in label_ems:

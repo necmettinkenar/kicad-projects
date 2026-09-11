@@ -1,0 +1,713 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-11T15:59:08",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.3",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/a1b2c3d4-0000-4000-8000-000000000001",
+            "violations": [
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol PS1 Pin 1 [AC/L, Power input, Line]",
+                            "pos": {
+                                "x": 0.6484,
+                                "y": 0.4246
+                            },
+                            "uuid": "f2c88bc6-a92c-4e47-ad21-35d316fa1260"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol PS1 Pin 2 [AC/N, Power input, Line]",
+                            "pos": {
+                                "x": 0.6484,
+                                "y": 0.4754
+                            },
+                            "uuid": "aa3f30d5-cfae-4e56-952c-c1dbc63ef2f5"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol J1 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 0.2992,
+                                "y": 0.4246
+                            },
+                            "uuid": "e1ac465b-b452-4d8d-bd8b-4e32ae4403b0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol S1 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 0.2992,
+                                "y": 2.0746
+                            },
+                            "uuid": "00bb1e6f-042b-4039-a77b-307401d80bfa"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol S2 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 0.2992,
+                                "y": 2.2946
+                            },
+                            "uuid": "a9e803ea-9926-423e-b6b2-7f9b4ae1e781"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol SW1 Pin 1 [A, Passive, Line]",
+                            "pos": {
+                                "x": 0.4008,
+                                "y": 1.6246
+                            },
+                            "uuid": "256eefa1-48b2-49fb-814b-6746935a72e3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol SW2 Pin 1 [A, Passive, Line]",
+                            "pos": {
+                                "x": 0.4008,
+                                "y": 1.8446
+                            },
+                            "uuid": "4501a63d-dd5d-471d-9050-a620b145d372"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U5 Pin 1 [1B, Passive, Line]",
+                            "pos": {
+                                "x": 0.623,
+                                "y": 1.0611
+                            },
+                            "uuid": "3621e358-b150-430a-878a-97af458ef0a6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol PS1 Pin 1 [AC/L, Power input, Line]",
+                            "pos": {
+                                "x": 0.6484,
+                                "y": 0.4246
+                            },
+                            "uuid": "f2c88bc6-a92c-4e47-ad21-35d316fa1260"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R5 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.66,
+                                "y": 1.5619
+                            },
+                            "uuid": "52365d15-52b3-4fee-a53d-83b3a022fcdf"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R6 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.66,
+                                "y": 1.7819
+                            },
+                            "uuid": "93e05c25-b7ec-40d2-8edf-cdbb829d93db"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "'IRM-20-24' sembolü 'Converter_ACDC' kütüphanesindeki kopyayla eşleşmiyor",
+                    "items": [
+                        {
+                            "description": "SembollerPS1 [IRM-20-24]",
+                            "pos": {
+                                "x": 0.75,
+                                "y": 0.45
+                            },
+                            "uuid": "99220b13-a253-457a-80a1-efd01e958c2c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C1 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.75,
+                                "y": 0.6819
+                            },
+                            "uuid": "68f4fdba-aed3-4159-9cd5-65b6e8b4126e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Mevcut yapılandırma 'KicadAuto' sembol kütüphanesini içermiyor",
+                    "items": [
+                        {
+                            "description": "SembollerU5 [AM26LS32ACN]",
+                            "pos": {
+                                "x": 0.75,
+                                "y": 1.15
+                            },
+                            "uuid": "a5ef2218-8295-4901-8e41-c90edce889e7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol S3 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 0.8492,
+                                "y": 2.1246
+                            },
+                            "uuid": "835078bb-e886-42ae-a759-f23c60394f2a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol S4 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 0.8492,
+                                "y": 2.3746
+                            },
+                            "uuid": "fd0122a2-547c-4366-8962-36cae69a4af6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C3 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.92,
+                                "y": 1.6119
+                            },
+                            "uuid": "c8d4eca0-d622-4dcc-a9b3-1670316b887c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C4 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.92,
+                                "y": 1.8319
+                            },
+                            "uuid": "0dbacbad-834d-4018-ac6b-24f4507fe746"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 1 [VI, Power input, Line]",
+                            "pos": {
+                                "x": 1.023,
+                                "y": 0.45
+                            },
+                            "uuid": "7d9eba82-d68b-40e4-8495-1e7f67d419d4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Mevcut yapılandırma 'KicadAuto' sembol kütüphanesini içermiyor",
+                    "items": [
+                        {
+                            "description": "SembollerU1 [OKI-78SR]",
+                            "pos": {
+                                "x": 1.15,
+                                "y": 0.45
+                            },
+                            "uuid": "f68388a3-140b-4f63-b302-4ba122af1963"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C2 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 1.15,
+                                "y": 0.6819
+                            },
+                            "uuid": "e01ac4b5-66fe-44de-877f-6038f782ce84"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R7 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 1.22,
+                                "y": 2.0619
+                            },
+                            "uuid": "f63e05c3-d1bc-4b1d-964e-98d3ea700e20"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R8 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 1.22,
+                                "y": 2.2419
+                            },
+                            "uuid": "7b5d0b54-ac58-4b88-ab3f-93df49ba84a6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U6 Pin 1 [VCC, Power input, Line]",
+                            "pos": {
+                                "x": 1.223,
+                                "y": 1.0611
+                            },
+                            "uuid": "db036bc4-33b4-47f0-bda4-192b19477af0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Mevcut yapılandırma 'KicadAuto' sembol kütüphanesini içermiyor",
+                    "items": [
+                        {
+                            "description": "SembollerU6 [74HC4050]",
+                            "pos": {
+                                "x": 1.35,
+                                "y": 1.15
+                            },
+                            "uuid": "7bb798ec-1853-4ab1-8541-5fbbe44573a5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R9 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 1.48,
+                                "y": 2.0619
+                            },
+                            "uuid": "dfb8e4f5-99c8-4188-9f11-fead1831915f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R10 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 1.48,
+                                "y": 2.2419
+                            },
+                            "uuid": "7d429fe4-fc6f-4679-a369-6228f55456e1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "'BC547' sembolü 'Transistor_BJT' kütüphanesindeki kopyayla eşleşmiyor",
+                    "items": [
+                        {
+                            "description": "SembollerQ1 [BC547]",
+                            "pos": {
+                                "x": 1.7,
+                                "y": 0.52
+                            },
+                            "uuid": "7ff37d29-107e-4c33-a4fa-333fd3c3071c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R11 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 1.7,
+                                "y": 0.6619
+                            },
+                            "uuid": "d64885ef-0437-4750-bec7-899f0dcf877e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C5 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 1.7,
+                                "y": 0.8419
+                            },
+                            "uuid": "a519b10a-2536-436b-9d54-2061d399100e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol Q1 Pin 1 [C, Passive, Line]",
+                            "pos": {
+                                "x": 1.7254,
+                                "y": 0.4692
+                            },
+                            "uuid": "1bc25123-5ef3-4120-a55c-3afff5b222ba"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R1 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 1.8992,
+                                "y": 1.6
+                            },
+                            "uuid": "8557f6b5-6d0a-43d3-93fc-e3f508dabd47"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R3 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 1.8992,
+                                "y": 1.82
+                            },
+                            "uuid": "279705ac-9260-494f-88e2-a5cfc717474d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R12 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 1.96,
+                                "y": 0.6619
+                            },
+                            "uuid": "74daf7ed-64b4-4ec6-ac6d-65ecf711b24d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 1 [3V3, Power output, Line]",
+                            "pos": {
+                                "x": 2.1722,
+                                "y": 0.6214
+                            },
+                            "uuid": "9d54b124-45a4-46b6-bfef-64fbab32c659"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R2 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 2.22,
+                                "y": 1.5619
+                            },
+                            "uuid": "3446ac89-3888-42bc-bc73-ccad0842965e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R4 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 2.22,
+                                "y": 1.7819
+                            },
+                            "uuid": "6d1f857d-592c-4fc4-95ea-8d9b7047cb25"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Mevcut yapılandırma 'AUTO' ayak izi kütüphanesini içermiyor",
+                    "items": [
+                        {
+                            "description": "SembollerU3 [ESP32-DevKitC]",
+                            "pos": {
+                                "x": 2.35,
+                                "y": 0.85
+                            },
+                            "uuid": "dc9f1cf1-4edc-4600-a094-6319c338d546"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Mevcut yapılandırma 'KicadAuto' sembol kütüphanesini içermiyor",
+                    "items": [
+                        {
+                            "description": "SembollerU3 [ESP32-DevKitC]",
+                            "pos": {
+                                "x": 2.35,
+                                "y": 0.85
+                            },
+                            "uuid": "dc9f1cf1-4edc-4600-a094-6319c338d546"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 2.4492,
+                                "y": 1.9246
+                            },
+                            "uuid": "28d2ec63-da26-4f02-bc33-4ec9c1ff4963"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U4 Pin 1 [EN, Passive, Line]",
+                            "pos": {
+                                "x": 3.023,
+                                "y": 0.7611
+                            },
+                            "uuid": "42710113-8335-4472-bc6a-54a072657904"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Mevcut yapılandırma 'AUTO' ayak izi kütüphanesini içermiyor",
+                    "items": [
+                        {
+                            "description": "SembollerU4 [LV8729]",
+                            "pos": {
+                                "x": 3.15,
+                                "y": 0.85
+                            },
+                            "uuid": "17ab3217-71be-4393-a049-9b596ebf1321"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Mevcut yapılandırma 'KicadAuto' sembol kütüphanesini içermiyor",
+                    "items": [
+                        {
+                            "description": "SembollerU4 [LV8729]",
+                            "pos": {
+                                "x": 3.15,
+                                "y": 0.85
+                            },
+                            "uuid": "17ab3217-71be-4393-a049-9b596ebf1321"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol J2 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 3.4992,
+                                "y": 0.6746
+                            },
+                            "uuid": "98cf9052-29b9-42ea-9a64-b1bb9fbf79cc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol J3 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 3.4992,
+                                "y": 1.2238
+                            },
+                            "uuid": "f06389aa-74ff-4f45-9548-fd2426c666f2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                }
+            ]
+        }
+    ],
+    "source": "step-motor-controller.kicad_sch"
+}

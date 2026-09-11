@@ -2322,20 +2322,20 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0458faad-03c6-4425-ae9b-7d600cad76a7")
+		(uuid "b41acaf6-1968-4e7e-a417-e98f1eeccd50")
 		(property "Reference" "J1" (at 35 42 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "AC Input 3Pin" (at 35 48 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal" (at 35 45 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 35 45 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "AC Input 3Pin" (at 35 45 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "75253966-c805-4ace-acaa-83f5573a2eaa")
+			(uuid "e1ac465b-b452-4d8d-bd8b-4e32ae4403b0")
 		)
 		(pin "2"
-			(uuid "c0a0e386-db55-4e8a-890e-8c673c9f70a5")
+			(uuid "49347286-412b-4006-b79c-f6139f80190f")
 		)
 		(pin "3"
-			(uuid "88d8ae92-a362-4998-872c-e206ad553903")
+			(uuid "f8742abc-52dc-4ff2-967c-7f2dcdb691b5")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2354,23 +2354,23 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d1fd1200-3fc3-4d6d-9467-2c0924d14b95")
+		(uuid "d024888b-a408-45af-9d3a-7b55a24809c0")
 		(property "Reference" "J2" (at 355 67 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "Step Motor" (at 355 73 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" (at 355 70 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 355 70 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "Step Motor" (at 355 70 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "7fe2c393-cbfb-4338-9ee9-64acfa846ed2")
+			(uuid "98cf9052-29b9-42ea-9a64-b1bb9fbf79cc")
 		)
 		(pin "2"
-			(uuid "b0d84c40-6492-4953-8663-4276756e7001")
+			(uuid "c806bac4-b7df-44c1-9fba-ac786c76d6ce")
 		)
 		(pin "3"
-			(uuid "2d2c3c25-2aad-43c2-9190-36329a1799fe")
+			(uuid "63483e00-a27b-42b1-96e4-a8bb50986553")
 		)
 		(pin "4"
-			(uuid "e42a79be-66e6-489c-9c80-fd80938d286f")
+			(uuid "ad058065-299f-405b-b13b-66282bfe0252")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2389,35 +2389,35 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7d4f8a67-ebe4-49b2-bdf3-f0ee5da2eb15")
+		(uuid "f403fb83-b3ee-461f-8195-49af4726f8da")
 		(property "Reference" "J3" (at 355 127 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "Encoder" (at 355 133 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" (at 355 130 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 355 130 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "Encoder" (at 355 130 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "141822f2-6605-4b2b-a017-ab8279565a95")
+			(uuid "f06389aa-74ff-4f45-9548-fd2426c666f2")
 		)
 		(pin "2"
-			(uuid "bf98b1a6-8700-46da-8a48-1992a42fe649")
+			(uuid "a6f38a47-b9d4-4682-b10e-7cb2c800b52b")
 		)
 		(pin "3"
-			(uuid "02bb1604-bd23-4ae0-9ae9-c1ac550b65f0")
+			(uuid "4ffe36ab-028c-4691-b9c7-078fa4481b07")
 		)
 		(pin "4"
-			(uuid "854a2718-b71a-4409-9bb7-8db6adfcd15e")
+			(uuid "897967b4-e9e5-431b-b3ed-1c95debebd52")
 		)
 		(pin "5"
-			(uuid "5c62c663-48d8-434a-aeeb-07b2afd7ca5f")
+			(uuid "47a82c2b-6599-4bcc-8470-d601f0ddfce5")
 		)
 		(pin "6"
-			(uuid "470b5160-64c4-4aaf-a6b0-34e27159f1dc")
+			(uuid "29d524a3-0ab1-466a-bf08-c88f483094b5")
 		)
 		(pin "7"
-			(uuid "de7da7a5-7c37-44ae-a38a-175c6d563dc2")
+			(uuid "08e55a8e-3252-4521-983b-4b10aec2b643")
 		)
 		(pin "8"
-			(uuid "86b8dcea-abf4-4f6a-aae1-a737738ce47e")
+			(uuid "ba802492-80c2-4f71-8acb-2e4fc2b92b8d")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2436,23 +2436,23 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "67544c6f-8e97-48e1-b65f-1d89cce9e72c")
+		(uuid "99220b13-a253-457a-80a1-efd01e958c2c")
 		(property "Reference" "PS1" (at 75 42 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "IRM-20-24" (at 75 48 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Converter_ACDC:Converter_ACDC_MeanWell_IRM-20-xx_THT" (at 75 45 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 75 45 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "IRM-20-24" (at 75 45 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "6c852f5c-f647-47a1-a5f7-e535ff8f3ccf")
+			(uuid "f2c88bc6-a92c-4e47-ad21-35d316fa1260")
 		)
 		(pin "2"
-			(uuid "74b69e86-999c-4f85-9c30-b58bd6548d4e")
+			(uuid "aa3f30d5-cfae-4e56-952c-c1dbc63ef2f5")
 		)
 		(pin "3"
-			(uuid "13891799-2dc7-458e-98a2-121e0ca7ae8c")
+			(uuid "bc116f8e-8077-4218-9ca3-482cf7dbc82d")
 		)
 		(pin "4"
-			(uuid "cdc2cd8b-ca96-48e9-95e9-c69643175899")
+			(uuid "6b24e91c-06ad-4373-9950-f338d9a25b4b")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2471,20 +2471,20 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a0e7cbb8-cd6f-4174-89ec-2cbd3e7cb9ef")
+		(uuid "f68388a3-140b-4f63-b302-4ba122af1963")
 		(property "Reference" "U1" (at 115 42 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "OKI-78SR-5/1.5-W36-C" (at 115 48 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Converter_DCDC:Converter_DCDC_Murata_OKI-78SR_Vertical" (at 115 45 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 115 45 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "OKI-78SR-5/1.5-W36-C" (at 115 45 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "f58fbf8b-6427-45bb-a038-85cb4df334ed")
+			(uuid "7d9eba82-d68b-40e4-8495-1e7f67d419d4")
 		)
 		(pin "2"
-			(uuid "3f4eb51f-04d2-480e-be65-cdd1a148b9cd")
+			(uuid "a60ac046-977d-46c8-9f0d-7b3663a1b56b")
 		)
 		(pin "3"
-			(uuid "b9a263f5-c56d-4e4c-bc6e-e680c9bd8186")
+			(uuid "ac8fc1bd-3649-4e23-8560-48fb331d2c3d")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2503,23 +2503,23 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a780cbdb-f620-4fb5-ad54-7862cef29302")
+		(uuid "713239c6-a17f-4bec-895e-931b613dd8f4")
 		(property "Reference" "U2" (at 250 192 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "UART Display" (at 250 198 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" (at 250 195 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 250 195 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "UART Display" (at 250 195 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "b1d7e030-74ea-43d8-a9c4-73945896ea8c")
+			(uuid "28d2ec63-da26-4f02-bc33-4ec9c1ff4963")
 		)
 		(pin "2"
-			(uuid "a3c9ab41-6c37-4c0e-8b43-fd0babd22419")
+			(uuid "0d828e02-e5bc-4275-8142-ef0b3c01d8fa")
 		)
 		(pin "3"
-			(uuid "eb5a23d5-f5a3-4ded-b763-56e9ffa2c325")
+			(uuid "f0af4bb5-45cd-46f6-906b-a45d28e22604")
 		)
 		(pin "4"
-			(uuid "532f26f9-4d0a-4241-a32f-3c1ef5d76eaa")
+			(uuid "d18eac26-6df4-40f0-b3b8-5e6052564e45")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2538,125 +2538,125 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "bddf9b64-6055-4e82-8f35-4d7a0ba3bd37")
+		(uuid "dc9f1cf1-4edc-4600-a094-6319c338d546")
 		(property "Reference" "U3" (at 235 82 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "ESP32-DevKitC" (at 235 88 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "AUTO:ESP32_SOCKET" (at 235 85 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 235 85 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "ESP32-DevKitC" (at 235 85 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "e1e7d7c6-f1d4-48c2-96eb-f951e6d4f8c3")
+			(uuid "9d54b124-45a4-46b6-bfef-64fbab32c659")
 		)
 		(pin "2"
-			(uuid "e11afd66-1d57-4ac5-b9bd-c2760cdbee08")
+			(uuid "48a6f649-4072-4085-9777-9f12d10e1734")
 		)
 		(pin "3"
-			(uuid "d4d990ae-fc8d-4538-af9c-bdb67b0f5800")
+			(uuid "8adb2968-372e-4f9c-83b6-20d8a33469ae")
 		)
 		(pin "4"
-			(uuid "25b27e55-608b-4bdf-b815-0309499ddca3")
+			(uuid "1e32f735-d802-4eda-b783-d79c611ff07f")
 		)
 		(pin "5"
-			(uuid "166564e5-75f0-4e76-839f-2aebe219f4ad")
+			(uuid "936008d4-6264-406b-81f7-9dd935706135")
 		)
 		(pin "6"
-			(uuid "74dbd97f-f39f-4553-b310-3a4b7be008e1")
+			(uuid "bd44ef26-f8f5-4601-91b2-66ca2ade7d5e")
 		)
 		(pin "7"
-			(uuid "0b151393-229d-4e41-99d3-7e8f7a350b03")
+			(uuid "0c15fad9-ee26-4580-b09e-f2de3795b56a")
 		)
 		(pin "8"
-			(uuid "4b5d9bd2-3008-4bca-92ed-c0345dda53bc")
+			(uuid "10021497-efa3-43cf-9f2a-b9e3e9079b25")
 		)
 		(pin "9"
-			(uuid "d800f0ac-ccd2-4270-8a7d-bdf57ec1fe8c")
+			(uuid "bbc24009-1d8f-4d6c-acf1-66f0a93bd530")
 		)
 		(pin "10"
-			(uuid "4da29f6f-4277-45e8-a325-80d81179bd0b")
+			(uuid "32d3bc90-c685-4802-813f-9abe748250f5")
 		)
 		(pin "11"
-			(uuid "3f8625b1-ab7d-4b57-9449-c6edf7127380")
+			(uuid "d3f1e535-b06c-4f88-803e-67026bfc93fd")
 		)
 		(pin "12"
-			(uuid "57284b23-73e5-4185-ae5e-f20a2f0c0ce5")
+			(uuid "12680e8a-87d5-4c67-bb19-eb8a2cdb8025")
 		)
 		(pin "13"
-			(uuid "f36a5124-11c4-48e8-8c8b-50e5f0446c85")
+			(uuid "34234afd-aac0-4729-b3dc-d6d883ebad6f")
 		)
 		(pin "14"
-			(uuid "22bee8c0-c120-4e42-96da-997bccf612b9")
+			(uuid "d8627946-82ed-4335-b225-c816f1b63291")
 		)
 		(pin "15"
-			(uuid "03867b16-467d-4a68-9b99-de469fc8ba08")
+			(uuid "6b13abe3-781f-4290-acad-9e16726abc6d")
 		)
 		(pin "16"
-			(uuid "084c76c4-2037-40ec-ba96-7da162efcae8")
+			(uuid "ad216d0e-a388-4f45-a4f4-58cd4825bbcc")
 		)
 		(pin "17"
-			(uuid "5345272f-8dce-41c2-98b6-f32a8d1e2372")
+			(uuid "c5ea29b9-4ca7-458b-b9a9-774a1e59f6bc")
 		)
 		(pin "18"
-			(uuid "62d33cff-6d00-4b8c-82fa-432e5c623dfa")
+			(uuid "c1921619-0cde-4058-b3ed-d2ea719b01ee")
 		)
 		(pin "19"
-			(uuid "9e81fd2d-3fad-4ea7-8efb-daf2e889a2a5")
+			(uuid "ea912e86-47b1-45b8-8cd4-6850c9de5a11")
 		)
 		(pin "20"
-			(uuid "e7784999-e1c5-478b-9243-008f9688af98")
+			(uuid "6ae81a2b-9ece-418b-ac8b-26343b5fbb4e")
 		)
 		(pin "21"
-			(uuid "030272e7-d249-473e-9eda-deef54d2407d")
+			(uuid "35a39c2f-6019-4ebe-8496-de929caa6fb0")
 		)
 		(pin "22"
-			(uuid "21e849e4-2a10-42ed-a4bc-0187df12ec78")
+			(uuid "823a4b3b-d986-4ed4-8ec2-5937ad1902c0")
 		)
 		(pin "23"
-			(uuid "5033aca5-ebfe-44a8-8efb-5d00dc6e9584")
+			(uuid "0cd2dbf4-df07-421b-a167-b2359673de39")
 		)
 		(pin "24"
-			(uuid "09eb4ba5-ac5b-414c-83ce-9e7710f6a516")
+			(uuid "37d82b24-dfc9-4625-be13-cf724be3e144")
 		)
 		(pin "25"
-			(uuid "42a8b9e3-dd7c-4afe-9f6b-d8456e0fdb66")
+			(uuid "cb957083-8f93-4c6c-abea-047bc912d321")
 		)
 		(pin "26"
-			(uuid "ef340ac5-394a-4e05-9e81-3d7c1e6d8441")
+			(uuid "804ed0bb-8ce4-4a81-b2c6-cadd8ed22a8c")
 		)
 		(pin "27"
-			(uuid "970ad913-05c7-49f1-bc4e-3caebee00a5f")
+			(uuid "4897bf88-cb75-4f5e-814e-4a5ee79fe40a")
 		)
 		(pin "28"
-			(uuid "661c36f7-92c5-4a6e-b7a7-38572af030a0")
+			(uuid "21b6e5dc-8497-4d29-91d5-981f7b3b5f7b")
 		)
 		(pin "29"
-			(uuid "620b3ea8-4caf-4e74-a639-60a89a19e09e")
+			(uuid "2e4a8d2f-3e2b-4592-8914-56d28e446370")
 		)
 		(pin "30"
-			(uuid "413ed60b-4f79-4809-b1d4-8904acfe9de1")
+			(uuid "911a3c23-903d-4a99-8319-c8efb50180c1")
 		)
 		(pin "31"
-			(uuid "af51035e-694f-4cfc-b446-d0c956933d68")
+			(uuid "98b701e4-155b-445a-aa69-6bc7c27cdf4e")
 		)
 		(pin "32"
-			(uuid "5dafc52d-8b73-4cd8-948f-5e36f018be91")
+			(uuid "c68eddcd-1628-4b2f-a8d8-97d54300efac")
 		)
 		(pin "33"
-			(uuid "f078c66b-832b-4a58-a2f8-f26174f7442a")
+			(uuid "c207cad2-caa6-4514-908b-b1f20b8e76d9")
 		)
 		(pin "34"
-			(uuid "a87c827c-ff57-4da9-9f2d-0f2139c7f655")
+			(uuid "94271265-6409-4e53-ae17-39e9d8b7f3c0")
 		)
 		(pin "35"
-			(uuid "298251b3-a4ca-49ec-98ea-3187919bacf8")
+			(uuid "ecd8d834-85eb-40a5-a7e3-9a972acac245")
 		)
 		(pin "36"
-			(uuid "df7c1f9a-d70d-4537-b5d2-6c1e184dc84b")
+			(uuid "ab6f6e59-e7ea-4c49-9dc9-6b1bc46c7b96")
 		)
 		(pin "37"
-			(uuid "54393343-cd95-4074-b2ea-95759f4778eb")
+			(uuid "5c517ed0-66fa-4232-891d-5259d586e996")
 		)
 		(pin "38"
-			(uuid "b1aac53b-88ed-43f8-9914-35a9fa5892b2")
+			(uuid "5e69f28c-50c6-4898-887d-aabaeb3fc959")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2675,59 +2675,59 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2d39bc38-5a47-47a5-9f43-9301aff52404")
+		(uuid "17ab3217-71be-4393-a049-9b596ebf1321")
 		(property "Reference" "U4" (at 315 82 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "LV8729 Module" (at 315 88 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "AUTO:STEPSTICK_2x8" (at 315 85 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 315 85 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "LV8729 Module" (at 315 85 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "00de20ff-9ad6-4ab5-800c-59b2e6d682d5")
+			(uuid "42710113-8335-4472-bc6a-54a072657904")
 		)
 		(pin "2"
-			(uuid "4a54b4e3-5e76-42d3-b274-1d92d731949e")
+			(uuid "73651d84-36e8-4aef-823c-a0a7788100c6")
 		)
 		(pin "3"
-			(uuid "0a02cc23-4f1a-40b1-a3d5-f7374f1f80bd")
+			(uuid "75a65a9c-435f-46ce-a7fe-061b1d1df067")
 		)
 		(pin "4"
-			(uuid "04135b2f-82b8-4ed9-a6da-fd5687a55023")
+			(uuid "69fb1520-b811-4ebd-954e-94c5c810904e")
 		)
 		(pin "5"
-			(uuid "83b80021-09e0-4ee7-a416-d5884c77390c")
+			(uuid "7039ca82-4d2a-4f00-bff8-1eef3fa615af")
 		)
 		(pin "6"
-			(uuid "1a5ba444-8969-43e4-b506-09ef5c78bab6")
+			(uuid "6116014b-7aca-4694-87a8-bcf6ee232084")
 		)
 		(pin "7"
-			(uuid "3d61d6a3-227e-4b4d-a2b1-195b084643fb")
+			(uuid "1d9ecf00-ea76-43af-8aad-7a800d49036f")
 		)
 		(pin "8"
-			(uuid "c97201d0-5687-4d07-93d7-6ee21b1d2b6c")
+			(uuid "0295bca3-7155-499f-af03-923023addaa1")
 		)
 		(pin "9"
-			(uuid "e229a0db-8c2e-48f8-9044-a88158d301ba")
+			(uuid "6fcdc165-8c0c-4d2c-b4a1-7cff82fdbed2")
 		)
 		(pin "10"
-			(uuid "48629e30-fe01-439f-8fd1-1718ed9b3e93")
+			(uuid "86efffbf-e5b6-4692-a621-fffc705f1f74")
 		)
 		(pin "11"
-			(uuid "228b2c82-6045-48e0-907a-ae69c9dab5f3")
+			(uuid "37ac396f-77bd-4593-bfe8-23eb960742c0")
 		)
 		(pin "12"
-			(uuid "2926eaf9-20ac-499b-82bc-6434df145ef6")
+			(uuid "624fc1ed-7a1a-42d8-8951-2b24a9d83058")
 		)
 		(pin "13"
-			(uuid "daf03d74-76c1-474f-bdbb-0e9fe40a8707")
+			(uuid "351e6823-beee-4e61-98d2-6c72f731bb87")
 		)
 		(pin "14"
-			(uuid "20351f83-c230-47e6-8e90-c6284a1216b6")
+			(uuid "ac211f48-abd9-413f-b41e-13f470124c77")
 		)
 		(pin "15"
-			(uuid "a4f927d2-2f58-4d3a-9f13-3310ac02a6b0")
+			(uuid "8be7e3c5-6506-43e1-97b5-d4842db91109")
 		)
 		(pin "16"
-			(uuid "babc724a-abee-4d67-8895-1b6f629ec6d4")
+			(uuid "61ba5c4f-ef81-4a0b-92c8-60a42fe14a93")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2746,59 +2746,59 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "9974037d-1002-4739-9600-35fc64e39d75")
+		(uuid "a5ef2218-8295-4901-8e41-c90edce889e7")
 		(property "Reference" "U5" (at 75 112 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "AM26LS32ACN" (at 75 118 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Package_DIP:DIP-16_W7.62mm" (at 75 115 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 75 115 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "AM26LS32ACN" (at 75 115 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "0182f68b-b613-4f1a-9ed1-fae2591f96ff")
+			(uuid "3621e358-b150-430a-878a-97af458ef0a6")
 		)
 		(pin "2"
-			(uuid "e080c55b-53f1-49fa-bd5e-33733182863f")
+			(uuid "e09fac33-b51e-49eb-b9d8-5d02ef46777f")
 		)
 		(pin "3"
-			(uuid "5f39d115-25c0-407e-b288-13f4f842508b")
+			(uuid "f6152070-9011-4cb1-b928-a04de4f36d46")
 		)
 		(pin "4"
-			(uuid "2dc82373-b8bd-4290-935b-e99fa38dbd14")
+			(uuid "e6f34bcf-b8b7-4346-865d-5eba14f8a96e")
 		)
 		(pin "5"
-			(uuid "3d36acac-cfbc-46b5-9307-4bcce5c86c26")
+			(uuid "eb37d02c-410e-4538-babe-83d29e99bf37")
 		)
 		(pin "6"
-			(uuid "a3d91d4c-836f-4d67-a175-b8506ab5cb13")
+			(uuid "19283862-19bb-4189-8de5-35f147b6d84d")
 		)
 		(pin "7"
-			(uuid "18a5773b-04e5-4195-8659-17f547668229")
+			(uuid "c4b8cd20-60e2-4c1b-9aa2-6a2dc07012f9")
 		)
 		(pin "8"
-			(uuid "81c7686f-f384-4fd2-9720-81f2dfc9d7f4")
+			(uuid "b11e5e7f-002c-4512-944e-8fdbe51d0631")
 		)
 		(pin "9"
-			(uuid "d5fd8a2e-4156-4020-b377-15b3557dd719")
+			(uuid "14593097-7f17-4699-83e1-5fe5b0383026")
 		)
 		(pin "10"
-			(uuid "c0ff0497-77c2-477b-a464-0509f7f3d679")
+			(uuid "422ac4cf-5171-4caf-b6d5-d045ca9ecda7")
 		)
 		(pin "11"
-			(uuid "c5536cd9-cc9d-4537-a847-788ca880727c")
+			(uuid "6751f2f4-8c2e-46f9-9b4e-fbc745ed1fc6")
 		)
 		(pin "12"
-			(uuid "dc742084-9bf8-4a61-a386-0d142febebbb")
+			(uuid "52609494-ddd5-401e-899e-5ac210a2e109")
 		)
 		(pin "13"
-			(uuid "435bf16f-f213-478c-8c79-15d7bd04caf7")
+			(uuid "536098d2-b3d8-4992-b1b3-07e9f77c5e5c")
 		)
 		(pin "14"
-			(uuid "05c40769-38f1-4bc3-baba-4d599eacf020")
+			(uuid "803966bb-d8ed-4cf8-a134-775151d45db7")
 		)
 		(pin "15"
-			(uuid "28647285-64d2-433a-9561-6bb779d39c3a")
+			(uuid "d2f45d97-86ed-4d13-a74a-bc967fc5c3c7")
 		)
 		(pin "16"
-			(uuid "eef5feaa-a885-4ab3-a6a5-a523d618143d")
+			(uuid "616735a7-5019-4df0-8837-0d77edc7567b")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2817,59 +2817,59 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8dbfb47a-a96a-4927-9985-2f732eaa459f")
+		(uuid "7bb798ec-1853-4ab1-8541-5fbbe44573a5")
 		(property "Reference" "U6" (at 135 112 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "74HC4050N_652" (at 135 118 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Package_DIP:DIP-16_W7.62mm" (at 135 115 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 135 115 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "74HC4050N_652" (at 135 115 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "bb813d9e-eb10-4120-9980-5d95019af083")
+			(uuid "db036bc4-33b4-47f0-bda4-192b19477af0")
 		)
 		(pin "2"
-			(uuid "fde78acd-c631-471b-bb7b-60a5bae950e4")
+			(uuid "3c113da6-ab38-48de-96a1-813ffca0d5b9")
 		)
 		(pin "3"
-			(uuid "8e23168d-c5e1-45dc-82c6-ec63135f4d4f")
+			(uuid "7da37599-a80f-4f22-9e11-95e0ab101d10")
 		)
 		(pin "4"
-			(uuid "e3773666-e6fe-49a7-934e-49295a456072")
+			(uuid "7013a73c-494b-4b41-9a59-8c49ee0ea1dc")
 		)
 		(pin "5"
-			(uuid "436bc40f-8e14-4732-a72b-6a0b55fb810d")
+			(uuid "e452cd8c-759b-4948-8500-a20fd9f534d2")
 		)
 		(pin "6"
-			(uuid "029bcc1c-0951-4830-a520-279cc01ddc72")
+			(uuid "5cdb037e-50b1-4308-ba72-719d46756c84")
 		)
 		(pin "7"
-			(uuid "9e6b1792-554a-4413-99e4-6d9a3626eefc")
+			(uuid "6ffee9ce-bf13-4fe9-a243-f048a0a71834")
 		)
 		(pin "8"
-			(uuid "0a8f600a-8288-4c9d-b88e-977027eb24fc")
+			(uuid "0824c8f8-d5fa-4412-a4a5-b7cbedf63101")
 		)
 		(pin "9"
-			(uuid "c6b0f200-c046-4807-8d09-3b4597af2a2c")
+			(uuid "c3cf7204-7a81-4166-855f-c7a63321905e")
 		)
 		(pin "10"
-			(uuid "547f9ea2-e09e-4e40-a2dc-6d313d2d1bee")
+			(uuid "51487502-8cd5-4541-b42a-d0158057186e")
 		)
 		(pin "11"
-			(uuid "1556f4a2-eb0a-4def-a719-627773cb15ca")
+			(uuid "f46d80b3-c290-4249-9729-e156cfbc1e7d")
 		)
 		(pin "12"
-			(uuid "39e045a1-be62-4a40-b485-2091d96caf55")
+			(uuid "1e428fc0-6f77-4c8e-9a30-574d7d0421d8")
 		)
 		(pin "13"
-			(uuid "95d7b720-ff4d-4cc4-a42a-1969115a84d0")
+			(uuid "16e87c6f-0fcb-47c0-8df0-5150e71864b9")
 		)
 		(pin "14"
-			(uuid "3d267ccd-6055-44fd-af58-89bd91991684")
+			(uuid "d83a1059-a044-4dfd-8300-b55af8f29b4d")
 		)
 		(pin "15"
-			(uuid "a2f8da21-af2b-4595-8bb3-5b2179f4bb55")
+			(uuid "6be52db7-b23d-4cdf-9583-f647f00756da")
 		)
 		(pin "16"
-			(uuid "3ffd3ad9-4d73-41ad-ab67-f8cebc645d76")
+			(uuid "14acb8b2-02ae-4924-b0d6-d9465b48b6b3")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2888,20 +2888,20 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3d174f7b-f353-4730-8fd9-c445d14e7a53")
+		(uuid "7ff37d29-107e-4c33-a4fa-333fd3c3071c")
 		(property "Reference" "Q1" (at 170 49 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "BC547" (at 170 55 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline" (at 170 52 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 170 52 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "BC547" (at 170 52 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "c84611a6-ead2-40a9-902c-2a6eacd57762")
+			(uuid "1bc25123-5ef3-4120-a55c-3afff5b222ba")
 		)
 		(pin "2"
-			(uuid "21a2ab75-7a69-41a2-9650-7c2e43eab35d")
+			(uuid "24dd3924-ac07-491e-af4b-26df98bd8b4b")
 		)
 		(pin "3"
-			(uuid "3c569fcc-0562-4db3-84dc-0603908bac58")
+			(uuid "c2a6d411-710d-46a5-992b-876265cc68b0")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2920,17 +2920,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7a2354be-aa29-45a2-9254-a85363e86ce5")
+		(uuid "60a63622-b82f-4559-9c2c-17349b2ae3c7")
 		(property "Reference" "R1" (at 195 157 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "FSR (external)" (at 195 163 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 195 160 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 195 160 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "FSR (external)" (at 195 160 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "d81d2612-216b-46d5-a865-2d2d947676f2")
+			(uuid "8557f6b5-6d0a-43d3-93fc-e3f508dabd47")
 		)
 		(pin "2"
-			(uuid "9aee0a63-253c-4d98-b3c2-e3f84e26e6d5")
+			(uuid "bd2ed979-c99b-4204-948a-fe5ec7de9830")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2949,17 +2949,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "549045c4-957c-4a32-bdbf-db009e20e794")
+		(uuid "c0a3b3a1-c639-45af-9cfd-b9f8a810092e")
 		(property "Reference" "R2" (at 222 157 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 222 163 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 222 160 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 222 160 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 222 160 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "53b4cc29-08e5-4a32-948f-900b90fa4c86")
+			(uuid "3446ac89-3888-42bc-bc73-ccad0842965e")
 		)
 		(pin "2"
-			(uuid "06ad57a2-52b7-4b4d-b3f4-fe0b35c8b030")
+			(uuid "74b8bce9-5b03-426e-8634-22d287cc2fa4")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -2978,17 +2978,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5f6f72ff-ae66-4e17-bd40-bbe51bd9e6cc")
+		(uuid "705571ef-86dd-46be-872f-b6dfdc4e730b")
 		(property "Reference" "R3" (at 195 179 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "FSR (external)" (at 195 185 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 195 182 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 195 182 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "FSR (external)" (at 195 182 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "82cbdbfe-aaba-4898-901e-9096dc118625")
+			(uuid "279705ac-9260-494f-88e2-a5cfc717474d")
 		)
 		(pin "2"
-			(uuid "2df174b9-cdc1-4981-a393-51b11f7b5384")
+			(uuid "745af1e6-79d5-477d-83a8-726be944aa8b")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3007,17 +3007,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6e0b996e-072b-4162-93ab-29582d4b0a02")
+		(uuid "25aa5f6d-d499-40ab-ba51-bca0b83b87e1")
 		(property "Reference" "R4" (at 222 179 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 222 185 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 222 182 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 222 182 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 222 182 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "c06688a4-2a1d-4bd3-9228-e5ac0f82675e")
+			(uuid "6d1f857d-592c-4fc4-95ea-8d9b7047cb25")
 		)
 		(pin "2"
-			(uuid "21802752-9ce9-4857-b88f-203d59bf2a04")
+			(uuid "9b75d0f1-702e-4201-85fd-92d08083e2e9")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3036,17 +3036,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e346f7fd-1f04-4fbe-953e-35c81076545c")
+		(uuid "1a92806b-c4b7-4fa2-a2d2-69eadb78d8ea")
 		(property "Reference" "R5" (at 66 157 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 66 163 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 66 160 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 66 160 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 66 160 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "321bf108-076d-449a-833b-753c531e2906")
+			(uuid "52365d15-52b3-4fee-a53d-83b3a022fcdf")
 		)
 		(pin "2"
-			(uuid "885c46b4-000b-476d-8e5d-3d532fa29f1c")
+			(uuid "270cb8e2-9854-4642-9e7b-158034722200")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3065,17 +3065,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e10651eb-5dac-4ea8-8556-bea20ff22c0f")
+		(uuid "e2024c91-b3cf-479f-93cb-dfa0e066ddc4")
 		(property "Reference" "R6" (at 66 179 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 66 185 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 66 182 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 66 182 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 66 182 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "033df95f-cd29-4200-aad6-9af100a39b02")
+			(uuid "93e05c25-b7ec-40d2-8edf-cdbb829d93db")
 		)
 		(pin "2"
-			(uuid "9b6c60b6-892a-4a51-85fa-f32688f0e6bb")
+			(uuid "396883ac-6011-4589-be69-fc9a8c2a04e0")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3094,17 +3094,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "abc588b3-8696-4b77-bc1c-9e690dc95bf5")
+		(uuid "28fd38fa-7f00-4a02-815a-30ebc69330b7")
 		(property "Reference" "R7" (at 122 207 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 122 213 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 122 210 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 122 210 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 122 210 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "ed0db81e-f935-4ab0-9991-069ed812a4db")
+			(uuid "f63e05c3-d1bc-4b1d-964e-98d3ea700e20")
 		)
 		(pin "2"
-			(uuid "32d6a277-94b4-40f3-a228-e6c5ef93fc30")
+			(uuid "ed18b306-876c-4643-8f5e-327fda48d19a")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3123,17 +3123,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "22c0f5a2-2e37-42e7-b206-0fb248a4af8b")
+		(uuid "a2b68180-e554-42e8-a0a5-07d9ec26701b")
 		(property "Reference" "R8" (at 122 225 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "20K" (at 122 231 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 122 228 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 122 228 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "20K" (at 122 228 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "e2e9c795-cb9d-483f-800a-790d27a0560f")
+			(uuid "7b5d0b54-ac58-4b88-ab3f-93df49ba84a6")
 		)
 		(pin "2"
-			(uuid "f40aeede-4697-4b30-92dc-2ba8da2fbf96")
+			(uuid "552f3989-496f-4ee8-96f0-7b0a1b806067")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3152,17 +3152,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "eb355a10-a8e1-4f8c-805c-169faef002a1")
+		(uuid "2413c139-7e4a-425b-bd0d-d965380b1b30")
 		(property "Reference" "R9" (at 148 207 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 148 213 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 148 210 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 148 210 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 148 210 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "bd1bf9b7-0873-45ce-b5eb-f32a2b74793f")
+			(uuid "dfb8e4f5-99c8-4188-9f11-fead1831915f")
 		)
 		(pin "2"
-			(uuid "98ccae25-49b0-489c-a2b5-119dc7d26a3c")
+			(uuid "00be8968-5aa8-4d54-9943-df141c167e14")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3181,17 +3181,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "52a5073d-f9de-44a1-93bf-294beecd8abc")
+		(uuid "21eb6796-f39f-4035-9e0b-ec6ff8f0f24f")
 		(property "Reference" "R10" (at 148 225 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "20K" (at 148 231 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 148 228 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 148 228 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "20K" (at 148 228 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "0b87c44c-fbd5-423b-8aa6-acd73cd5249a")
+			(uuid "7d429fe4-fc6f-4679-a369-6228f55456e1")
 		)
 		(pin "2"
-			(uuid "7c6049cb-0258-4672-bbc4-01b230c94fcf")
+			(uuid "97c956fa-ec41-427d-b626-2e2aa0b0f0ce")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3210,17 +3210,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "196277e2-bb21-4258-92f3-75c681740d6a")
+		(uuid "270d05fb-a14f-49c2-8da1-6b889912e6dc")
 		(property "Reference" "R11" (at 170 67 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 170 73 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 170 70 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 170 70 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 170 70 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "8ba1181f-1628-4c8d-8236-44fc1f83a6f3")
+			(uuid "d64885ef-0437-4750-bec7-899f0dcf877e")
 		)
 		(pin "2"
-			(uuid "efd4a59c-3cd5-4b92-b459-6ab8d8c293a2")
+			(uuid "5f0cee24-738a-404d-8ed4-5ff70a7a09e1")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3239,17 +3239,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c31cced0-be24-438a-bd67-374f5b35759c")
+		(uuid "603a5558-c3bc-4103-ab17-f9ad2efba832")
 		(property "Reference" "R12" (at 196 67 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "1K" (at 196 73 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 196 70 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 196 70 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "1K" (at 196 70 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "ca89d2a9-16c7-43d2-8621-aac1e9dc9410")
+			(uuid "74daf7ed-64b4-4ec6-ac6d-65ecf711b24d")
 		)
 		(pin "2"
-			(uuid "35c32168-e779-4f75-bfb1-7e1d7f1bb20e")
+			(uuid "eca043b5-7eb0-4122-8fee-ef4f86fae89c")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3268,17 +3268,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "eb6f6943-ed19-44a1-a149-239de555c830")
+		(uuid "3b91e2f6-f9a0-4802-ab6b-1764f74b5372")
 		(property "Reference" "C1" (at 75 69 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "100uF/35V" (at 75 75 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" (at 75 72 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 75 72 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "100uF/35V" (at 75 72 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "2414d01d-cb5e-439e-977c-e2cfbb0d619d")
+			(uuid "68f4fdba-aed3-4159-9cd5-65b6e8b4126e")
 		)
 		(pin "2"
-			(uuid "eb21302e-33c8-4155-9ce3-807d5e3934a5")
+			(uuid "f6651a04-7a2f-45f2-9cff-a078e570c431")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3297,17 +3297,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7f4e7b50-ffbe-4839-9c7b-c2df7d6e9589")
+		(uuid "a33020bb-437a-49ae-99c4-126b99b9486f")
 		(property "Reference" "C2" (at 115 69 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10uF/16V" (at 115 75 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" (at 115 72 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 115 72 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10uF/16V" (at 115 72 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "c389c6f9-21d1-4d7c-a12b-e4ce768cd05a")
+			(uuid "e01ac4b5-66fe-44de-877f-6038f782ce84")
 		)
 		(pin "2"
-			(uuid "98e38bdd-eb12-4478-acf0-a08675050b00")
+			(uuid "ca4473c2-2878-46f2-b32e-895e7a3ba1f9")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3326,17 +3326,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "90654775-2ea9-418c-8cf7-eec47ab6533b")
+		(uuid "aae097d2-f43e-4ba4-828b-c81f13f96fc9")
 		(property "Reference" "C3" (at 92 162 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "100nF" (at 92 168 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 92 165 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 92 165 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "100nF" (at 92 165 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "4ec8a6e1-7999-4882-809b-2909d9c1d4fe")
+			(uuid "c8d4eca0-d622-4dcc-a9b3-1670316b887c")
 		)
 		(pin "2"
-			(uuid "efd6773e-cb5a-4402-b14e-909b7d792009")
+			(uuid "c23de305-a44d-480b-90c1-49c087b8b1c2")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3355,17 +3355,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3af4d9da-5b4a-48e6-8e61-67c1c685b3c8")
+		(uuid "38f0247e-6bcd-4fa6-951f-dc2bbd6d0605")
 		(property "Reference" "C4" (at 92 184 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "100nF" (at 92 190 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 92 187 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 92 187 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "100nF" (at 92 187 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "bf858a9e-15ba-4f07-88e0-9407c7ee0622")
+			(uuid "0dbacbad-834d-4018-ac6b-24f4507fe746")
 		)
 		(pin "2"
-			(uuid "47f2b230-1dae-4c77-af02-8eaf1a22ca3e")
+			(uuid "7ddb7122-d6f4-44c5-95e4-453df6e36a1a")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3384,17 +3384,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8e146b95-7c2e-428f-af1d-2ff4c3f86588")
+		(uuid "879002f4-3405-473c-ac1a-ce6b5c6ee526")
 		(property "Reference" "C5" (at 170 85 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "100nF" (at 170 91 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 170 88 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 170 88 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "100nF" (at 170 88 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "3ff575b2-1b1f-46a5-9cc8-6d3d5163ea1f")
+			(uuid "a519b10a-2536-436b-9d54-2061d399100e")
 		)
 		(pin "2"
-			(uuid "7bb3f11f-b1bd-46fe-9ee9-4f233301f628")
+			(uuid "c6a12017-7874-44ae-84ab-52115805389a")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3413,20 +3413,20 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "fce72931-f8ff-4c94-b207-4061c52f6f1d")
+		(uuid "4c5bed26-8e12-4146-a5bf-717db6d6c559")
 		(property "Reference" "S1" (at 35 207 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "Optic LS-1" (at 35 213 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 35 210 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 35 210 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "Optic LS-1" (at 35 210 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "21c3d401-0fc2-456b-930c-875d50924ec5")
+			(uuid "00bb1e6f-042b-4039-a77b-307401d80bfa")
 		)
 		(pin "2"
-			(uuid "1e175913-2a6b-4e6d-893d-c17cbbc30ae9")
+			(uuid "114833d4-10dd-49ea-87f9-84a23964aae1")
 		)
 		(pin "3"
-			(uuid "4e9c6846-d48e-4aa9-8037-e0c901acdce5")
+			(uuid "6ab8f482-948c-4942-8d47-deee16cf207f")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3445,20 +3445,20 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c25d3959-0501-4b72-82e6-2f9c7bcd4324")
+		(uuid "10a10c5f-d453-40e5-9ee4-e1edbc6d5c65")
 		(property "Reference" "S2" (at 35 229 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "Optic LS-2" (at 35 235 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 35 232 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 35 232 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "Optic LS-2" (at 35 232 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "cd443a91-38af-4835-a33c-7b26853d1e76")
+			(uuid "a9e803ea-9926-423e-b6b2-7f9b4ae1e781")
 		)
 		(pin "2"
-			(uuid "0b30f27e-4a18-4024-be83-999f05b3d1f1")
+			(uuid "47b25713-db58-4fd1-b9cb-5d705abdea7f")
 		)
 		(pin "3"
-			(uuid "156cee31-f2ca-4e8c-a273-b4ab2eb4712b")
+			(uuid "8c05c8f2-17db-44fd-8b44-7b0c65541ffd")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3477,20 +3477,20 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5dfd6d0c-d7d1-417c-9050-e6cb42b56488")
+		(uuid "20ee300f-2e92-46ee-a894-ce03005a0d4e")
 		(property "Reference" "S3" (at 90 212 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "Hall-1" (at 90 218 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 90 215 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 90 215 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "Hall-1" (at 90 215 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "687b5bc0-ee78-4276-b924-f826bf1fef39")
+			(uuid "835078bb-e886-42ae-a759-f23c60394f2a")
 		)
 		(pin "2"
-			(uuid "ba49ccb6-37ef-40a6-b007-7902b4b50f2f")
+			(uuid "73cfd529-503a-48f4-b949-ce4a30513a2b")
 		)
 		(pin "3"
-			(uuid "fb51369c-07b6-492d-8557-9577e4868c05")
+			(uuid "78d7fc6e-6a08-4b2e-b78f-3b1f59f688f5")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3509,20 +3509,20 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "308b061c-d64b-4aa9-af5e-fc8b2cef793b")
+		(uuid "76dad20c-a1cb-42f0-825a-01b0f2425e04")
 		(property "Reference" "S4" (at 90 237 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "Hall-2" (at 90 243 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 90 240 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 90 240 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "Hall-2" (at 90 240 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "ad04ccba-c6f6-4061-be38-9239fbee7026")
+			(uuid "fd0122a2-547c-4366-8962-36cae69a4af6")
 		)
 		(pin "2"
-			(uuid "4386c7d3-aa89-43ab-a8e9-090627f6c289")
+			(uuid "e99dbedd-635f-4101-9900-8eea757187ce")
 		)
 		(pin "3"
-			(uuid "2ee4a1d2-b9c1-4e09-94db-09209c350870")
+			(uuid "52621891-2127-4a52-b456-307501b0872f")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3541,20 +3541,20 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "755b0e71-51de-443d-8f02-16d88cf3bb55")
+		(uuid "99cb5246-f8ac-4717-92d7-608a0b1de8bd")
 		(property "Reference" "SW1" (at 35 162 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "Limit SW-1" (at 35 168 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 35 165 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 35 165 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "Limit SW-1" (at 35 165 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "218a662d-1445-4847-8589-afd572660800")
+			(uuid "256eefa1-48b2-49fb-814b-6746935a72e3")
 		)
 		(pin "2"
-			(uuid "221b27a2-cf89-41e5-b39c-f3226521b172")
+			(uuid "f70060a5-b99f-4146-b61e-844ce79cf6cc")
 		)
 		(pin "3"
-			(uuid "c760cdfb-db11-4bc1-8cd6-b8d9a68b4a9e")
+			(uuid "2a8752cb-0eda-47a5-a8b9-94bf0612c42c")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3573,20 +3573,20 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4ae641e9-1dca-4cce-ac74-2899bc09a6f3")
+		(uuid "8f0760ff-ea5b-408b-8f58-ef464abf321e")
 		(property "Reference" "SW2" (at 35 184 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "Limit SW-2" (at 35 190 0) (effects (font (size 1.27 1.27))))
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 35 187 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 35 187 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "Limit SW-2" (at 35 187 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
-			(uuid "9c2e5f4a-0624-4fe0-9332-9af57cfa6881")
+			(uuid "4501a63d-dd5d-471d-9050-a620b145d372")
 		)
 		(pin "2"
-			(uuid "7a379019-a0e7-45c8-b887-17afa130e17e")
+			(uuid "d52666a3-bb97-4bd5-b601-38e90ade4b34")
 		)
 		(pin "3"
-			(uuid "a4ce7cfe-0455-4505-8dff-80da0342e306")
+			(uuid "e6e1bb21-e15a-44a8-a502-5bcd90dc7491")
 		)
 		(instances
 			(project "step-motor-controller"
@@ -3597,999 +3597,1099 @@
 			)
 		)
 	)
+	(no_connect
+		(at 217.2200 92.6200)
+		(uuid "4b141c07-9a51-4aeb-8c6e-a4554f409af3")
+	)
+	(no_connect
+		(at 217.2200 100.2400)
+		(uuid "9b275933-70d8-4655-ba93-a1914901588f")
+	)
+	(no_connect
+		(at 217.2200 102.7800)
+		(uuid "c6a82a53-8ef7-4fe7-9933-771683aa63d5")
+	)
+	(no_connect
+		(at 217.2200 105.3200)
+		(uuid "1779f64a-e87f-4191-80f1-71922ffb58f6")
+	)
+	(no_connect
+		(at 252.7800 107.8600)
+		(uuid "13ff8cbc-904a-4d30-a944-fc579c6e97d2")
+	)
+	(no_connect
+		(at 252.7800 105.3200)
+		(uuid "5c372f8c-4eec-444e-afe1-4f3cffb74f5a")
+	)
+	(no_connect
+		(at 252.7800 102.7800)
+		(uuid "158dd9f5-1113-4ee8-8787-5b024dfb44e3")
+	)
+	(no_connect
+		(at 252.7800 100.2400)
+		(uuid "92a55d75-d077-4647-bebc-52007c0ce828")
+	)
+	(no_connect
+		(at 252.7800 97.7000)
+		(uuid "15073c71-8e09-46ef-9f17-f62e47403fc6")
+	)
+	(no_connect
+		(at 252.7800 95.1600)
+		(uuid "07feded9-71de-4e48-ab7c-525e4e91e4ca")
+	)
+	(no_connect
+		(at 252.7800 72.3000)
+		(uuid "3acc428f-1a36-4f10-9f87-5da76a71b458")
+	)
+	(no_connect
+		(at 252.7800 69.7600)
+		(uuid "75a5014a-8c59-47f7-9b77-77d2397d3d4e")
+	)
+	(no_connect
+		(at 252.7800 67.2200)
+		(uuid "7a28d21b-1d96-43ee-9414-9b50bdfe489f")
+	)
+	(no_connect
+		(at 252.7800 62.1400)
+		(uuid "acb942ae-0cef-4312-8fdc-803f3d8a0e33")
+	)
+	(no_connect
+		(at 302.3000 86.2700)
+		(uuid "b1db6260-3a5b-4dae-ac6a-09b43b6fb396")
+	)
+	(no_connect
+		(at 302.3000 88.8100)
+		(uuid "959c4797-a2e8-4a3d-a6db-8a159c9f1afa")
+	)
+	(no_connect
+		(at 87.7000 113.7300)
+		(uuid "dbe7bc12-daed-4737-9da8-54c4039a499a")
+	)
+	(no_connect
+		(at 87.7000 111.1900)
+		(uuid "e66b7492-ebbe-4700-bcc1-5b757c4807f2")
+	)
+	(no_connect
+		(at 87.7000 108.6500)
+		(uuid "8790fa58-4762-4e6e-b613-1f219f52cf84")
+	)
+	(no_connect
+		(at 147.7000 113.7300)
+		(uuid "3863c5e8-a4d7-444c-885b-cba0eff35f4e")
+	)
+	(no_connect
+		(at 147.7000 111.1900)
+		(uuid "5b73c36b-8788-4f96-abd9-2f11fab1fa4a")
+	)
+	(no_connect
+		(at 147.7000 108.6500)
+		(uuid "39388491-49a2-48a9-b7cd-d6224a46a6bd")
+	)
+	(no_connect
+		(at 147.7000 106.1100)
+		(uuid "cf36a8bc-4691-495f-b379-21d9ad77eacd")
+	)
+	(no_connect
+		(at 40.0800 167.5400)
+		(uuid "497adf9b-481b-4194-93ce-534fad5fddff")
+	)
+	(no_connect
+		(at 40.0800 189.5400)
+		(uuid "11aec94f-cf7c-4e1e-9f6f-10ffbe5842a4")
+	)
 	(global_label
 		"AC_L"
 		(shape input)
 		(at 29.9200 42.4600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "d3d8d7eb-1e00-4bf4-974a-c50c1ea86ee7")
+		(uuid "671c2c2c-b502-4197-b3eb-12aa0f86eaef")
 	)
 	(global_label
 		"AC_N"
 		(shape input)
 		(at 29.9200 45.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "32b62c4d-d224-4b6a-ab70-ecedfc7748c1")
+		(uuid "c4fd3aa6-b84d-4b27-ab0d-71255f9dfb72")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 29.9200 47.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "363f6dc4-2f75-406d-95cd-98960ae610a6")
+		(uuid "354448fb-843e-4703-b212-d64e6f5b4eae")
 	)
 	(global_label
 		"MOT_1A"
 		(shape input)
 		(at 349.9200 67.4600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "9c2580fd-cf04-4431-8401-9913fad45d04")
+		(uuid "4755f5e7-4a15-4fa8-a20c-f6a287554e2f")
 	)
 	(global_label
 		"MOT_1B"
 		(shape input)
 		(at 349.9200 70.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "8d7352f9-ad36-401d-a459-eb9f892fa54e")
+		(uuid "790eaddb-eabd-4a41-b9ff-a04bfe37dc72")
 	)
 	(global_label
 		"MOT_2A"
 		(shape input)
 		(at 349.9200 72.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "b1681d8d-14bb-4417-9399-1a5cef057116")
+		(uuid "fc16d207-4fa2-42d7-b309-32e3e360e8fe")
 	)
 	(global_label
 		"MOT_2B"
 		(shape input)
 		(at 349.9200 75.0800 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "58c1f906-1cf9-4eac-872e-fdd9af9280ca")
+		(uuid "33003b94-269b-4ee5-a3ce-213996b46651")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 349.9200 122.3800 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "863b20a2-8ae6-4dab-b740-d436eb17435a")
+		(uuid "27674c6b-2f76-422c-94fa-021e79cf8b8f")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 349.9200 124.9200 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "63cba923-fb13-4348-81ad-b24d5be9fa6f")
+		(uuid "887ed036-5a7f-455c-9bf7-3c267fa3c32f")
 	)
 	(global_label
 		"ENC_A_P"
 		(shape input)
 		(at 349.9200 127.4600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "e4b89347-f334-4a16-a0c4-6693f2db1546")
+		(uuid "19be81e8-350d-49c8-94f1-566a216c9909")
 	)
 	(global_label
 		"ENC_A_N"
 		(shape input)
 		(at 349.9200 130.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "82425b38-458b-4692-bc52-f47885abd082")
+		(uuid "d738e973-ce76-4999-9fa8-74e07dd45702")
 	)
 	(global_label
 		"ENC_B_P"
 		(shape input)
 		(at 349.9200 132.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "7feacbff-0062-47e4-80b3-77656e2f87c3")
+		(uuid "fc795ac9-697c-4a71-b937-dd5a846a0a9f")
 	)
 	(global_label
 		"ENC_B_N"
 		(shape input)
 		(at 349.9200 135.0800 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "f8e12a46-9a0c-43dd-a38d-42e3e391c391")
+		(uuid "c84ec3bd-28d1-4c48-8805-43874c912a71")
 	)
 	(global_label
 		"ENC_Z_P"
 		(shape input)
 		(at 349.9200 137.6200 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "9f4c1c3b-523b-46fd-9870-02f09941fa4f")
+		(uuid "92cafece-7130-44e3-9853-bc854714ab4a")
 	)
 	(global_label
 		"ENC_Z_N"
 		(shape input)
 		(at 349.9200 140.1600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "124a7fcd-d958-475e-9003-71aede4cd9ea")
+		(uuid "7d0ed85b-ecac-4666-a0db-c55cf0717bbd")
 	)
 	(global_label
 		"AC_L"
 		(shape input)
 		(at 64.8400 42.4600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "f5e47412-2c83-4bc6-b201-7a2c2ade20b7")
+		(uuid "d9d58fde-581d-47d4-a21d-6428773292e1")
 	)
 	(global_label
 		"AC_N"
 		(shape input)
 		(at 64.8400 47.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "afb1e8cb-7644-460f-8577-6451d2f9b7ad")
+		(uuid "dc81b871-7f3f-4f2c-9c9b-5f3c21f989e5")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 85.1600 47.5400 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "1aaf52a8-8eed-4d81-a5a2-bfe89e676890")
+		(uuid "18227a19-1d92-4012-ba3e-76355cff0e17")
 	)
 	(global_label
 		"+24V"
 		(shape input)
 		(at 85.1600 42.4600 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "53441f04-8a2a-409e-afe8-5bc3d27bd8f4")
+		(uuid "18a8b900-237d-493d-a36b-79f25eb9f230")
 	)
 	(global_label
 		"+24V"
 		(shape input)
 		(at 102.3000 45.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "ba1211ad-573a-4475-9144-bb1a27b43637")
+		(uuid "2c95b32f-20c9-4901-84c7-42b2cb64ab0a")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 102.3000 42.4600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "693e658f-e8a5-45fc-af8b-878c79c8f998")
+		(uuid "61a808ce-8530-41fc-9362-d845e63ca15a")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 102.3000 47.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "6e963793-8595-4c5e-b217-32248e9f4a93")
+		(uuid "aa2bf230-86bb-4abf-abd4-10df928d46f2")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 244.9200 192.4600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "f41dd86a-c029-4a71-ac59-a3f19064734a")
+		(uuid "236d92d9-d820-474b-9ed6-281669b28959")
 	)
 	(global_label
 		"UART_M_TX"
 		(shape input)
 		(at 244.9200 195.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "d2c39a3b-5fd9-4a38-bd06-49ce81561e93")
+		(uuid "4a4cf439-dbfc-428f-9de3-be570abe1431")
 	)
 	(global_label
 		"UART_M_RX"
 		(shape input)
 		(at 244.9200 197.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "3dceb2ef-03ff-44bc-8ff8-91597949ce8c")
+		(uuid "cfd4b8bb-a1ca-4e1b-9288-7fadf815e97e")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 244.9200 200.0800 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "43adf400-e3bb-4d55-a618-c20a60b78cbd")
+		(uuid "4bc2caa9-a5d6-4541-b003-a5065d3eaa10")
 	)
 	(global_label
 		"+3V3"
 		(shape input)
 		(at 217.2200 62.1400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "c54cb68a-d92f-4cbb-a563-575feef49414")
+		(uuid "62930e51-7313-44bd-bb1a-a2626334392b")
 	)
 	(global_label
 		"CHIP_PU"
 		(shape input)
 		(at 217.2200 64.6800 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "4e1aa076-bc2b-4809-9693-cd9090cef5bb")
+		(uuid "69ddd00f-321c-4b24-aa41-4264bfd18ee2")
 	)
 	(global_label
 		"SW1_SIG"
 		(shape input)
 		(at 217.2200 67.2200 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "51494dd9-f155-42d8-aaef-5ebca38be79a")
+		(uuid "d4944018-4824-4f1c-89ad-78cf76a39e89")
 	)
 	(global_label
 		"SW2_SIG"
 		(shape input)
 		(at 217.2200 69.7600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "d8dd7e6d-3bb6-47f9-ac49-e13c363df2c8")
+		(uuid "82b0a6b6-9d9b-4d8b-9829-d5709d4086ee")
 	)
 	(global_label
 		"HALL1_DIV"
 		(shape input)
 		(at 217.2200 72.3000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "13519e92-18df-4bf2-be25-18f626f84ffd")
+		(uuid "ae8ddf4d-17a8-424f-b335-c28886eaf488")
 	)
 	(global_label
 		"HALL2_DIV"
 		(shape input)
 		(at 217.2200 74.8400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "0bb8139b-2948-41ba-9f88-ec0ff7cfddb3")
+		(uuid "e15f305c-9f33-43d0-aa10-588172ef7ffd")
 	)
 	(global_label
 		"FSR1_TOP"
 		(shape input)
 		(at 217.2200 77.3800 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "3fec09d8-324a-4688-9c7c-88d14a04ac86")
+		(uuid "b49c8473-4935-4295-a65d-4849f97c2ed6")
 	)
 	(global_label
 		"FSR2_TOP"
 		(shape input)
 		(at 217.2200 79.9200 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "dee16605-9c01-4135-863c-8e4d55328c97")
+		(uuid "989b931c-190f-45ac-983b-67702b084b1c")
 	)
 	(global_label
 		"M_MS3"
 		(shape input)
 		(at 217.2200 82.4600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "3053c24a-6ec3-4f07-b85a-8d5e48b7cc31")
+		(uuid "376903c1-ed73-4e93-8d94-36440a715db2")
 	)
 	(global_label
 		"M_STEP"
 		(shape input)
 		(at 217.2200 85.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "cdcc3047-a03d-4ef1-a625-f90edb966ad7")
+		(uuid "c87f34c6-518d-41fe-b1c5-e0ed9a2bf091")
 	)
 	(global_label
 		"M_DIR"
 		(shape input)
 		(at 217.2200 87.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "43369ad1-3c0f-4af6-a3d1-acb168ee7189")
+		(uuid "7066c8ef-f37a-4e56-a08f-49cfb4dec090")
 	)
 	(global_label
 		"M_EN"
 		(shape input)
 		(at 217.2200 90.0800 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "16f962de-5b98-4538-80b8-3b6d4db3a9fb")
+		(uuid "16d9e988-a4d8-452f-8d4c-89aeb6f4bef2")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 217.2200 95.1600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "be0d815c-aacc-4a62-a752-be5bc41e5c63")
+		(uuid "c0fcbffb-547d-45f8-8223-25bdaea68978")
 	)
 	(global_label
 		"ENC_Z_ESP"
 		(shape input)
 		(at 217.2200 97.7000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "8b7156c3-34e5-4d26-ab07-78dcb4f26fbb")
+		(uuid "134c771b-fa95-43ac-b993-113edddf9277")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 217.2200 107.8600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "252a57b7-8d98-4702-a4aa-0021f6ad7713")
+		(uuid "fe3ac765-3ea2-48d4-a135-16b72c7917db")
 	)
 	(global_label
 		"M_MS1"
 		(shape input)
 		(at 252.7800 92.6200 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "12b697aa-b92d-4f07-8d4c-4dad3df3a780")
+		(uuid "cc28f5c9-ca8c-42e8-b5af-4dc64950c85c")
 	)
 	(global_label
 		"UART_M_TX"
 		(shape input)
 		(at 252.7800 90.0800 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "5b7dc7bb-4189-43c7-973a-aae842b3c7af")
+		(uuid "52013faf-409f-4943-ac89-0ea06cbf7c4c")
 	)
 	(global_label
 		"UART_M_RX"
 		(shape input)
 		(at 252.7800 87.5400 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "e402b531-f76c-4026-a4ed-ecf3120a7cbf")
+		(uuid "35398165-873e-419d-a3ba-d8f09577a3a3")
 	)
 	(global_label
 		"M_MS2"
 		(shape input)
 		(at 252.7800 85.0000 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "7ad11c5b-be48-446f-a1ed-a13d0148075b")
+		(uuid "10e070dd-3ea5-4aca-819d-128fffb09bc8")
 	)
 	(global_label
 		"GPIO18_OPTIC1"
 		(shape input)
 		(at 252.7800 82.4600 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "9d315a1c-f6a5-45ea-80f0-00048572d912")
+		(uuid "60c7d735-5e9e-4fc6-a917-811f0126b0ce")
 	)
 	(global_label
 		"GPIO19_OPTIC2"
 		(shape input)
 		(at 252.7800 79.9200 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "8f7d7f90-cfc4-43a7-b865-eac218a40cfc")
+		(uuid "c5a4c2f1-de68-4a11-920a-c78c7a6c1632")
 	)
 	(global_label
 		"GPIO21_ENC_A"
 		(shape input)
 		(at 252.7800 77.3800 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "3a538b0a-f0ef-4a00-871f-f618db715e4d")
+		(uuid "cc512917-8513-439c-a8af-17c54df3c87f")
 	)
 	(global_label
 		"GPIO22_ENC_B"
 		(shape input)
 		(at 252.7800 74.8400 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "6573d123-83ff-4324-a043-46440edbc166")
+		(uuid "30853a39-a3ac-4baa-b95b-040aacd6bdc4")
 	)
 	(global_label
 		"GPIO23_RST"
 		(shape input)
 		(at 252.7800 64.6800 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "3e412ef1-49cb-4708-8569-df870d89cf3c")
+		(uuid "9a38ba3a-b43c-43a5-8195-767cdc828061")
 	)
 	(global_label
 		"M_EN"
 		(shape input)
 		(at 302.3000 76.1100 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "ba23a278-508c-4665-9226-28897efd1af9")
+		(uuid "5267185b-bebc-4b7d-9f50-cc4af6a46a16")
 	)
 	(global_label
 		"M_MS1"
 		(shape input)
 		(at 302.3000 78.6500 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "fddb79a0-212f-46e0-b7b0-effb1b60bf80")
+		(uuid "36e929aa-77ac-49de-aaf4-ff8af3d4d33a")
 	)
 	(global_label
 		"M_MS2"
 		(shape input)
 		(at 302.3000 81.1900 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "7e6b22e9-a53f-4bcd-b83f-b6708aae5470")
+		(uuid "8968ec1d-4ca8-47fe-903c-df6d3ca9dac4")
 	)
 	(global_label
 		"M_MS3"
 		(shape input)
 		(at 302.3000 83.7300 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "4a328954-6421-480c-a4e9-af036040199c")
+		(uuid "7b95858e-76b2-4d13-bd76-53d22d53b951")
 	)
 	(global_label
 		"M_STEP"
 		(shape input)
 		(at 302.3000 91.3500 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "b46d2449-0c34-44ca-a766-b8b8e13bdf30")
+		(uuid "10564fd5-c604-4639-a6d8-58cb68d825be")
 	)
 	(global_label
 		"M_DIR"
 		(shape input)
 		(at 302.3000 93.8900 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "ca121b40-4eb6-47fc-b964-00273ae1408c")
+		(uuid "7efba403-1a32-405c-a0ee-575a98fbf116")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 327.7000 93.8900 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "75a65f21-0060-4c00-b551-a189567cc057")
+		(uuid "c0c22f8f-2827-40e8-8d32-8aede3b3ef5e")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 327.7000 91.3500 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "63e06aca-bda9-4e32-8fba-7dece0ea94df")
+		(uuid "9ab1cf1a-1c3f-4114-ae96-1a334cfac322")
 	)
 	(global_label
 		"MOT_2B"
 		(shape input)
 		(at 327.7000 88.8100 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "de8679a3-013c-4ca8-beae-7ccfb3b3446a")
+		(uuid "541b196b-c796-4de5-8050-bd91c168a64b")
 	)
 	(global_label
 		"MOT_2A"
 		(shape input)
 		(at 327.7000 86.2700 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "ba06476a-e628-4e8a-8cec-310bd3c57fd1")
+		(uuid "e602d894-e495-4d0b-9b8d-17f6b82f0a62")
 	)
 	(global_label
 		"MOT_1B"
 		(shape input)
 		(at 327.7000 83.7300 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "8b73c4eb-c3d0-4c83-a00c-030dd812ab57")
+		(uuid "df19339b-b7ea-4d04-820e-4e611c3e99ff")
 	)
 	(global_label
 		"MOT_1A"
 		(shape input)
 		(at 327.7000 81.1900 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "7426fd71-fbfe-4b65-b195-73c7b9394934")
+		(uuid "774c3eb0-f513-4fff-ac7a-3d6ea62f2699")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 327.7000 78.6500 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "690ca4e8-640e-4f0e-a7e6-864b547d4d11")
+		(uuid "c1003db1-8fc5-41c7-bad4-1c4e533ba465")
 	)
 	(global_label
 		"+24V"
 		(shape input)
 		(at 327.7000 76.1100 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "6dda1411-cbde-434a-a808-88c2a6147237")
+		(uuid "0131e95d-ed51-4a64-92f4-88d59fe5fd41")
 	)
 	(global_label
 		"ENC_A_N"
 		(shape input)
 		(at 62.3000 106.1100 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "6de00114-766e-472a-87ba-7fb93f964937")
+		(uuid "adeaafc3-f05b-4695-ba86-63d41d161965")
 	)
 	(global_label
 		"ENC_A_P"
 		(shape input)
 		(at 62.3000 108.6500 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "80f2c2b6-e67c-422d-af54-01c25a884d24")
+		(uuid "006de29a-b0f5-419e-9b0a-4687406d1393")
 	)
 	(global_label
 		"ENC_A_BUF"
 		(shape input)
 		(at 62.3000 111.1900 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "d18a1c39-2333-4878-bea7-bd40216b5492")
+		(uuid "b4059452-9440-4443-865f-fd5271862b07")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 62.3000 113.7300 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "42195bcd-2e60-4d7d-8b8e-edf36cd29569")
+		(uuid "62e14927-ec24-40eb-930c-8c0b278027b4")
 	)
 	(global_label
 		"ENC_B_BUF"
 		(shape input)
 		(at 62.3000 116.2700 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "283af211-321d-4196-9761-89fb3e0a70a2")
+		(uuid "945563eb-a8f1-4d4c-ba63-357897147eb4")
 	)
 	(global_label
 		"ENC_B_N"
 		(shape input)
 		(at 62.3000 118.8100 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "90f67b30-422f-496a-b6f8-416be45aded5")
+		(uuid "a7a2c1e9-82f3-41de-94dd-db23ef848a19")
 	)
 	(global_label
 		"ENC_B_P"
 		(shape input)
 		(at 62.3000 121.3500 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "952703ac-d2f4-47cb-9112-c98d9c7778b2")
+		(uuid "cc488654-d4eb-4adf-b057-a9511034ef5a")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 62.3000 123.8900 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "f70b1ac5-91ab-4f47-bbdb-80613c265e76")
+		(uuid "12510f07-2a14-469c-9cf0-86c78ac066f3")
 	)
 	(global_label
 		"ENC_Z_P"
 		(shape input)
 		(at 87.7000 123.8900 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "dc8dd5f3-d322-4c0f-8a16-1c8f987dba6b")
+		(uuid "ac831487-c412-4181-9056-8e5ba6c19319")
 	)
 	(global_label
 		"ENC_Z_N"
 		(shape input)
 		(at 87.7000 121.3500 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "3e443420-b8e7-4174-b897-c1f0e725897d")
+		(uuid "e7fd11d7-11f5-451e-9b9b-5ccad1082091")
 	)
 	(global_label
 		"ENC_Z_BUF"
 		(shape input)
 		(at 87.7000 118.8100 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "aa36093a-950a-4cca-876a-14dd417ef72a")
+		(uuid "a0b4faed-73e2-4d82-aad5-42ebe7a98907")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 87.7000 116.2700 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "fdcf005e-a3fa-4aed-9548-f5a9ba1d6651")
+		(uuid "77e762e7-1cab-406f-9572-62cebae65931")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 87.7000 106.1100 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "17f5c517-a03a-417d-83b0-7926411a53c6")
+		(uuid "98660a8c-aba4-438a-9553-6bab2dd03823")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 122.3000 106.1100 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "2a2d2d1d-2360-4a87-9630-bbe2e4acdf15")
+		(uuid "1157c829-db40-4ba2-9ab5-5e837b0e09a6")
 	)
 	(global_label
 		"GPIO21_ENC_A"
 		(shape input)
 		(at 122.3000 108.6500 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "e3cfa2fa-99cf-4317-80ec-380794121dd7")
+		(uuid "e8039bb6-0872-45ee-85da-4fa8807a7ff5")
 	)
 	(global_label
 		"ENC_A_BUF"
 		(shape input)
 		(at 122.3000 111.1900 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "bd6a1c68-31e6-4893-8b1b-b32167883411")
+		(uuid "3677dd1a-1b00-4a23-ac69-88c0305ee426")
 	)
 	(global_label
 		"GPIO22_ENC_B"
 		(shape input)
 		(at 122.3000 113.7300 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "87f8eeef-bef3-4852-9b82-459bb2f2f1e0")
+		(uuid "a6e694e2-4ce2-4ccc-9843-1cc4d4144eb9")
 	)
 	(global_label
 		"ENC_B_BUF"
 		(shape input)
 		(at 122.3000 116.2700 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "a8ea1bd4-6f97-4bab-8a76-2403d2162c88")
+		(uuid "abbbcf79-edfb-4834-8e7a-9a8aa92ac5b1")
 	)
 	(global_label
 		"ENC_Z_ESP"
 		(shape input)
 		(at 122.3000 118.8100 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "bd52af53-1221-4860-affd-00c31bb8feb1")
+		(uuid "28b5a47b-616e-4561-bcdd-437c53191062")
 	)
 	(global_label
 		"ENC_Z_BUF"
 		(shape input)
 		(at 122.3000 121.3500 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "8ceb97bc-b712-4d38-92f4-a9e63e305e0f")
+		(uuid "83cb0c77-7c52-425e-9e0a-bd12c41bdc5d")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 122.3000 123.8900 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "cbcf309e-96e5-4370-b511-41f8e83ac484")
+		(uuid "2bb9dd3e-13e9-43d8-a2f9-8b2c74041145")
 	)
 	(global_label
 		"OPTIC1_RAW"
 		(shape input)
 		(at 147.7000 123.8900 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "99bbd708-3698-494f-98c2-0131e808d491")
+		(uuid "e8d20a8f-8cf7-4acd-b280-e90a8b5e3962")
 	)
 	(global_label
 		"GPIO18_OPTIC1"
 		(shape input)
 		(at 147.7000 121.3500 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "1aff6928-3114-4a12-aa77-94796efea56a")
+		(uuid "52bc22db-28a7-4366-9807-252d1ddb587c")
 	)
 	(global_label
 		"OPTIC2_RAW"
 		(shape input)
 		(at 147.7000 118.8100 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "4b689703-ebe0-4e65-b705-83433e1fb2ab")
+		(uuid "339ac296-9094-45b5-bda1-8beaea20e313")
 	)
 	(global_label
 		"GPIO19_OPTIC2"
 		(shape input)
 		(at 147.7000 116.2700 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "30fad9dd-ee6e-4648-b6f0-1acf220ba567")
+		(uuid "0598a129-521d-4cf6-84aa-4fe8af20676c")
 	)
 	(global_label
 		"CHIP_PU"
 		(shape input)
 		(at 172.5400 46.9200 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "418c8859-5a2f-4e0a-85bc-e24d9e3a69aa")
+		(uuid "9e153496-87c9-4ec4-ac65-6f7ee56ef131")
 	)
 	(global_label
 		"Q1_BASE"
 		(shape input)
 		(at 164.9200 52.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "b8043a8b-8eea-4f38-ac8b-b00a3017599e")
+		(uuid "2cfe7800-7620-491f-9735-6517be7adc5b")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 172.5400 57.0800 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "f093c6e3-1be7-49b9-80f8-1923c137ba16")
+		(uuid "86bbbdac-7791-4fb8-9268-7792c073932e")
 	)
 	(global_label
 		"+3V3"
 		(shape input)
 		(at 189.9200 160.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "ef5d4805-8ed5-4ed1-b2dd-a9f66732b68d")
+		(uuid "84d6e873-3456-4c0c-a21d-f6af9418f78c")
 	)
 	(global_label
 		"FSR1_TOP"
 		(shape input)
 		(at 189.9200 162.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "6e093afc-512e-40c1-a6e2-75b23ca7b2ef")
+		(uuid "5af8574e-c7da-424a-b4a0-1b960d021664")
 	)
 	(global_label
 		"FSR1_TOP"
 		(shape input)
 		(at 222.0000 156.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "73cdd3a4-6337-40ea-ab36-7bf393563ca6")
+		(uuid "79702bcd-7d59-40af-a849-a7f756c2052e")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 222.0000 163.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "56e51c07-ddc4-4676-b9af-c184f0d0c890")
+		(uuid "12a7811b-d83b-4031-8a66-aac6e81af4f7")
 	)
 	(global_label
 		"+3V3"
 		(shape input)
 		(at 189.9200 182.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "ac8931c6-5418-4d4c-9cc6-fe46e56b517c")
+		(uuid "749ba398-9400-4118-8fe7-b549d74a3ef2")
 	)
 	(global_label
 		"FSR2_TOP"
 		(shape input)
 		(at 189.9200 184.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "d74d2be5-8ab2-4499-8864-7658feff92df")
+		(uuid "957cf245-305c-4095-941a-e845632f09bb")
 	)
 	(global_label
 		"FSR2_TOP"
 		(shape input)
 		(at 222.0000 178.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "912c5ecb-d709-4cb3-bb66-37585892f8bf")
+		(uuid "1a747f24-ad32-4bba-a453-f2ca6ae27e42")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 222.0000 185.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "27c62d63-2568-4cd6-800c-e24f05558744")
+		(uuid "d18af38a-267c-48ba-9492-dc2b684049d5")
 	)
 	(global_label
 		"SW1_SIG"
 		(shape input)
 		(at 66.0000 156.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "e69b7d0c-c02e-4d9d-93db-c635c7c6bd8d")
+		(uuid "5441701b-0ef8-4399-8d93-9af34a6bc535")
 	)
 	(global_label
 		"+3V3"
 		(shape input)
 		(at 66.0000 163.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "1d7ac941-1df7-473a-bcf0-d6e7cc92d485")
+		(uuid "8bb51f86-5dd2-4630-bc56-759c0a36509a")
 	)
 	(global_label
 		"SW2_SIG"
 		(shape input)
 		(at 66.0000 178.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "5c98be89-a52f-4e12-a8d3-6b0bc2b08884")
+		(uuid "b5fde687-5757-4b39-bff7-e270c346a8b5")
 	)
 	(global_label
 		"+3V3"
 		(shape input)
 		(at 66.0000 185.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "17d1ccab-aef5-44ec-bd3c-a6756aa3bb34")
+		(uuid "2f698487-7ad6-4f07-ab91-be9a4d7e3c3a")
 	)
 	(global_label
 		"HALL1_RAW"
 		(shape input)
 		(at 122.0000 206.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "dd2b511d-d544-4968-b3b4-1f9527b95137")
+		(uuid "6eb5f261-2595-46ee-823e-ea09179cceb6")
 	)
 	(global_label
 		"HALL1_DIV"
 		(shape input)
 		(at 122.0000 213.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "ad5ba679-56dc-48e6-b9b2-7a6d64554c05")
+		(uuid "d579c4db-14bd-4b58-8543-6bcb746bac95")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 122.0000 224.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "dd29baa1-2c58-4d4f-a526-435a902231fd")
+		(uuid "c4d3feb4-8e0d-4a28-9478-b22dae9b65ab")
 	)
 	(global_label
 		"HALL1_DIV"
 		(shape input)
 		(at 122.0000 231.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "50771402-2622-44f3-b972-9562f1e52da8")
+		(uuid "ef9c65a7-79f4-41a7-83c2-008ac7c6afaf")
 	)
 	(global_label
 		"HALL2_RAW"
 		(shape input)
 		(at 148.0000 206.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "3bafa427-1b2b-499f-bbb0-65e5cadc0f72")
+		(uuid "ec0790b3-7b2e-45bb-abd2-7fd12924ee62")
 	)
 	(global_label
 		"HALL2_DIV"
 		(shape input)
 		(at 148.0000 213.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "3986261a-3931-4929-b121-e4644614060c")
+		(uuid "048d50c0-adbd-4f6b-ade1-7c02d8729f99")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 148.0000 224.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "634951be-16e9-4482-bf04-9cb7d5c63960")
+		(uuid "6c2415f7-686d-4a2f-a6fe-0f70880add92")
 	)
 	(global_label
 		"HALL2_DIV"
 		(shape input)
 		(at 148.0000 231.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "a5430664-4338-4dc1-9a8a-032d1d5caf42")
+		(uuid "d6af745f-9159-466d-b416-394cd800e41e")
 	)
 	(global_label
 		"+3V3"
 		(shape input)
 		(at 170.0000 66.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "14c9e6b3-263a-45b8-b8e1-572a356cd014")
+		(uuid "88eb3fe0-bda6-4155-abe3-be9adbed9808")
 	)
 	(global_label
 		"CHIP_PU"
 		(shape input)
 		(at 170.0000 73.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "80eb9c7e-a5e1-490d-a9fc-40bd961c630d")
+		(uuid "f860c550-aae6-4bb9-886f-28f0a598b48f")
 	)
 	(global_label
 		"GPIO23_RST"
 		(shape input)
 		(at 196.0000 66.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "6db1c850-9c09-4ffb-a8c1-75a9c1cef7fa")
+		(uuid "b9c3eacd-467a-4458-a622-07d6f40b6d3a")
 	)
 	(global_label
 		"Q1_BASE"
 		(shape input)
 		(at 196.0000 73.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "1adaeb72-9a35-4d03-83b7-0ffb1d84e1e1")
+		(uuid "fa2af871-1ceb-4a4d-8c82-d44c036bc6cc")
 	)
 	(global_label
 		"+24V"
 		(shape input)
 		(at 75.0000 68.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "4b990e47-fe61-447f-be73-86403100fac8")
+		(uuid "1b4b2efd-557e-44f5-bf82-4b0000fc5116")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 75.0000 75.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "e37f78c3-8c60-48e3-aab8-fda330c3fb19")
+		(uuid "37d1b8eb-21af-4912-9331-b6cfa90155e7")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 115.0000 68.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "68ae6e39-ed85-46dc-b2d9-c1c86988b701")
+		(uuid "b4bf89ce-c9cb-44fc-9ba1-38ccbf9772a2")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 115.0000 75.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "aee2d4aa-07e7-43a1-8091-c93a11260919")
+		(uuid "9a3c919f-f634-4e68-a045-b2af7daf81ca")
 	)
 	(global_label
 		"SW1_SIG"
 		(shape input)
 		(at 92.0000 161.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "d5519c73-731a-4469-af73-5943843adc27")
+		(uuid "d86f14bb-82c3-4fd0-8163-8e14b4b1b78d")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 92.0000 168.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "518521ce-e9df-4a9f-a731-ccb090a48d3c")
+		(uuid "525af136-b5ef-4256-83ac-be4a02541935")
 	)
 	(global_label
 		"SW2_SIG"
 		(shape input)
 		(at 92.0000 183.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "3ed71036-2f00-46f8-915a-adba85e5df7a")
+		(uuid "1de10cea-4351-4158-9025-792e71a30a9d")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 92.0000 190.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "9d7379c6-853e-44eb-859b-500801421805")
+		(uuid "6aa832a4-8ee2-48b8-b5ae-60ef43f963e4")
 	)
 	(global_label
 		"CHIP_PU"
 		(shape input)
 		(at 170.0000 84.1900 270.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "8d7e635d-5701-40e2-ae3a-1a50a7181b81")
+		(uuid "d1b8604a-269a-47c4-812d-2ecb6ba3a9e3")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 170.0000 91.8100 90.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "b7bfe611-c623-4f32-851d-723c56c30abe")
+		(uuid "f59a5303-52d6-45b9-90ac-fc8bc639d302")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 29.9200 207.4600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "e3bbfda4-20ed-4545-be25-8472b2c4c608")
+		(uuid "6ac76dfe-55ac-4c96-855a-a6fd8718c993")
 	)
 	(global_label
 		"OPTIC1_RAW"
 		(shape input)
 		(at 29.9200 210.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "34f01798-d407-49d2-969b-c3a42c17b813")
+		(uuid "809f267c-7b16-479c-89ee-3099586a045f")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 29.9200 212.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "ef4b05d4-756b-4abb-806c-0ef1f5344de4")
+		(uuid "9554fbfd-ed73-4378-ba75-4f683a620630")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 29.9200 229.4600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "b2e887a4-b30e-4b52-9b8e-59e6465b5c0c")
+		(uuid "4e070681-d467-4e82-ba55-488850d989c5")
 	)
 	(global_label
 		"OPTIC2_RAW"
 		(shape input)
 		(at 29.9200 232.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "98fc043e-d86a-4405-a090-ffd868271c52")
+		(uuid "c9ec7b8e-ed16-4328-9510-ca91c6ab6380")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 29.9200 234.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "bcca0806-8ca6-4eee-bd75-aa9458289301")
+		(uuid "a8823c46-d944-4370-8c3a-2cc2c29c9797")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 84.9200 212.4600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "1a76a564-6fab-4a8a-b7c2-bb3f20e95eb1")
+		(uuid "2557a314-dd9a-4b05-9712-8a392984d729")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 84.9200 215.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "66d949c4-f625-4a52-88b8-e199a2fcb873")
+		(uuid "f3f41755-bd8b-4702-ab29-c104a416bbd7")
 	)
 	(global_label
 		"HALL1_RAW"
 		(shape input)
 		(at 84.9200 217.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "95875275-21c9-452f-8a27-aa241355d2ab")
+		(uuid "f052fe92-24ee-498d-b413-0978c5a4b010")
 	)
 	(global_label
 		"+5V"
 		(shape input)
 		(at 84.9200 237.4600 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "e019eede-dc2c-4dfb-8472-e33d15e1116f")
+		(uuid "80787db4-4191-407a-b19d-b784829ed9b3")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 84.9200 240.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "197a28de-49a0-4174-8ebf-739524642b65")
+		(uuid "fbc37e8b-3c51-46da-bbfc-d1ef01b838d6")
 	)
 	(global_label
 		"HALL2_RAW"
 		(shape input)
 		(at 84.9200 242.5400 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "915ad155-77ff-4347-ae61-baf9c2241a46")
+		(uuid "97d30c13-ae67-4d09-82c8-b31083ed52d7")
 	)
 	(global_label
 		"SW1_SIG"
 		(shape input)
 		(at 40.0800 162.4600 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "4281f43c-9da9-4714-b444-51c70e553e9d")
+		(uuid "abf63cd2-c7ce-4d8a-a193-2bca04c03a7a")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 29.9200 165.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "3cf418a5-929e-4995-8016-5d3bb5a418c7")
+		(uuid "562a5ae6-722f-470c-add4-b8f0978ee99d")
 	)
 	(global_label
 		"SW2_SIG"
 		(shape input)
 		(at 40.0800 184.4600 0.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "87e7d7c5-58cc-4605-87d2-cb4cbb161278")
+		(uuid "7ab821c1-a6c7-4327-8650-40013986a0f1")
 	)
 	(global_label
 		"GND"
 		(shape input)
 		(at 29.9200 187.0000 180.0)
 		(effects (font (size 1.27 1.27)))
-		(uuid "fb1a41d4-c617-4687-af4c-94a7ed7de85d")
+		(uuid "acfccd42-b5c0-41be-93c2-2715e77eeba7")
 	)
 	(sheet_instances
 		(path "/" (page "1"))
