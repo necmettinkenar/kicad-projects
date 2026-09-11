@@ -48,28 +48,7 @@ def extract_lib_symbol(lib, name):
         blk = re.sub(r'\n?\s*\(extends "[^"]+"\)', '', pblk)
         depth += 1
     # rename top-level:  (symbol "Name"  ->  (symbol "Lib:Name"
-    blk = blk.replace('(symbol "' + name + '"', '(symbol "' + lib + ':' + name + '"', 1)
-    # PS1: force -Vo/+Vo pins to power_out so GND/+24V count as driven for ERC
-    if name == 'IRM-20-24':
-        out = []
-        i = 0
-        while i < len(blk):
-            m2 = re.compile(r'\(pin (\w+)').search(blk, i)
-            if not m2:
-                out.append(blk[i:]); break
-            j = m2.start()
-            out.append(blk[i:j])
-            pinblk = extract_block(blk, j)
-            nm2 = re.search(r'\(name "([^"]*)"', pinblk)
-            pn = nm2.group(1) if nm2 else ''
-            if pn in ('-Vo', '+Vo'):
-                pinblk = pinblk.replace('(pin ' + m2.group(1), '(pin power_out', 1)
-            elif pn in ('AC/L', 'AC/N'):
-                pinblk = pinblk.replace('(pin ' + m2.group(1), '(pin passive', 1)
-            out.append(pinblk)
-            i = j + len(pinblk)
-        blk = ''.join(out)
-    return blk
+    return blk.replace('(symbol "' + name + '"', '(symbol "' + lib + ':' + name + '"', 1)
 
 def parse_pins(blk):
     """Extract pins from a symbol block: number -> (x, y, angle, name, etype)."""
