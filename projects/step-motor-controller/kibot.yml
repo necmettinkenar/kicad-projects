@@ -58,7 +58,7 @@ outputs:
     dir: 'fabrication/pnp'
     options:
       format: 'CSV'
-      units: 'mm'
+      units: 'millimeters'
 
   - name: 'pcb_pdf'
     comment: 'PCB layout PDF'
