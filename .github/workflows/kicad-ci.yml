@@ -87,7 +87,7 @@ jobs:
                 -c kibot.yml \
                 -d output \
                 -v \
-                gerbers drill bom_html bom_csv pnp pcb_pdf schematic_pdf render_3d step_3d
+                gerbers drill bom_html bom_csv pnp pcb_pdf schematic_pdf step_3d
 
       - name: Zip fabrication files
         if: steps.find.outputs.has_project == 'true'
