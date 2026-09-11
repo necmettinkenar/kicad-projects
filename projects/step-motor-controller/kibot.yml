@@ -6,14 +6,6 @@ kibot:
 global:
   output: 'output/%f'
 
-filters:
-  - name: 'exclude_dnp'
-    type: 'generic'
-    comment: 'Exclude DNP components'
-    attrs:
-      - name: 'dnp'
-        value: true
-
 outputs:
   - name: 'drc'
     comment: 'Design Rule Check'
