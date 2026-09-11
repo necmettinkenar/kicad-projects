@@ -6,14 +6,17 @@ on:
       - '**.kicad_sch'
       - '**.kicad_pcb'
       - '**.kicad_pro'
-      - 'kibot.yml'
+      - '**/kibot.yml'
   pull_request:
     paths:
       - '**.kicad_sch'
       - '**.kicad_pcb'
       - '**.kicad_pro'
-      - 'kibot.yml'
+      - '**/kibot.yml'
   workflow_dispatch:
+
+env:
+  PROJ_DIR: projects/step-motor-controller
 
 jobs:
   # ─── CI: DRC + ERC ────────────────────────────────────────
@@ -27,15 +30,17 @@ jobs:
 
       - name: Find KiCad projects
         id: find
+        working-directory: ${{ env.PROJ_DIR }}
         run: |
-          pcb=$(find projects -name '*.kicad_pcb' 2>/dev/null | head -1)
-          sch=$(find projects -name '*.kicad_sch' 2>/dev/null | head -1)
+          pcb=$(find . -name '*.kicad_pcb' 2>/dev/null | head -1)
+          sch=$(find . -name '*.kicad_sch' 2>/dev/null | head -1)
           echo "pcb=$pcb" >> $GITHUB_OUTPUT
           echo "sch=$sch" >> $GITHUB_OUTPUT
           echo "has_project=$( [ -n "$pcb" ] && echo true || echo false )" >> $GITHUB_OUTPUT
 
       - name: Run DRC + ERC (KiBot)
         if: steps.find.outputs.has_project == 'true'
+        working-directory: ${{ env.PROJ_DIR }}
         run: |
           kibot -b "${{ steps.find.outputs.pcb }}" \
                 -e "${{ steps.find.outputs.sch }}" \
@@ -49,7 +54,7 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: drc-erc-reports
-          path: output/reports/
+          path: ${{ env.PROJ_DIR }}/output/reports/
           if-no-files-found: ignore
 
   # ─── CD: Gerber + BOM + PnP + PDF + 3D ───────────────────
@@ -65,15 +70,17 @@ jobs:
 
       - name: Find KiCad projects
         id: find
+        working-directory: ${{ env.PROJ_DIR }}
         run: |
-          pcb=$(find projects -name '*.kicad_pcb' 2>/dev/null | head -1)
-          sch=$(find projects -name '*.kicad_sch' 2>/dev/null | head -1)
+          pcb=$(find . -name '*.kicad_pcb' 2>/dev/null | head -1)
+          sch=$(find . -name '*.kicad_sch' 2>/dev/null | head -1)
           echo "pcb=$pcb" >> $GITHUB_OUTPUT
           echo "sch=$sch" >> $GITHUB_OUTPUT
           echo "has_project=$( [ -n "$pcb" ] && echo true || echo false )" >> $GITHUB_OUTPUT
 
       - name: Generate all manufacturing files (KiBot)
         if: steps.find.outputs.has_project == 'true'
+        working-directory: ${{ env.PROJ_DIR }}
         run: |
           kibot -b "${{ steps.find.outputs.pcb }}" \
                 -e "${{ steps.find.outputs.sch }}" \
@@ -84,6 +91,7 @@ jobs:
 
       - name: Zip fabrication files
         if: steps.find.outputs.has_project == 'true'
+        working-directory: ${{ env.PROJ_DIR }}
         run: |
           cd output
           zip -r ../manufacturing.zip ./
@@ -93,7 +101,7 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: manufacturing-files
-          path: output/
+          path: ${{ env.PROJ_DIR }}/output/
           if-no-files-found: ignore
 
       - name: Upload ZIP artifact
@@ -101,5 +109,5 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: manufacturing-zip
-          path: manufacturing.zip
+          path: ${{ env.PROJ_DIR }}/manufacturing.zip
           if-no-files-found: ignore
