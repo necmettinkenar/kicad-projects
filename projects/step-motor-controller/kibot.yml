@@ -1,24 +1,18 @@
 # KiBot config for Step Motor Controller project
-# Generates: DRC, ERC, Gerber, Drill, BOM, PnP, PDF, 3D render
+# Generates: DRC, ERC (preflight) + Gerber, Drill, BOM, PnP, PDF, 3D render (outputs)
 kibot:
   version: 1
 
 global:
   output: 'output/%f'
 
+preflight:
+  run_erc: true
+  run_drc: true
+  erc_warnings: false
+  drc_warnings: false
+
 outputs:
-  - name: 'drc'
-    comment: 'Design Rule Check'
-    type: 'kicad_drc'
-    dir: 'reports'
-    options:
-      check_zone_fills: true
-
-  - name: 'erc'
-    comment: 'Electrical Rule Check'
-    type: 'kicad_erc'
-    dir: 'reports'
-
   - name: 'gerbers'
     comment: 'Gerber fabrication files'
     type: 'gerber'
@@ -33,11 +27,10 @@ outputs:
 
   - name: 'drill'
     comment: 'Drill files'
-    type: 'drill'
+    type: 'excellon'
     dir: 'fabrication/drills'
     options:
       units: 'mm'
-      report: true
       map:
         type: 'pdf'
 
@@ -48,15 +41,6 @@ outputs:
     options:
       output: 'bom_%f.html'
       format: 'html'
-      group_fields: ['part', 'value', 'footprint']
-      columns:
-        - field: 'References'
-          name: 'Ref'
-        - field: 'Value'
-        - field: 'Footprint'
-        - field: 'Quantity'
-          name: 'Qty'
-        - field: 'Description'
 
   - name: 'bom_csv'
     comment: 'BOM (CSV)'
@@ -73,8 +57,6 @@ outputs:
     options:
       format: 'CSV'
       units: 'mm'
-      separate_files_for_front_and_back: true
-      only_smd: false
 
   - name: 'pcb_pdf'
     comment: 'PCB layout PDF'
@@ -96,7 +78,12 @@ outputs:
     dir: 'documentation'
     options:
       output: 'render_%f.svg'
-      view: 'top'
-      zoom: 4
       width: 1600
       height: 1200
+
+  - name: 'step_3d'
+    comment: '3D STEP model'
+    type: 'step'
+    dir: 'fabrication/3d'
+    options:
+      output: '%f.step'
