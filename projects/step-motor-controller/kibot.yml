@@ -1,5 +1,7 @@
 # KiBot config for Step Motor Controller project
 # Generates: DRC, ERC, Gerber, Drill, BOM, PnP, PDF, 3D render
+kibot:
+  version: 1
 
 global:
   kicad_active_version: 10.0
