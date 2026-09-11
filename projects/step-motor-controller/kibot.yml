@@ -3,9 +3,6 @@
 kibot:
   version: 1
 
-global:
-  output: 'output/%f'
-
 preflight:
   # DRC/ERC verified locally (0 electrical violations) — CI runs netlist parity only
   update_xml: true
