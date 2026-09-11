@@ -9,14 +9,14 @@ global:
 outputs:
   - name: 'drc'
     comment: 'Design Rule Check'
-    type: 'drc'
+    type: 'kicad_drc'
     dir: 'reports'
     options:
       check_zone_fills: true
 
   - name: 'erc'
     comment: 'Electrical Rule Check'
-    type: 'erc'
+    type: 'kicad_erc'
     dir: 'reports'
 
   - name: 'gerbers'
