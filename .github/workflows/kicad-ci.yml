@@ -93,8 +93,7 @@ jobs:
         if: steps.find.outputs.has_project == 'true'
         working-directory: ${{ env.PROJ_DIR }}
         run: |
-          cd output
-          zip -r ../manufacturing.zip ./
+          python3 -m zipfile -c manufacturing.zip output/
 
       - name: Upload manufacturing files
         if: always()
