@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "C:\\Users\\CASPER\\Documents\\KiCad\\kicad-projects\\projects\\step-motor-controller\\step-motor-controller.kicad_sch")
-		(date "2026-09-11T17:29:58")
+		(date "2026-09-15T06:08:12")
 		(tool "Eeschema 10.0.3")
 		(sheet
 			(number "1")
@@ -11,12 +11,12 @@
 			(title_block
 				(title "Step Motor Controller")
 				(company)
-				(rev "2.0")
-				(date "2026-09-11")
+				(rev "4.0")
+				(date "2026-09-12")
 				(source "step-motor-controller.kicad_sch")
 				(comment
 					(number "1")
-					(value "Auto-generated from Sema_Baglanti_Tablosu.xlsx - all 6 sheets")
+					(value "Auto-generated wired schematic from Sema_Baglanti_Tablosu.xlsx")
 				)
 				(comment
 					(number "2")
@@ -57,11 +57,11 @@
 		(comp
 			(ref "C1")
 			(value "100uF/35V")
-			(footprint "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm")
 			(description "100uF/35V")
 			(fields
 				(field
-					(name "Footprint") "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -93,7 +93,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "45551d8c-9ce4-45b3-8d4e-8f2998996612")
+			(tstamps "dc30c085-c657-4902-9e93-2e89d29e6670")
 			(units
 				(unit
 					(name "A")
@@ -111,11 +111,11 @@
 		(comp
 			(ref "C2")
 			(value "10uF/16V")
-			(footprint "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm")
 			(description "10uF/16V")
 			(fields
 				(field
-					(name "Footprint") "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -147,7 +147,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "a04c4ce7-3742-4c32-94d0-5fae212f643c")
+			(tstamps "d638acdf-6f09-470d-9221-ddc88a162661")
 			(units
 				(unit
 					(name "A")
@@ -165,11 +165,11 @@
 		(comp
 			(ref "C3")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0805_2012Metric")
 			(description "100nF")
 			(fields
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -201,7 +201,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "4ec735ed-d081-404a-b34c-5d437a4867c0")
+			(tstamps "04db7f3b-4801-4cc8-b3f0-f9b93a4ca062")
 			(units
 				(unit
 					(name "A")
@@ -219,11 +219,11 @@
 		(comp
 			(ref "C4")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0805_2012Metric")
 			(description "100nF")
 			(fields
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -255,7 +255,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "1cae8458-20d5-48f8-a74d-69f6bcf7c683")
+			(tstamps "7ff347a8-b4cf-494f-8c9b-18f39b9cc1a8")
 			(units
 				(unit
 					(name "A")
@@ -273,11 +273,11 @@
 		(comp
 			(ref "C5")
 			(value "100nF")
-			(footprint "Capacitor_SMD:C_0805_2012Metric")
 			(description "100nF")
 			(fields
 				(field
-					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -309,7 +309,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "86b49625-10a0-45b5-a752-c9ed9ea643b9")
+			(tstamps "03ec3fae-aa26-4e1a-a08d-51beb29404b5")
 			(units
 				(unit
 					(name "A")
@@ -326,9 +326,9 @@
 		)
 		(comp
 			(ref "J1")
-			(value "AC Input 3Pin")
+			(value "AC Input")
 			(footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal")
-			(description "AC Input 3Pin")
+			(description "AC Input")
 			(fields
 				(field
 					(name "Footprint") "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal")
@@ -336,7 +336,7 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "AC Input 3Pin")
+					(name "Description") "AC Input")
 			)
 			(libsource
 				(lib "Connector_Generic")
@@ -363,7 +363,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "18e8ff64-3c66-42c5-a281-de5bb0dbfe9a")
+			(tstamps "9918826c-7f93-458a-b94c-8adda2345673")
 			(units
 				(unit
 					(name "A")
@@ -420,7 +420,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "2764994c-b8e7-4439-a8af-9268ec8b3bf4")
+			(tstamps "d8ff6c6f-9a47-470e-8c18-cf1fbf53db8a")
 			(units
 				(unit
 					(name "A")
@@ -480,7 +480,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "53a513e5-5907-4b13-b081-388cedc9d914")
+			(tstamps "688e9ed9-e157-4007-b2fb-c373153cf98f")
 			(units
 				(unit
 					(name "A")
@@ -552,7 +552,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "bcf3fe58-180f-4fce-baba-95166c12a6ed")
+			(tstamps "591268df-cfdb-4f22-9424-2d60a6b4df75")
 			(units
 				(unit
 					(name "A")
@@ -608,7 +608,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "4b5e2b52-3213-4c79-8b8d-831cecfcf875")
+			(tstamps "1351a761-c181-4b25-a190-c352c1b52422")
 			(units
 				(unit
 					(name "A")
@@ -665,7 +665,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "a2046750-1fa8-4fde-a0ec-6a9d4d5fe819")
+			(tstamps "7fe5aaa1-8eeb-463e-b45e-d4d2acf7612a")
 			(units
 				(unit
 					(name "A")
@@ -683,11 +683,11 @@
 		(comp
 			(ref "R2")
 			(value "10K")
-			(footprint "Resistor_SMD:R_0805_2012Metric")
 			(description "10K")
 			(fields
 				(field
-					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -719,7 +719,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "746dec0d-58b6-44e6-95ad-0db3d2a3ed13")
+			(tstamps "a0d1b5c3-ac44-4f80-a95a-61c267e62ca0")
 			(units
 				(unit
 					(name "A")
@@ -773,7 +773,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "971c7e01-6c3c-4ed3-9e1c-9b5e2d27a4e8")
+			(tstamps "87e1251f-4e32-44ad-969a-428cb92279c5")
 			(units
 				(unit
 					(name "A")
@@ -791,11 +791,11 @@
 		(comp
 			(ref "R4")
 			(value "10K")
-			(footprint "Resistor_SMD:R_0805_2012Metric")
 			(description "10K")
 			(fields
 				(field
-					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -827,7 +827,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "59e29ad8-1a15-482b-a479-cf55c590abfd")
+			(tstamps "5e91f024-9627-4808-a158-9b231aa8be96")
 			(units
 				(unit
 					(name "A")
@@ -845,11 +845,11 @@
 		(comp
 			(ref "R5")
 			(value "10K")
-			(footprint "Resistor_SMD:R_0805_2012Metric")
 			(description "10K")
 			(fields
 				(field
-					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -881,7 +881,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "b0b6517d-88f2-40f9-b475-5b0df06299c9")
+			(tstamps "e91d49a3-8fc2-402f-b72a-dcf7e3894cff")
 			(units
 				(unit
 					(name "A")
@@ -899,11 +899,11 @@
 		(comp
 			(ref "R6")
 			(value "10K")
-			(footprint "Resistor_SMD:R_0805_2012Metric")
 			(description "10K")
 			(fields
 				(field
-					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -935,7 +935,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "b03859d0-762c-411c-a4ee-b383c7a339cd")
+			(tstamps "0934aa3b-e208-47cb-8646-7bf196296e26")
 			(units
 				(unit
 					(name "A")
@@ -953,11 +953,11 @@
 		(comp
 			(ref "R7")
 			(value "10K")
-			(footprint "Resistor_SMD:R_0805_2012Metric")
 			(description "10K")
 			(fields
 				(field
-					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -989,7 +989,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "e896639c-8225-477e-857b-6f2d015d0165")
+			(tstamps "d09834e2-1394-42ef-b9b1-0f98a096db30")
 			(units
 				(unit
 					(name "A")
@@ -1007,11 +1007,11 @@
 		(comp
 			(ref "R8")
 			(value "20K")
-			(footprint "Resistor_SMD:R_0805_2012Metric")
 			(description "20K")
 			(fields
 				(field
-					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -1043,7 +1043,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "fcdcbdf0-5de9-4f45-a5fa-388d26b9f45e")
+			(tstamps "71446879-288b-4df0-bda7-a229b1076037")
 			(units
 				(unit
 					(name "A")
@@ -1061,11 +1061,11 @@
 		(comp
 			(ref "R9")
 			(value "10K")
-			(footprint "Resistor_SMD:R_0805_2012Metric")
 			(description "10K")
 			(fields
 				(field
-					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -1097,7 +1097,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "7bb39b6d-cc2d-4e2f-8c6f-922c9b1c0601")
+			(tstamps "156c8ee2-7e19-4b18-9692-bd09590a3ce9")
 			(units
 				(unit
 					(name "A")
@@ -1115,11 +1115,11 @@
 		(comp
 			(ref "R10")
 			(value "20K")
-			(footprint "Resistor_SMD:R_0805_2012Metric")
 			(description "20K")
 			(fields
 				(field
-					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -1151,7 +1151,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "706d69ff-4a4a-4f3b-800f-77726b03d496")
+			(tstamps "5392de2e-c986-44c6-9844-043457c60a87")
 			(units
 				(unit
 					(name "A")
@@ -1169,11 +1169,11 @@
 		(comp
 			(ref "R11")
 			(value "10K")
-			(footprint "Resistor_SMD:R_0805_2012Metric")
 			(description "10K")
 			(fields
 				(field
-					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -1205,7 +1205,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "2140d0f8-10fe-4d55-b1dd-e38ac3c0db2b")
+			(tstamps "4ea326d7-f36a-448c-b09e-78227f261151")
 			(units
 				(unit
 					(name "A")
@@ -1223,11 +1223,11 @@
 		(comp
 			(ref "R12")
 			(value "1K")
-			(footprint "Resistor_SMD:R_0805_2012Metric")
 			(description "1K")
 			(fields
 				(field
-					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+					(name "Footprint")
+				)
 				(field
 					(name "Datasheet")
 				)
@@ -1259,7 +1259,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "0e699c4c-c72a-4ebd-93b5-b90c0d274c28")
+			(tstamps "23282dc7-52c5-4e51-97b7-ea18d85d80e9")
 			(units
 				(unit
 					(name "A")
@@ -1313,7 +1313,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "8f89f165-7867-4448-a8f1-94bdffd757e8")
+			(tstamps "b994d248-7ce9-4db3-99e0-a4b2ced56303")
 			(units
 				(unit
 					(name "A")
@@ -1370,7 +1370,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "8b2a080c-dfc4-4f48-82ea-61f302331d9b")
+			(tstamps "5a7d1616-4702-41ea-aabb-49ca640b0d2b")
 			(units
 				(unit
 					(name "A")
@@ -1427,7 +1427,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "85df4ebb-6fbb-40ec-aa59-f374cf084f93")
+			(tstamps "eb528bd3-718e-4eda-beca-c76a0e77ab7b")
 			(units
 				(unit
 					(name "A")
@@ -1484,7 +1484,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "079a8b47-ab92-4cdb-9a15-bed2111854d2")
+			(tstamps "da139c4b-9283-4ac6-9aa8-7595e90a9283")
 			(units
 				(unit
 					(name "A")
@@ -1504,9 +1504,9 @@
 		)
 		(comp
 			(ref "SW1")
-			(value "Limit SW-1")
+			(value "SW1")
 			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
-			(description "Limit SW-1")
+			(description "SW1")
 			(fields
 				(field
 					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
@@ -1514,7 +1514,7 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "Limit SW-1")
+					(name "Description") "SW1")
 			)
 			(libsource
 				(lib "Switch")
@@ -1537,7 +1537,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "fe26a205-89d3-450b-ba85-efef08f58b06")
+			(tstamps "be92492d-bf13-4d7b-932a-4665b077bf97")
 			(units
 				(unit
 					(name "A")
@@ -1557,9 +1557,9 @@
 		)
 		(comp
 			(ref "SW2")
-			(value "Limit SW-2")
+			(value "SW2")
 			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
-			(description "Limit SW-2")
+			(description "SW2")
 			(fields
 				(field
 					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
@@ -1567,7 +1567,7 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "Limit SW-2")
+					(name "Description") "SW2")
 			)
 			(libsource
 				(lib "Switch")
@@ -1590,7 +1590,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "8bdfc4dd-16e7-4f41-b7ed-6e50f824fe47")
+			(tstamps "dcc82f99-3b39-415f-bc83-55459d72b0c5")
 			(units
 				(unit
 					(name "A")
@@ -1610,9 +1610,9 @@
 		)
 		(comp
 			(ref "U1")
-			(value "OKI-78SR-5/1.5-W36-C")
+			(value "OKI-78SR-5")
 			(footprint "Converter_DCDC:Converter_DCDC_Murata_OKI-78SR_Vertical")
-			(description "OKI-78SR-5/1.5-W36-C")
+			(description "OKI-78SR-5")
 			(fields
 				(field
 					(name "Footprint") "Converter_DCDC:Converter_DCDC_Murata_OKI-78SR_Vertical")
@@ -1620,12 +1620,12 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "OKI-78SR-5/1.5-W36-C")
+					(name "Description") "OKI-78SR-5")
 			)
 			(libsource
 				(lib "KicadAuto")
 				(part "OKI-78SR")
-				(description "Auto-generated from Excel connection table")
+				(description "Auto-generated")
 			)
 			(property
 				(name "Sheetname")
@@ -1639,16 +1639,16 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "0f1ab35d-e7ea-4595-aeb5-b4fdba6c7d47")
+			(tstamps "158d83fb-18a6-4a00-9638-9d0f058d80d8")
 			(units
 				(unit
 					(name "A")
 					(pins
 						(pin
-							(num "2")
+							(num "1")
 						)
 						(pin
-							(num "1")
+							(num "2")
 						)
 						(pin
 							(num "3")
@@ -1696,7 +1696,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "b906b002-8a3d-4ed9-aec9-613a4694e4d3")
+			(tstamps "f37591eb-34f1-472c-a628-9d19108a6ecc")
 			(units
 				(unit
 					(name "A")
@@ -1734,7 +1734,7 @@
 			(libsource
 				(lib "KicadAuto")
 				(part "ESP32-DevKitC")
-				(description "Auto-generated from Excel connection table")
+				(description "Auto-generated")
 			)
 			(property
 				(name "Sheetname")
@@ -1748,7 +1748,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "76da3116-d7d9-4bb9-85f8-3cc204493a3c")
+			(tstamps "7c13fcfe-2f23-4fc2-a8da-b8564d2d8267")
 			(units
 				(unit
 					(name "A")
@@ -1758,6 +1758,12 @@
 						)
 						(pin
 							(num "2")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "19")
 						)
 						(pin
 							(num "3")
@@ -1778,25 +1784,7 @@
 							(num "8")
 						)
 						(pin
-							(num "9")
-						)
-						(pin
-							(num "10")
-						)
-						(pin
-							(num "11")
-						)
-						(pin
-							(num "12")
-						)
-						(pin
 							(num "13")
-						)
-						(pin
-							(num "14")
-						)
-						(pin
-							(num "15")
 						)
 						(pin
 							(num "16")
@@ -1808,64 +1796,76 @@
 							(num "18")
 						)
 						(pin
-							(num "19")
-						)
-						(pin
-							(num "38")
-						)
-						(pin
-							(num "37")
-						)
-						(pin
-							(num "36")
-						)
-						(pin
-							(num "35")
-						)
-						(pin
-							(num "34")
-						)
-						(pin
-							(num "33")
-						)
-						(pin
-							(num "32")
-						)
-						(pin
-							(num "31")
-						)
-						(pin
-							(num "30")
-						)
-						(pin
-							(num "29")
-						)
-						(pin
-							(num "28")
-						)
-						(pin
-							(num "27")
-						)
-						(pin
-							(num "26")
-						)
-						(pin
-							(num "25")
-						)
-						(pin
-							(num "24")
-						)
-						(pin
-							(num "23")
-						)
-						(pin
-							(num "22")
+							(num "20")
 						)
 						(pin
 							(num "21")
 						)
 						(pin
-							(num "20")
+							(num "22")
+						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "26")
+						)
+						(pin
+							(num "29")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "32")
+						)
+						(pin
+							(num "33")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "30")
+						)
+						(pin
+							(num "31")
+						)
+						(pin
+							(num "27")
+						)
+						(pin
+							(num "28")
+						)
+						(pin
+							(num "37")
+						)
+						(pin
+							(num "25")
+						)
+						(pin
+							(num "34")
+						)
+						(pin
+							(num "35")
+						)
+						(pin
+							(num "36")
+						)
+						(pin
+							(num "38")
 						)
 					)
 				)
@@ -1888,7 +1888,7 @@
 			(libsource
 				(lib "KicadAuto")
 				(part "LV8729")
-				(description "Auto-generated from Excel connection table")
+				(description "Auto-generated")
 			)
 			(property
 				(name "Sheetname")
@@ -1902,7 +1902,7 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "3c8497d7-5dc9-4e8b-b261-f5867c4f4ede")
+			(tstamps "8bf3fb82-000e-4680-89f2-0a3642368d2d")
 			(units
 				(unit
 					(name "A")
@@ -1920,40 +1920,40 @@
 							(num "4")
 						)
 						(pin
-							(num "5")
-						)
-						(pin
-							(num "6")
-						)
-						(pin
 							(num "7")
 						)
 						(pin
 							(num "8")
 						)
 						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
 							(num "16")
+						)
+						(pin
+							(num "9")
 						)
 						(pin
 							(num "15")
 						)
 						(pin
-							(num "14")
-						)
-						(pin
-							(num "13")
-						)
-						(pin
-							(num "12")
+							(num "10")
 						)
 						(pin
 							(num "11")
 						)
 						(pin
-							(num "10")
+							(num "12")
 						)
 						(pin
-							(num "9")
+							(num "13")
+						)
+						(pin
+							(num "14")
 						)
 					)
 				)
@@ -1976,7 +1976,7 @@
 			(libsource
 				(lib "KicadAuto")
 				(part "AM26LS32ACN")
-				(description "Auto-generated from Excel connection table")
+				(description "Auto-generated")
 			)
 			(property
 				(name "Sheetname")
@@ -1990,25 +1990,16 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "996ef1d5-0de4-490b-9a99-4a7e5a5c8678")
+			(tstamps "60962076-83c4-4093-a35c-6bffb9985526")
 			(units
 				(unit
 					(name "A")
 					(pins
 						(pin
-							(num "1")
+							(num "10")
 						)
 						(pin
-							(num "2")
-						)
-						(pin
-							(num "3")
-						)
-						(pin
-							(num "4")
-						)
-						(pin
-							(num "5")
+							(num "9")
 						)
 						(pin
 							(num "6")
@@ -2017,31 +2008,40 @@
 							(num "7")
 						)
 						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
 							(num "8")
 						)
 						(pin
 							(num "16")
 						)
 						(pin
-							(num "15")
+							(num "3")
 						)
 						(pin
-							(num "14")
-						)
-						(pin
-							(num "13")
-						)
-						(pin
-							(num "12")
+							(num "5")
 						)
 						(pin
 							(num "11")
 						)
 						(pin
-							(num "10")
+							(num "4")
 						)
 						(pin
-							(num "9")
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
 						)
 					)
 				)
@@ -2049,9 +2049,9 @@
 		)
 		(comp
 			(ref "U6")
-			(value "74HC4050N_652")
+			(value "74HC4050N")
 			(footprint "Package_DIP:DIP-16_W7.62mm")
-			(description "74HC4050N_652")
+			(description "74HC4050N")
 			(fields
 				(field
 					(name "Footprint") "Package_DIP:DIP-16_W7.62mm")
@@ -2059,12 +2059,12 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "74HC4050N_652")
+					(name "Description") "74HC4050N")
 			)
 			(libsource
 				(lib "KicadAuto")
 				(part "74HC4050")
-				(description "Auto-generated from Excel connection table")
+				(description "Auto-generated")
 			)
 			(property
 				(name "Sheetname")
@@ -2078,58 +2078,58 @@
 				(names "/")
 				(tstamps "/")
 			)
-			(tstamps "12b34a1b-d09f-4bf6-b933-dfbaf350403a")
+			(tstamps "10c5f7f7-bdff-45e9-a9ba-4896f36aa9f8")
 			(units
 				(unit
 					(name "A")
 					(pins
 						(pin
-							(num "1")
-						)
-						(pin
-							(num "2")
-						)
-						(pin
 							(num "3")
-						)
-						(pin
-							(num "4")
 						)
 						(pin
 							(num "5")
 						)
 						(pin
-							(num "6")
-						)
-						(pin
 							(num "7")
 						)
 						(pin
-							(num "8")
-						)
-						(pin
-							(num "16")
-						)
-						(pin
-							(num "15")
-						)
-						(pin
-							(num "14")
-						)
-						(pin
-							(num "13")
-						)
-						(pin
-							(num "12")
+							(num "9")
 						)
 						(pin
 							(num "11")
 						)
 						(pin
+							(num "1")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
 							(num "10")
 						)
 						(pin
-							(num "9")
+							(num "12")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
 						)
 					)
 				)
@@ -2468,12 +2468,12 @@
 		(libpart
 			(lib "KicadAuto")
 			(part "74HC4050")
-			(description "Auto-generated from Excel connection table")
+			(description "Auto-generated")
 			(fields
 				(field
 					(name "Reference") "U")
 				(field
-					(name "Value") "74HC4050")
+					(name "Value") "74HC4050N")
 				(field
 					(name "Footprint")
 				)
@@ -2481,7 +2481,7 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "Auto-generated from Excel connection table")
+					(name "Description") "Auto-generated")
 			)
 			(pins
 				(pin
@@ -2547,12 +2547,12 @@
 				(pin
 					(num "13")
 					(name "6A")
-					(type "passive")
+					(type "free")
 				)
 				(pin
 					(num "14")
 					(name "6Y")
-					(type "passive")
+					(type "free")
 				)
 				(pin
 					(num "15")
@@ -2569,7 +2569,7 @@
 		(libpart
 			(lib "KicadAuto")
 			(part "AM26LS32ACN")
-			(description "Auto-generated from Excel connection table")
+			(description "Auto-generated")
 			(fields
 				(field
 					(name "Reference") "U")
@@ -2582,7 +2582,7 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "Auto-generated from Excel connection table")
+					(name "Description") "Auto-generated")
 			)
 			(pins
 				(pin
@@ -2603,7 +2603,7 @@
 				(pin
 					(num "4")
 					(name "G")
-					(type "passive")
+					(type "power_in")
 				)
 				(pin
 					(num "5")
@@ -2643,7 +2643,7 @@
 				(pin
 					(num "12")
 					(name "/G")
-					(type "passive")
+					(type "power_in")
 				)
 				(pin
 					(num "13")
@@ -2670,7 +2670,7 @@
 		(libpart
 			(lib "KicadAuto")
 			(part "ESP32-DevKitC")
-			(description "Auto-generated from Excel connection table")
+			(description "Auto-generated")
 			(fields
 				(field
 					(name "Reference") "U")
@@ -2683,7 +2683,7 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "Auto-generated from Excel connection table")
+					(name "Description") "Auto-generated")
 			)
 			(pins
 				(pin
@@ -2749,7 +2749,7 @@
 				(pin
 					(num "13")
 					(name "GPIO12")
-					(type "bidirectional")
+					(type "free")
 				)
 				(pin
 					(num "14")
@@ -2881,12 +2881,12 @@
 		(libpart
 			(lib "KicadAuto")
 			(part "LV8729")
-			(description "Auto-generated from Excel connection table")
+			(description "Auto-generated")
 			(fields
 				(field
 					(name "Reference") "U")
 				(field
-					(name "Value") "LV8729")
+					(name "Value") "LV8729 Module")
 				(field
 					(name "Footprint")
 				)
@@ -2894,7 +2894,7 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "Auto-generated from Excel connection table")
+					(name "Description") "Auto-generated")
 			)
 			(pins
 				(pin
@@ -2982,12 +2982,12 @@
 		(libpart
 			(lib "KicadAuto")
 			(part "OKI-78SR")
-			(description "Auto-generated from Excel connection table")
+			(description "Auto-generated")
 			(fields
 				(field
 					(name "Reference") "U")
 				(field
-					(name "Value") "OKI-78SR")
+					(name "Value") "OKI-78SR-5")
 				(field
 					(name "Footprint")
 				)
@@ -2995,7 +2995,7 @@
 					(name "Datasheet")
 				)
 				(field
-					(name "Description") "Auto-generated from Excel connection table")
+					(name "Description") "Auto-generated")
 			)
 			(pins
 				(pin
@@ -3226,7 +3226,7 @@
 				(ref "U5")
 				(pin "4")
 				(pinfunction "G_4")
-				(pintype "passive")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U6")
@@ -3681,7 +3681,7 @@
 				(ref "U5")
 				(pin "12")
 				(pinfunction "/G_12")
-				(pintype "passive")
+				(pintype "power_in")
 			)
 			(node
 				(ref "U5")
@@ -4192,7 +4192,7 @@
 				(ref "U3")
 				(pin "13")
 				(pinfunction "GPIO12_13")
-				(pintype "bidirectional+no_connect")
+				(pintype "free+no_connect")
 			)
 		)
 		(net
@@ -4401,7 +4401,7 @@
 				(ref "U6")
 				(pin "13")
 				(pinfunction "6A_13")
-				(pintype "passive+no_connect")
+				(pintype "free+no_connect")
 			)
 		)
 		(net
@@ -4412,7 +4412,7 @@
 				(ref "U6")
 				(pin "14")
 				(pinfunction "6Y_14")
-				(pintype "passive+no_connect")
+				(pintype "free+no_connect")
 			)
 		)
 		(net
