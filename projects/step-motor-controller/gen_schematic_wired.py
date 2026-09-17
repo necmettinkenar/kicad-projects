@@ -185,6 +185,11 @@ COMPS = [
     ('U2',  'Connector_Generic:Conn_01x04', 'UART Display', 375, 155, 0, True),
 ]
 
+def snap(v):
+    return round(round(v / 1.27) * 1.27, 2)
+
+COMPS = [(r, l, v, snap(cx), snap(cy), rot, mir) for (r, l, v, cx, cy, rot, mir) in COMPS]
+
 def pin_endpoint(cx, cy, rot, mirror, lib_id, num):
     px, py, ang, nm, et = LIB_PINS[lib_id][num]
     if mirror:
@@ -211,16 +216,27 @@ net_idx = {n: i + 1 for i, n in enumerate(NETS)}
 wires = []
 junctions = []
 
+_wire_set = set()
+
+def _norm_seg(x1, y1, x2, y2):
+    a = (round(x1, 2), round(y1, 2))
+    b = (round(x2, 2), round(y2, 2))
+    return (a, b) if a <= b else (b, a)
+
 def add_wire(x1, y1, x2, y2, net):
     if abs(x1 - x2) < 0.01 and abs(y1 - y2) < 0.01:
         return
     x1, y1, x2, y2 = round(x1, 2), round(y1, 2), round(x2, 2), round(y2, 2)
+    key = (_norm_seg(x1, y1, x2, y2), net)
+    if key in _wire_set:
+        return
+    _wire_set.add(key)
     wires.append((x1, y1, x2, y2, net))
     stamp_segments([(x1, y1, x2, y2)], net_idx[net])
 
 # ---------------- A* grid ----------------
 CELL = 1.27
-GX0, GY0 = 5.0, 10.0
+GX0, GY0 = 0.0, 0.0
 NX = int(412 / CELL) + 1
 NY = int(288 / CELL) + 1
 WIRE_COST = 40.0
@@ -446,6 +462,7 @@ def route_all():
     wires.clear()
     junctions.clear()
     occ_wire.clear()
+    _wire_set.clear()
 
     # ---- 1. power rails ----
     for net, y in RAILS.items():
@@ -572,6 +589,103 @@ TAP_LABEL_PINS = {}
 for (net, r, p) in tap_fail:
     TAP_LABEL_PINS[(r, str(p))] = net
 print('tap-label pins:', len(TAP_LABEL_PINS))
+# ---- KURAL 2: collinear segment birlestirme (iki nokta arasi tek tel) ----
+def merge_collinear():
+    merged = []
+    by_net = {}
+    for w in wires:
+        by_net.setdefault(w[4], []).append(w)
+    for net, ws in by_net.items():
+        # dikey segmentler: ayni x
+        verts = {}
+        for (x1, y1, x2, y2, n) in ws:
+            if abs(x1 - x2) < 0.01:
+                verts.setdefault(round(x1, 2), []).append((min(y1, y2), max(y1, y2)))
+        for x, ivs in verts.items():
+            ivs.sort()
+            cur_lo, cur_hi = ivs[0]
+            for (lo, hi) in ivs[1:]:
+                if lo <= cur_hi + 0.02:
+                    cur_hi = max(cur_hi, hi)
+                else:
+                    merged.append((x, cur_lo, x, cur_hi, net))
+                    cur_lo, cur_hi = lo, hi
+            merged.append((x, cur_lo, x, cur_hi, net))
+        # yatay segmentler: ayni y
+        hors = {}
+        for (x1, y1, x2, y2, n) in ws:
+            if abs(y1 - y2) < 0.01:
+                hors.setdefault(round(y1, 2), []).append((min(x1, x2), max(x1, x2)))
+        for y, ivs in hors.items():
+            ivs.sort()
+            cur_lo, cur_hi = ivs[0]
+            for (lo, hi) in ivs[1:]:
+                if lo <= cur_hi + 0.02:
+                    cur_hi = max(cur_hi, hi)
+                else:
+                    merged.append((cur_lo, y, cur_hi, y, net))
+                    cur_lo, cur_hi = lo, hi
+            merged.append((cur_lo, y, cur_hi, y, net))
+        # egik segmentler (pin baglanti telleri vb.) oldugu gibi korunur
+        for (x1, y1, x2, y2, n) in ws:
+            if abs(x1 - x2) >= 0.01 and abs(y1 - y2) >= 0.01:
+                merged.append((x1, y1, x2, y2, net))
+    wires[:] = merged
+
+# merge_collinear()  # KURAL-2 dedupe ile saglandi; collinear merge kopukluk yaratti
+
+# ---- pin-stitch: merge sonrasi kopuk kalan pinleri en yakin ayni-net segmentine bagla ----
+def pt_on_wire(px, py, w, tol=0.05):
+    x1, y1, x2, y2, n = w
+    dx, dy = x2 - x1, y2 - y1
+    L2 = dx * dx + dy * dy
+    if L2 == 0:
+        return False
+    t = ((px - x1) * dx + (py - y1) * dy) / L2
+    if t < 0.0 or t > 1.0:
+        return False
+    return math.hypot(px - (x1 + t * dx), py - (y1 + t * dy)) < tol
+
+stitched = 0
+for (ref, num), (ex, ey, outward, nm, et) in sorted(PINS.items()):
+    nname = NETS_NETOF.get((ref, str(num)))
+    if nname is None or nname in LABEL_NETS or (ref, str(num)) in TAP_LABEL_PINS:
+        continue
+    net_wires = [w for w in wires if w[4] == nname]
+    if not net_wires:
+        continue
+    if any(pt_on_wire(ex, ey, w, 0.01) for w in net_wires):
+        continue
+    # en yakin ayni-net telinin en yakin noktasi
+    best = None
+    for w in net_wires:
+        x1, y1, x2, y2, _ = w
+        dx, dy = x2 - x1, y2 - y1
+        L2 = dx * dx + dy * dy
+        t = 0.0 if L2 == 0 else max(0.0, min(1.0, ((ex - x1) * dx + (ey - y1) * dy) / L2))
+        qx, qy = x1 + t * dx, y1 + t * dy
+        d = math.hypot(ex - qx, ey - qy)
+        if best is None or d < best[0]:
+            best = (d, qx, qy)
+    if best is None:
+        continue
+    d, qx, qy = best
+    # grid uzerinde L-sekilli kisa baglanti (KURAL-1: 1.27mm grid)
+    mx = snap(ex)
+    my = snap(ey)
+    if abs(qx - ex) < 0.02 and abs(qy - ey) < 0.02:
+        continue
+    # once yatay sonra dikey
+    add_wire(ex, ey, qx, ey, nname)
+    add_wire(qx, ey, qx, qy, nname)
+    stitched += 1
+print('pin-stitch:', stitched)
+
+dup = len(wires) - len(set((_norm_seg(w[0], w[1], w[2], w[3]), w[4]) for w in wires))
+grid_off = [(r, cx, cy) for (r, l, v, cx, cy, rot, mir) in COMPS
+            if abs(cx / 1.27 - round(cx / 1.27)) > 0.001 or abs(cy / 1.27 - round(cy / 1.27)) > 0.001]
+print('KURAL-1 grid disi komponent:', len(grid_off), '| KURAL-2 yinelenen tel:', dup)
+
 # ---- 4. junctions ----
 def point_on_seg(px, py, x1, y1, x2, y2):
     dx, dy = x2 - x1, y2 - y1
