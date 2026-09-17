@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Step Motor Controller — Footprint Varlık Raporu</title>
+<style>
+:root{--bg:#f7f5f0;--ink:#201d18;--mut:#6b6459;--hair:#d8d2c6;--acc:#9c5227;--ok:#1a7f37;--bad:#b3591f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:15px/1.6 "Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1050px;margin:0 auto;padding:40px 24px 60px}
+header{border-bottom:3px solid var(--ink);padding-bottom:20px;margin-bottom:8px}
+.kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:700}
+h1{font-family:Georgia,serif;font-size:32px;margin:8px 0 6px}
+.sub{color:var(--mut);font-size:14px}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:26px 0}
+.metric{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:14px 16px;text-align:center}
+.metric .v{font-size:30px;font-weight:800;color:var(--acc);font-family:Georgia,serif}
+.metric .l{font-size:12px;color:var(--mut);margin-top:2px}
+section{margin:30px 0}
+h2{font-family:Georgia,serif;font-size:21px;margin-bottom:12px;color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff}
+th{background:#efe9df;color:#5a5245;text-align:left;padding:8px 10px;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em}
+td{padding:7px 10px;border-bottom:1px solid var(--hair)}
+code{font-family:Consolas,monospace;font-size:12.3px;color:#7a3f1e}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:10px}
+.tag-ok{background:#e2f0e5;color:var(--ok)}
+.tag-no{background:#f7e6da;color:var(--bad)}
+.tag-auto{background:#e8e4f5;color:#5a4a8a}
+.tag-empty{background:#f3efe8;color:#8a6d3b}
+.note{background:#fdfcf9;border:1px solid var(--hair);border-left:4px solid var(--acc);border-radius:6px;padding:14px 18px;margin:16px 0;font-size:14px}
+.note b{color:var(--acc)}
+ul{padding-left:22px;margin:8px 0}
+li{margin:4px 0}
+footer{margin-top:44px;border-top:1px solid var(--hair);padding-top:14px;color:var(--mut);font-size:12.5px;display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="kicker">Bileşen Tedarik Denetimi</div>
+<h1>Footprint Varlık Raporu</h1>
+<p class="sub">Step Motor Controller — 34 bileşen · KiCad 10.0 kurulumu · 17 Eylül 2026</p>
+</header>
+
+<div class="metrics">
+<div class="metric"><div class="v">32</div><div class="l">Footprint kurulumda mevcut</div></div>
+<div class="metric"><div class="v">2</div><div class="l">Özel (script üretimi)</div></div>
+<div class="metric"><div class="v">15</div><div class="l">Şemada atanmamış*</div></div>
+<div class="metric"><div class="v">0</div><div class="l">Eksik / bulunamayan</div></div>
+</div>
+
+<div class="note">
+<b>* Önemli ayrım:</b> Şematik dosyasında 15 pasif bileşenin (R2–R12, C1–C5) Footprint property'si boş bırakılmış. Ancak bunların tasarım için gereken footprint'leri (<code>Resistor_SMD:R_0805_2012Metric</code>, <code>Capacitor_SMD:C_0805_2012Metric</code>, <code>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</code>, <code>CP_Radial_D5.0mm_P2.50mm</code>) kurulumda <b>mevcut</b> — PCB üretiminde bu footprint'lerle kullanıldılar ve DRC'den geçtiler. Yani eksik yok; şematikteki alanların doldurulması yeterli.
+</div>
+
+<section>
+<h2>Footprint'i şemada atanmış bileşenler (19)</h2>
+<table>
+<tr><th>Ref</th><th>Değer</th><th>Footprint (Kütüphane:Paket)</th><th>Kurulumda</th></tr>
+<tr><td>J1</td><td>AC Input</td><td><code>TerminalBlock_Phoenix:...MKDS-1,5-3-5.08</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>J2</td><td>Step Motor</td><td><code>Connector_PinSocket_2.54mm:PinSocket_1x04</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>J3</td><td>Encoder</td><td><code>Connector_PinSocket_2.54mm:PinSocket_1x08</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>PS1</td><td>IRM-20-24</td><td><code>Converter_ACDC:...MeanWell_IRM-20-xx_THT</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>Q1</td><td>BC547</td><td><code>Package_TO_SOT_THT:TO-92_Inline</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>R1, R3</td><td>FSR (harici)</td><td><code>Connector_PinHeader_2.54mm:PinHeader_1x02</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>S1–S4</td><td>Optik/Hall sensör</td><td><code>Connector_PinHeader_2.54mm:PinHeader_1x03</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>SW1, SW2</td><td>Limit switch</td><td><code>Connector_PinHeader_2.54mm:PinHeader_1x03</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>U1</td><td>OKI-78SR-5</td><td><code>Converter_DCDC:...Murata_OKI-78SR_Vertical</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>U2</td><td>UART Display</td><td><code>Connector_PinSocket_2.54mm:PinSocket_1x04</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>U3</td><td>ESP32-DevKitC</td><td><code>AUTO:ESP32_SOCKET</code></td><td><span class="tag tag-auto">ÖZEL — script üretimi</span></td></tr>
+<tr><td>U4</td><td>LV8729 Module</td><td><code>AUTO:STEPSTICK_2x8</code></td><td><span class="tag tag-auto">ÖZEL — script üretimi</span></td></tr>
+<tr><td>U5, U6</td><td>AM26LS32 / 74HC4050</td><td><code>Package_DIP:DIP-16_W7.62mm</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+</table>
+</section>
+
+<section>
+<h2>Şemada atanmamış ama footprint'i mevcut bileşenler (15)</h2>
+<table>
+<tr><th>Ref</th><th>Değer</th><th>Gereken footprint (PCB'de kullanılan)</th><th>Kurulumda</th></tr>
+<tr><td>R2, R4–R12</td><td>10K / 20K / 1K</td><td><code>Resistor_SMD:R_0805_2012Metric</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>C1</td><td>100µF/35V</td><td><code>Capacitor_THT:CP_Radial_D6.3mm_P2.50mm</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>C2</td><td>10µF/16V</td><td><code>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+<tr><td>C3–C5</td><td>100nF</td><td><code>Capacitor_SMD:C_0805_2012Metric</code></td><td><span class="tag tag-ok">RESMİ ✓</span></td></tr>
+</table>
+</section>
+
+<section>
+<h2>3rd-party koleksiyonun bu tasarımdaki rolü</h2>
+<p>İndirdiğimiz ~15.000'lik 3rd-party koleksiyon (Digi-Key, SparkFun, Espressif, AKL vb.) bu tasarımın <b>hiçbir bileşeninde gerekli değil</b> — kullanılan tüm footprint'ler KiCad resmi kütüphanesinde zaten var. Koleksiyon, ileride özgün parça (ör. SparkFun modülü, Digi-Key özgün paketi) gerektiğinde hazır bulunacak yedek kapasite.</p>
+</section>
+
+<section>
+<h2>Yapılacaklar</h2>
+<ul>
+<li>Şematikte 15 pasif bileşenin Footprint alanı doldurulmalı (footprint'ler kurulumda mevcut, atama yeterli).</li>
+<li>U3 (ESP32 soketi) ve U4 (LV8729 stepstick soketi) için <code>AUTO:</code> footprint'ler script üretimi — bunları kalıcı .pretty kütüphanesine dönüştürüp fp-lib-table'a kaydetmek ileride sürdürülebilirlik açısından iyi olur.</li>
+<li>fp-lib-table'da 142 kütüphane kayıtlı; bu tasarımın resmi kütüphaneleri KiCad'in dahili tablosundan çözümleniyor, ek kayıt gerekmez.</li>
+</ul>
+</section>
+
+<footer>
+<span>Step Motor Controller · Footprint Varlık Raporu</span>
+<span>KiCad 10.0 · 34 bileşen denetlendi</span>
+</footer>
+</div>
+</body>
+</html>
