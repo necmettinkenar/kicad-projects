@@ -3743,7 +3743,7 @@
 		(uuid "6bc1a506-5500-4113-9b9f-e3b3cf0cbbfe")
 		(property "Reference" "C1" (at 204.47 66.85 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "100uF/35V" (at 204.47 72.85 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 204.47 69.85 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm" (at 204.47 69.85 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 204.47 69.85 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "100uF/35V" (at 204.47 69.85 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -3772,7 +3772,7 @@
 		(uuid "6b8dbc60-bfd6-4b38-a237-633231d553c3")
 		(property "Reference" "C2" (at 222.25 66.85 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10uF/16V" (at 222.25 72.85 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 222.25 69.85 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" (at 222.25 69.85 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 222.25 69.85 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10uF/16V" (at 222.25 69.85 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -3938,7 +3938,7 @@
 		(uuid "258d585c-83bd-4f45-9c9e-030250654d9b")
 		(property "Reference" "R11" (at 204.47 121.46 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 204.47 127.46 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 204.47 124.46 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 204.47 124.46 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 204.47 124.46 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 204.47 124.46 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -3967,7 +3967,7 @@
 		(uuid "14a064d6-bd66-4de7-a39d-76b36451ea9b")
 		(property "Reference" "C5" (at 218.44 139.24 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "100nF" (at 218.44 145.24 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 218.44 142.24 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" (at 218.44 142.24 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 218.44 142.24 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "100nF" (at 218.44 142.24 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -4028,7 +4028,7 @@
 		(uuid "fee52310-e713-4e33-a09a-3eeabe2acbb5")
 		(property "Reference" "R12" (at 294.64 115.11 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "1K" (at 294.64 121.11 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 294.64 118.11 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 294.64 118.11 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 294.64 118.11 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "1K" (at 294.64 118.11 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -4121,7 +4121,7 @@
 		(uuid "9e0759e6-efd9-4bd7-9e09-15a2b339de29")
 		(property "Reference" "R5" (at 165.1 118.92 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 165.1 124.92 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 165.1 121.92 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 165.1 121.92 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 165.1 121.92 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 165.1 121.92 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -4150,7 +4150,7 @@
 		(uuid "921f7c3f-80cd-4c72-8b35-c09261d714a0")
 		(property "Reference" "R6" (at 165.1 136.7 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 165.1 142.7 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 165.1 139.7 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 165.1 139.7 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 165.1 139.7 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 165.1 139.7 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -4179,7 +4179,7 @@
 		(uuid "1cde168d-2f13-403a-b6ac-b69151d9b9e0")
 		(property "Reference" "C3" (at 187.96 118.92 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "100nF" (at 187.96 124.92 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 187.96 121.92 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" (at 187.96 121.92 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 187.96 121.92 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "100nF" (at 187.96 121.92 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -4208,7 +4208,7 @@
 		(uuid "64c6ba5c-94b1-4c6a-a7ef-2f922fed3dd4")
 		(property "Reference" "C4" (at 187.96 136.7 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "100nF" (at 187.96 142.7 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 187.96 139.7 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Capacitor_THT:C_Rect_L7.0mm_W2.5mm_P5.00mm" (at 187.96 139.7 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 187.96 139.7 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "100nF" (at 187.96 139.7 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -4365,7 +4365,7 @@
 		(uuid "4c256492-299b-41cb-98cf-1bee13b08637")
 		(property "Reference" "R7" (at 100.33 196.39 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 100.33 202.39 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 100.33 199.39 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 100.33 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 100.33 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 100.33 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -4394,7 +4394,7 @@
 		(uuid "8f921147-ed54-4446-bf0f-0749f14c3506")
 		(property "Reference" "R8" (at 111.76 196.39 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "20K" (at 111.76 202.39 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 111.76 199.39 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 111.76 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 111.76 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "20K" (at 111.76 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -4423,7 +4423,7 @@
 		(uuid "b0f6d2e9-3b02-4d31-8e69-09a8fe14931d")
 		(property "Reference" "R9" (at 134.62 196.39 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 134.62 202.39 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 134.62 199.39 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 134.62 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 134.62 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 134.62 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -4452,7 +4452,7 @@
 		(uuid "11efc928-382f-4dd4-b575-19c0b50e9d44")
 		(property "Reference" "R10" (at 147.32 196.39 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "20K" (at 147.32 202.39 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 147.32 199.39 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 147.32 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 147.32 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "20K" (at 147.32 199.39 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -4539,7 +4539,7 @@
 		(uuid "b40e1fc8-e118-42e9-af8c-54d7a796e994")
 		(property "Reference" "R2" (at 115.57 233.22 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 115.57 239.22 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 115.57 236.22 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 115.57 236.22 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 115.57 236.22 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 115.57 236.22 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
@@ -4568,7 +4568,7 @@
 		(uuid "808e89df-78a9-42ab-aeba-7172dbb3c207")
 		(property "Reference" "R4" (at 154.94 233.22 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "10K" (at 154.94 239.22 0) (effects (font (size 1.27 1.27))))
-		(property "Footprint" "" (at 154.94 236.22 0) (effects (font (size 1.27 1.27)) hide))
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 154.94 236.22 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Datasheet" "" (at 154.94 236.22 0) (effects (font (size 1.27 1.27)) hide))
 		(property "Description" "10K" (at 154.94 236.22 0) (effects (font (size 1.27 1.27)) hide))
 		(pin "1"
