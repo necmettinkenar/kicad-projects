@@ -81,15 +81,15 @@ def reg(ref, fp, cx, cy):
 reg('PS1', load_fp('Converter_ACDC', 'Converter_ACDC_MeanWell_IRM-20-xx_THT'), 26, 17)
 reg('J1',  load_fp('TerminalBlock_Phoenix', 'TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal'), 26, 41)
 reg('U1',  load_fp('Converter_DCDC', 'Converter_DCDC_Murata_OKI-78SR_Vertical'), 54, 11)
-reg('C1',  load_fp('Capacitor_THT', 'CP_Radial_D6.3mm_P2.50mm'), 54, 22)
-reg('C2',  load_fp('Capacitor_THT', 'CP_Radial_D5.0mm_P2.50mm'), 65, 11)
+reg('C1',  load_fp('Capacitor_THT', 'CP_Radial_D8.0mm_P3.50mm'), 54, 22)
+reg('C2',  load_fp('Capacitor_THT', 'CP_Radial_D6.3mm_P2.50mm'), 65, 11)
 reg('U5',  load_fp('Package_DIP', 'DIP-16_W7.62mm'), 29, 55)
 reg('U6',  load_fp('Package_DIP', 'DIP-16_W7.62mm'), 29, 76)
 reg('Q1',  load_fp('Package_TO_SOT_THT', 'TO-92_Inline'), 52, 76)
 for r in ['R2', 'R4', 'R5', 'R6', 'R7', 'R8', 'R9', 'R10', 'R11', 'R12']:
-    reg(r, load_fp('Resistor_SMD', 'R_0805_2012Metric'), 0, 0)
+    reg(r, load_fp('Resistor_THT', 'R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal'), 0, 0)
 for r in ['C3', 'C4', 'C5']:
-    reg(r, load_fp('Capacitor_SMD', 'C_0805_2012Metric'), 0, 0)
+    reg(r, load_fp('Capacitor_THT', 'C_Rect_L7.0mm_W2.5mm_P5.00mm'), 0, 0)
 for r in ['R1', 'R3']:
     reg(r, load_fp('Connector_PinHeader_2.54mm', 'PinHeader_1x02_P2.54mm_Vertical'), 0, 0)
 for r in ['S1', 'S2', 'S3', 'S4', 'SW1', 'SW2']:
@@ -100,10 +100,10 @@ reg('U2', load_fp('Connector_PinSocket_2.54mm', 'PinSocket_1x04_P2.54mm_Vertical
 
 POS = {
     'U3': (77, 46), 'U4': (103, 46), 'J2': (116, 39), 'J3': (116, 57), 'U2': (99, 12),
-    'R1': (12, 94), 'R3': (20, 94), 'R2': (28, 94), 'R4': (36, 94),
-    'R5': (56, 84), 'R6': (56, 92), 'C3': (63, 84), 'C4': (63, 92),
-    'R7': (19, 36), 'R8': (19, 44), 'R9': (27, 36), 'R10': (27, 44),
-    'R11': (58, 76), 'R12': (64, 76), 'C5': (70, 76),
+    'R1': (10, 94), 'R3': (24, 94), 'R2': (38, 94), 'R4': (54, 99),
+    'R5': (54, 84), 'R6': (54, 92), 'C3': (68, 84), 'C4': (68, 92),
+    'R7': (16, 34), 'R8': (18, 55), 'R9': (34, 34), 'R10': (44, 54),
+    'R11': (58, 74), 'R12': (72, 74), 'C5': (84, 74),
     'S1': (46, 60), 'S2': (46, 68), 'S3': (11, 40), 'S4': (11, 48),
     'SW1': (46, 84), 'SW2': (46, 92),
     'Q1': (50, 76),
