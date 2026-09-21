@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skill Paketi Kurulum Raporu</title>
+<style>
+:root{--bg:#f7f5f0;--ink:#201d18;--mut:#6b6459;--hair:#d8d2c6;--acc:#9c5227;--ok:#1a7f37}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font:15px/1.6 "Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1000px;margin:0 auto;padding:40px 24px 60px}
+header{border-bottom:3px solid var(--ink);padding-bottom:20px;margin-bottom:8px}
+.kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:700}
+h1{font-family:Georgia,serif;font-size:30px;margin:8px 0 6px}
+.sub{color:var(--mut);font-size:14px}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:26px 0}
+.metric{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:14px;text-align:center}
+.metric .v{font-size:28px;font-weight:800;color:var(--acc);font-family:Georgia,serif}
+.metric .l{font-size:12px;color:var(--mut);margin-top:2px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;margin:14px 0}
+th{background:#efe9df;color:#5a5245;text-align:left;padding:8px 10px;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em}
+td{padding:7px 10px;border-bottom:1px solid var(--hair)}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:10px}
+.ok{background:#e2f0e5;color:var(--ok)}.add{background:#fdf0dc;color:#9c5227}.skip{background:#eee;color:#888}
+section{margin:30px 0}
+h2{font-family:Georgia,serif;font-size:21px;margin-bottom:12px}
+.note{background:#fdfcf9;border:1px solid var(--hair);border-left:4px solid var(--acc);border-radius:6px;padding:14px 18px;margin:16px 0;font-size:14px}
+footer{margin-top:40px;border-top:1px solid var(--hair);padding-top:14px;color:var(--mut);font-size:12.5px;display:flex;justify-content:space-between}
+</style></head><body><div class="wrap">
+<header><div class="kicker">Kurulum Tamamlandı</div><h1>Skill Paketi Kurulum Raporu</h1>
+<p class="sub">16 repo incelendi · 21 Eylül 2026</p></header>
+<div class="metrics">
+<div class="metric"><div class="v">2</div><div class="l">Eksik resmi kütüphane eklendi</div></div>
+<div class="metric"><div class="v">22</div><div class="l">SparkFun footprint kütüphanesi</div></div>
+<div class="metric"><div class="v">30</div><div class="l">SparkFun sembol kütüphanesi</div></div>
+<div class="metric"><div class="v">13</div><div class="l">KiCad plugin kurulu</div></div>
+<div class="metric"><div class="v">7</div><div class="l">Python aracı hazır</div></div>
+</div>
+<section><h2>Kütüphane Kurulumları</h2>
+<table>
+<tr><th>Kaynak</th><th>Ne yapıldı</th><th>Adet</th><th>Durum</th></tr>
+<tr><td>Connector_HDMI.pretty</td><td>3rdparty_footprints'e kopyalandı + fp-lib-table'a kaydedildi</td><td>1</td><td><span class="tag add">EKLENDİ</span></td></tr>
+<tr><td>Connector_Multicomp.pretty</td><td>3rdparty_footprints'e kopyalandı + fp-lib-table'a kaydedildi</td><td>1</td><td><span class="tag add">EKLENDİ</span></td></tr>
+<tr><td>digikey-footprints.pretty</td><td>3rdparty_footprints'e kopyalandı (önceki koleksiyonda yoktu)</td><td>1</td><td><span class="tag add">EKLENDİ</span></td></tr>
+<tr><td>SparkFun footprints (21 kütüphane)</td><td>3rdparty_footprints'e kopyalandı</td><td>21</td><td><span class="tag add">EKLENDİ</span></td></tr>
+<tr><td>SparkFun symbols (30 kütüphane)</td><td>3rdparty_symbols klasörüne kopyalandı + sym-lib-table'a kaydedildi</td><td>30</td><td><span class="tag add">EKLENDİ</span></td></tr>
+<tr><td>Resmi kicad-symbols</td><td>Karşılaştırıldı: kurulumda hepsi zaten var</td><td>0</td><td><span class="tag ok">EKSİK YOK</span></td></tr>
+<tr><td>Resmi kicad-footprints</td><td>Karşılaştırıldı: 2 eksik vardı, eklendi</td><td>2</td><td><span class="tag add">TAMAMLANDI</span></td></tr>
+<tr><td>kicad-templates</td><td>Kullanıcı şablon dizinine kopyalandı (Arduino, EuroCard vb.)</td><td>17</td><td><span class="tag add">EKLENDİ</span></td></tr>
+</table></section>
+<section><h2>Plugin Kurulumları</h2>
+<table>
+<tr><th>Plugin</th><th>İşlev</th><th>Durum</th></tr>
+<tr><td>InteractiveHtmlBom</td><td>İnteraktif HTML BOM — monte sırası takibi</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>kicad-jlcpcb-tools</td><td>JLCPCB üretim + LCSC parça atama</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>replicate_layout</td><td>Yerleşim kopyalama (kanal çoğaltma)</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>swap_pins / swap_units</td><td>Pin/birim değiştirme</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>length_stats</td><td>İz uzunluğu istatistikleri</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>net2pad / pad2track mesafe</td><td>Net-pad iz mesafe ölçümü</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>place_footprints</td><td>Footprint yerleştirme yardımcısı</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>screenshots</td><td>PCB ekran görüntüsü alma</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>archive_project</td><td>Proje arşivleme</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>delete_selected / save_restore_layout</td><td>Seçim silme / yerleşim kaydet-geri yükle</td><td><span class="tag add">KURULDU</span></td></tr>
+</table></section>
+<section><h2>Python Araçları</h2>
+<table>
+<tr><th>Araç</th><th>Sürüm</th><th>İşlev</th><th>Durum</th></tr>
+<tr><td>KiBot</td><td>1.9.1</td><td>Otomatik Gerber/BOM/PDF üretimi</td><td><span class="tag ok">ZATEN VAR</span></td></tr>
+<tr><td>skidl</td><td>2.3.0</td><td>Python ile şematik tasarımı</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>KiCost</td><td>1.1.21</td><td>Çok dağıtıcılı maliyet tablosu</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>KiKit</td><td>1.8.1</td><td>Panelizasyon, mouse-bites</td><td><span class="tag add">KURULDU</span></td></tr>
+<tr><td>easyeda2kicad</td><td>1.0.1</td><td>EasyEDA/LCSC bileşen dönüştürücü</td><td><span class="tag add">KURULDU</span></td></tr>
+</table></section>
+<section><h2>Karşılaştırma Sonuçları — Pakette Olup Kurulumda Olmayanlar</h2>
+<table>
+<tr><th>Kategori</th><th>Pakette</th><th>Kurulumda (önce)</th><th>Eksik</th><th>Yapılan</th></tr>
+<tr><td>Resmi semboller</td><td>~50 .kicad_sym</td><td>Hepsi kurulu</td><td>0</td><td>—</td></tr>
+<tr><td>Resmi footprint'ler</td><td>~157 .pretty</td><td>155 kurulu</td><td>2</td><td>Kopyalandı + kaydedildi</td></tr>
+<tr><td>SparkFun footprint</td><td>21 kütüphane</td><td>7 (eski koleksiyon)</td><td>14 yeni*</td><td>Kopyalandı (21'in hepsi taze)</td></tr>
+<tr><td>SparkFun semboller</td><td>30 kütüphane</td><td>0</td><td>30</td><td>Kopyalandı + kaydedildi</td></tr>
+<tr><td>Digi-Key footprint</td><td>1 kütüphane</td><td>0</td><td>1</td><td>Kopyalandı</td></tr>
+<tr><td>Pluginler</td><td>13</td><td>0</td><td>13</td><td>Kopyalandı</td></tr>
+<tr><td>Python araçları</td><td>5</td><td>1 (KiBot)</td><td>4</td><td>pip ile kuruldu</td></tr>
+<tr><td>Şablonlar</td><td>17</td><td>0</td><td>17</td><td>Kullanıcı dizinine kopyalandı</td></tr>
+</table>
+<p style="font-size:12.5px;color:var(--mut)30">* Önceki 3rd-party koleksiyonunda SparkFun'ın 7 kütüphanesi farklı adla vardı; yeni sürümle tamamı güncellendi.</p>
+</section>
+<div class="note"><b>Güncel toplam kapasite:</b> fp-lib-table'da 144 kayıtlı kütüphane (resmi 155 dahili + 3rd-party 24) · sym-lib-table'da 31 kayıt · 13 plugin · 17 proje şablonu · 7 Python aracı. KiCad'i yeniden başlattığında hepsi aktif olur.</div>
+<footer><span>Skill Paketi Kurulum Raporu</span><span>16 repo işlendi</span></footer>
+</div></body></html>
